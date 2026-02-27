@@ -1,0 +1,195 @@
+{
+  "users": [
+    {
+      "id": "a3a6",
+      "name": "Navneet Kaur Srow",
+      "email": "nksrow@gmail.com",
+      "mobile": "7986034016",
+      "password": "Navneet.k_2510",
+      "address": {
+        "street": "546, Urban estate phase-2",
+        "city": "Patiala",
+        "state": "Punjab",
+        "country": "India",
+        "pincode": "147002"
+      }
+    },
+    {
+      "id": "6306",
+      "name": "Navneet Kaur Srow",
+      "email": "navneetsrow@gmail.com",
+      "mobile": "7986034016",
+      "password": "Navneet.k_2510",
+      "address": {
+        "street": "546, Urban estate phase-2",
+        "city": "Patiala",
+        "state": "Punjab",
+        "country": "India",
+        "pincode": "147002"
+      }
+    }
+  ],
+  "cart": [
+    {
+      "id": "12b4",
+      "title": "Layer'r Wottagirl Vanilla Twist Fragrant Body Splash For Her (135ml)",
+      "price": 220,
+      "qty": 1,
+      "image": "../images/wottagirl_vanilla_mist.jpg"
+    },
+    {
+      "id": "2d35",
+      "title": "Plum Bodylovin' Vanilla Caramello Long Lasting Eau De Parfum With Warm Vanilla & Salted Caramel (50ml)",
+      "price": 728,
+      "qty": 1,
+      "image": "../images/plum_vanilla_perfume.jpg"
+    }
+  ],
+  "messages": [
+    {
+      "id": "0b53",
+      "name": "Navneet kaur",
+      "email": "navneetsrow@gmail.com",
+      "message": "thank you",
+      "date": "2025-11-13T05:53:04.402Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "7019",
+      "name": "Navneet Kaur Srow",
+      "email": "nksrow@gmail.com",
+      "mobile": "7986034016",
+      "address": "546, Urban estate phase-2, Patiala, Punjab, India, 147002",
+      "items": [
+        {
+          "id": "b326",
+          "title": "Layer'r Wottagirl Vanilla Twist Fragrant Body Splash For Her (135ml)",
+          "price": 220,
+          "qty": 1,
+          "image": "http://127.0.0.1:5500/wottagirl_vanilla_mist.jpg"
+        },
+        {
+          "id": "e416",
+          "title": "Bella Vita Date Women Perfume (100ml)",
+          "price": 575,
+          "qty": 1,
+          "image": "http://127.0.0.1:5500/bellavita_date_perfume.jpg"
+        }
+      ],
+      "totalAmount": 795,
+      "orderDate": "2025-11-02T13:18:35.858Z"
+    },
+    {
+      "id": "c0cb",
+      "name": "Navneet Kaur Srow",
+      "email": "nksrow@gmail.com",
+      "mobile": "7986034016",
+      "address": "546, Urban estate phase-2, Patiala, Punjab, India, 147002",
+      "items": [
+        {
+          "id": "e609",
+          "title": "Engage Yang Eau De Parfum For Women (100ml)",
+          "price": 422,
+          "qty": 2,
+          "image": "http://127.0.0.1:5500/engage_yang_perfume.webp"
+        },
+        {
+          "id": "aa2e",
+          "title": "Layer'r Wottagirl Vanilla Twist Fragrant Body Splash For Her (135ml)",
+          "price": 220,
+          "qty": 1,
+          "image": "http://127.0.0.1:5500/wottagirl_vanilla_mist.jpg"
+        }
+      ],
+      "totalAmount": 1064,
+      "orderDate": "2025-11-02T13:19:36.688Z"
+    },
+    {
+      "id": "bc39",
+      "name": "Navneet Kaur Srow",
+      "email": "nksrow@gmail.com",
+      "mobile": "7986034016",
+      "address": "546, Urban estate phase-2, Patiala, Punjab, India, 147002",
+      "items": [
+        {
+          "id": "7028",
+          "title": "Layer'r Wottagirl Vanilla Twist Fragrant Body Splash For Her (135ml)",
+          "price": 220,
+          "qty": 2,
+          "image": "http://127.0.0.1:5500/wottagirl_vanilla_mist.jpg"
+        },
+        {
+          "id": "156c",
+          "title": "Engage Yang Eau De Parfum For Women (100ml)",
+          "price": 422,
+          "qty": 2,
+          "image": "http://127.0.0.1:5500/engage_yang_perfume.webp"
+        }
+      ],
+      "totalAmount": 1284,
+      "orderDate": "2025-11-02T13:22:48.449Z"
+    },
+    {
+      "id": "f8da",
+      "name": "Navneet Kaur Srow",
+      "email": "nksrow@gmail.com",
+      "mobile": "7986034016",
+      "address": "546, Urban estate phase-2, Patiala, Punjab, India, 147002",
+      "items": [
+        {
+          "id": "1a29",
+          "title": "Layer'r Wottagirl Vanilla Twist Fragrant Body Splash For Her (135ml)",
+          "price": 220,
+          "qty": 1,
+          "image": "http://127.0.0.1:5500/wottagirl_vanilla_mist.jpg"
+        },
+        {
+          "id": "4476",
+          "title": "Yves Saint Laurent Libre Eau De Parfum With Lavender Essence, Orange Blossom, Musk & Warm Vanilla (10ml)",
+          "price": 2500,
+          "qty": 1,
+          "image": "http://127.0.0.1:5500/YSL_libre_perfume.avif"
+        }
+      ],
+      "totalAmount": 2720,
+      "orderDate": "2025-11-02T13:24:15.555Z"
+    },
+    {
+      "id": "79d8",
+      "name": "Navneet Kaur Srow",
+      "email": "nksrow@gmail.com",
+      "mobile": "7986034016",
+      "address": "546, Urban estate phase-2, Patiala, Punjab, India, 147002",
+      "items": [
+        {
+          "id": "e8cd",
+          "title": "Plum Bodylovin' Vanilla Caramello Long Lasting Eau De Parfum With Warm Vanilla & Salted Caramel (50ml)",
+          "price": 728,
+          "qty": 1,
+          "image": "http://127.0.0.1:5500/plum_vanilla_perfume.jpg"
+        }
+      ],
+      "totalAmount": 728,
+      "orderDate": "2025-11-02T13:24:50.111Z"
+    },
+    {
+      "id": "287f",
+      "name": "Navneet Kaur Srow",
+      "email": "nksrow@gmail.com",
+      "mobile": "7986034016",
+      "address": "546, Urban estate phase-2, Patiala, Punjab, India, 147002",
+      "items": [
+        {
+          "id": "5e1e",
+          "title": "Plum Bodylovin' Vanilla Caramello Long Lasting Eau De Parfum With Warm Vanilla & Salted Caramel (50ml)",
+          "price": 728,
+          "qty": 1,
+          "image": "http://127.0.0.1:5500/plum_vanilla_perfume.jpg"
+        }
+      ],
+      "totalAmount": 728,
+      "orderDate": "2025-11-02T13:26:19.061Z"
+    }
+  ]
+}

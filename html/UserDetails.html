@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Details</title>
+  <style>
+    /* Pinkish theme similar to signup page */
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(to bottom, #fde9f1 0%, #f9e5ee 100%);
+      margin: 0; 
+      padding: 40px 30px;
+      color: #512245;
+      min-height: 100vh;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: #be138e;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      font-size: 2rem;
+      margin-bottom: 24px;
+    }
+
+    .user-info {
+      background: rgba(255,255,255,0.9);
+      box-shadow: 0 8px 24px rgba(186,104,200,0.13);
+      border-radius: 18px;
+      padding: 30px 35px;
+      width: 100%;
+      max-width: 520px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      color: #701a53;
+      font-size: 1.1rem;
+      white-space: pre-line;
+    }
+
+    .user-info p {
+      margin: 12px 0;
+    }
+
+    #add-address-btn {
+      background-color: #be138e;
+      border: none;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      max-width: 520px;
+      width: 100%;
+    }
+
+    #add-address-btn:hover {
+      background-color: #95126b;
+    }
+
+    #address-form {
+      max-width: 520px;
+      width: 100%;
+      background: rgba(255,255,255,0.9);
+      box-shadow: 0 8px 24px rgba(186,104,200,0.13);
+      border-radius: 18px;
+      padding: 32px 35px;
+      box-sizing: border-box;
+      margin-top: 16px;
+      color: #701a53;
+    }
+
+    #address-form h3 {
+      margin-top: 0;
+      margin-bottom: 18px;
+      font-weight: 700;
+      color: #be138e;
+    }
+
+    #address-form input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      border: 1.3px solid #e9b1d1;
+      border-radius: 6px;
+      font-size: 1rem;
+      background: #fdf0f6;
+      color: #701a53;
+      box-sizing: border-box;
+      transition: border-color 0.3s;
+      margin-bottom: 14px;
+    }
+
+    #address-form input[type="text"]:focus {
+      border-color: #be138e;
+      outline: none;
+    }
+
+    #address-form button[type="submit"] {
+      background-color: #be138e;
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      width: 100%;
+    }
+
+    #address-form button[type="submit"]:hover {
+      background-color: #95126b;
+    }
+  </style>
+</head>
+<body>
+  <!-- Bridge for React integration -->
+  <script src="/bridge.js"></script>
+
+  <h1>Your Profile</h1>
+  <div class="user-info" id="user-info">
+    Loading...
+  </div>
+
+  <button id="add-address-btn">Add Address</button>
+
+  <div id="address-form" style="display:none;">
+    <h3>Add Address</h3>
+    <form id="addressForm">
+      <input type="text" id="street" placeholder="Street Address" required />
+      <input type="text" id="city" placeholder="City" required />
+      <input type="text" id="state" placeholder="State" required />
+      <input type="text" id="country" placeholder="Country" required />
+      <input type="text" id="pincode" placeholder="Pincode (6 digits)" required pattern="\d{6}" title="6-digit pincode" />
+      <button type="submit">Save Address</button>
+    </form>
+  </div>
+
+  <script>
+    const user = JSON.parse(localStorage.getItem('velouraUser'));
+    const userInfoDiv = document.getElementById('user-info');
+    const addAddressBtn = document.getElementById('add-address-btn');
+    const addressFormDiv = document.getElementById('address-form');
+
+    if (!user) {
+      alert("Not logged in!");
+      window.location.href = "login.html"; // redirect to login
+    } else {
+      fetch(`http://localhost:3000/users/${user.id}`)
+        .then(res => res.json())
+        .then(userData => {
+          const addr = userData.address;
+          const addressText = addr 
+            ? `${addr.street},\n${addr.city}, ${addr.state},\n${addr.country} - ${addr.pincode}`
+            : 'Not added yet';
+          userInfoDiv.innerHTML = `
+            <p><strong>Name:</strong> ${userData.name}</p>
+            <p><strong>Email:</strong> ${userData.email}</p>
+            <p><strong>Mobile Number:</strong> ${userData.mobile || 'Not added'}</p>
+            <p><strong>Address:</strong><br>${addressText}</p>
+        `;
+
+        })
+        .catch(() => {
+          userInfoDiv.innerText = "Failed to load user information.";
+        });
+    }
+
+    addAddressBtn.addEventListener('click', () => {
+      addressFormDiv.style.display = 'block';
+      addAddressBtn.style.display = 'none';
+    });
+
+    document.getElementById('addressForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const street = document.getElementById('street').value.trim();
+      const city = document.getElementById('city').value.trim();
+      const state = document.getElementById('state').value.trim();
+      const country = document.getElementById('country').value.trim();
+      const pincode = document.getElementById('pincode').value.trim();
+
+      if (street && city && state && country && /^\d{6}$/.test(pincode) && user) {
+        const addressObj = { street, city, state, country, pincode };
+
+        fetch(`http://localhost:3000/users/${user.id}`, {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ address: addressObj })
+        })
+        .then(res => {
+          if (!res.ok) throw new Error('Failed to save address');
+          return res.json();
+        })
+        .then(updatedUser => {
+          alert("Address added!");
+          window.location.reload();
+        })
+        .catch(() => {
+          alert("Failed to save address. Please try again.");
+        });
+      } else {
+        alert("Please fill all fields correctly.");
+      }
+    });
+  </script>
+</body>
+</html>

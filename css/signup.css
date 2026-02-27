@@ -1,0 +1,245 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(to bottom, #fde9f1 0%, #f9e5ee 100%);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: #512245;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* Card-like main container, pink background, gentle shadow */
+.container {
+  margin: 40px auto 0 auto;
+  display: flex;
+  flex-direction: row;
+  max-width: 1100px;
+  min-height: 630px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(186,104,200,0.13);
+  overflow: hidden;
+}
+
+/* Form panel styling */
+.form-panel {
+  flex: 1 1 440px;
+  padding: 46px 38px 40px 53px;
+  background: rgba(255,255,255,0.99);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: center;
+  min-width: 340px;
+  max-width: 520px;
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+}
+
+/* Responsive image panel */
+.img-panel {
+  flex: 1 1 540px;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  min-width: 340px;
+  padding: 0;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+  overflow: hidden;
+}
+
+/* Grid image: tall, fills right panel */
+.img-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 100%;
+  display: block;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+/* Headings and text */
+h2 {
+  margin-bottom: 22px;
+  color: #be138e;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 1.47rem;
+  font-family: 'Segoe UI Semibold', Arial, sans-serif;
+}
+
+/* Form elements */
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  margin-top: 24px;
+  color: #701a53;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1.3px solid #e9b1d1;
+  border-radius: 5px;
+  font-size: 15px;
+  background: #fdf0f6;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+  margin-bottom: 3px;
+  color: #701a53;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #be138e;
+  outline: none;
+}
+
+/* Validation hints */
+.hint {
+  color: #d9534f;
+  font-size: 13px;
+  min-height: 16px;
+  margin-bottom: 2px;
+}
+
+/* Submit button styling */
+button[type="submit"] {
+  margin-top: 32px;
+  background-color: #be138e;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 13px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+  letter-spacing: 0.5px;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background-color: #95126b;
+}
+
+/* Success and info messages */
+#success {
+  margin-top: 16px;
+  color: #3c763d;
+  font-weight: 600;
+  min-height: 21px;
+}
+
+/* "Sign in" link style */
+.form-panel p {
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.form-panel a {
+  color: #be138e;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* Footer styling */
+footer {
+  width: 100%;
+  background: #f9e5ee;
+  padding: 32px 0 16px 0;
+  margin-top: 40px;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-content > div {
+  flex: 1 1 220px;
+  margin-bottom: 16px;
+}
+
+.footer-content strong {
+  display: block;
+  margin-bottom: 11px;
+  color: #be138e;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  font-size: 1.07rem;
+}
+
+.footer-content p {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  color: #701a53;
+}
+
+.footer-copy {
+  max-width: 1100px;
+  margin: 0 auto;
+  font-size: 13px;
+  color: #ae8aaf;
+  text-align: center;
+  padding-top: 12px;
+}
+
+/* Responsive fixes */
+@media (max-width: 950px) {
+  .container {
+    max-width: 99vw;
+    min-width: 0;
+    min-height: unset;
+  }
+  .img-panel, .form-panel {
+    min-width: 0;
+    width: 100%;
+    flex: none;
+    border-radius: 0;
+  }
+  .img-panel img {
+    border-radius: 0;
+    max-height: 350px;
+  }
+}
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    min-width: 0;
+    min-height: unset;
+    border-radius: 0;
+    margin: 0;
+  }
+  .form-panel {
+    border-radius: 0;
+    padding: 28px 10px 30px 10px;
+    max-width: 100vw;
+  }
+  .img-panel {
+    border-radius: 0;
+    padding: 0;
+    min-height: 160px;
+    max-height: 210px;
+    align-items: flex-start;
+  }
+  .img-panel img {
+    min-height: 160px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0;
+  }
+}

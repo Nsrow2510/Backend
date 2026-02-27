@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veloura Fragrances</title>
+  <link rel="stylesheet" href="../css/fragrances_women.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+  <!-- Bridge for React integration -->
+  <script src="/bridge.js"></script>
+
+
+  <!-- 🔝 Top Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="veloura.png" alt="Veloura Logo">
+      Veloura
+    </div>
+    <div class="navbar">
+      <div class="dropdown">
+        <span class="dropdown-label">Skincare</span>
+        <div class="mega-menu">
+          <div class="mega-column">
+            <h4>Face Care</h4>
+
+            <ul>
+              <li><a href="#">Face Moisturizer</a></li>
+              <li><a href="#">Cleansers</a></li>
+              <li><a href="#">Serum</a></li>
+              <li><a href="#">Toners</a></li>
+              <li><a href="#">Sunscreens</a></li>
+              <li><a href="#">Masks</a></li>
+              
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Lip Care</h4>
+            <ul>
+              <li><a href="lipbalm.html">Lip balm</a></li>
+              <li><a href="lipscrubs.html">Lip scrub</a></li>
+              <li><a href="lipmasks.css">Lip Masks</a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Body Care</h4>
+            <ul>
+              <li><a href="#">Lotions & Creams</a></li>
+              <li><a href="#">Body Scrubs</a></li>
+              <li><a href="#">Body sunscreens</a></li>
+              <li><a href="#">Soaps & body wash </a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Eye Care</h4>
+            <ul>
+              <li><a href="#">undereye cream & serums</a></li>
+              <li><a href="#">eye masks</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Makeup Dropdown -->
+      <div class="dropdown">
+        <span class="dropdown-label">Makeup</span>
+        <div class="mega-menu">
+          <div class="mega-column">
+            <h4>Face</h4>
+            <ul>
+              <li><a href="#">Foundation</a></li>
+              <li><a href="#">Concealer</a></li>
+              <li><a href="#">Primer</a></li>
+              <li><a href="#">Highlighter</a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Eyes</h4>
+            <ul>
+              <li><a href="#">Mascara</a></li>
+              <li><a href="#">Eyeliner</a></li>
+              <li><a href="#">Eyeshadow</a></li>
+              <li><a href="kajal.html">Kajal</a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Lips</h4>
+            <ul>
+              <li><a href="#">Lipstick</a></li>
+              <li><a href="#">Lip Gloss</a></li>
+              <li><a href="#">Lip Liner</a></li>
+              <li><a href="#">Lip Tints</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fragrances Dropdown -->
+      <div class="dropdown">
+        <span class="dropdown-label">Fragrances</span>
+        <div class="mega-menu">
+          <div class="mega-column">
+            <h4>By Gender</h4>
+            <ul>
+              <!-- <li><a href="#">For Women</a></li> -->
+              <li><a href="fragrances_men.html">For Men</a></li>
+              <li><a href="fragrances_unisex.html">Unisex</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Any other links -->
+      <div class="nav-links">
+        <a href="tools.html">Tools</a>
+        <a href="#">Home</a>
+      </div>
+    </div>
+    <div class="icons">
+      <input type="text" id="page-search-input" placeholder="Search for products...">
+      <button type="submit" id="page-search-btn"><i class="fa fa-search"></i></button>
+      <div id="page-search-results"></div>
+      <a href="signin.html"><span class="icon">👤</span></a>
+      <a href="AddToCart.html">
+        <span class="icon cart">🛒<span id="cart-count">0</span></span>
+      </a>
+    </div>
+  </header>
+
+ 
+  <!-- 🏷 Page Title -->
+  <h1 class="section-title">Fragrances</h1>
+
+  <!-- By Type Selection -->
+  <div class="filter-links">
+    <a href="fragrances_women.html">All</a>
+    <a href="women_perfume.html">Perfumes</a>
+    <a href="women_mist.html">Body Mists</a>
+    <!-- <a href="#">Roll-ons</a> -->
+    <!-- <a href="#">Deodrants</a> -->
+  </div>
+
+  <!-- 🛍 Product Grid -->
+
+  <div class="product-grid">
+
+    <div class="product-card">
+      <a href="wishcare_rollOn.html"><img src="Wishcare_rollOn.webp" alt="Lip Balm"></a>
+      <div class="badge">Best Seller</div>
+      <p class="title">Wishcare Aqua Fresh Under Arm Roll On Serum 5% AHA & 3% Kojic Acid - Treats Pigmentation & Odour (50ml)</p>
+      <p class="price">₹299 <del>₹399 </del> <span class="green">25% off</span></p>
+      <div class="rating"><span>4.3 ★</span> (9660)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <a href="dove_deodrant.html"><img src="Dove_eventone_deodrant.jpg" alt="Lip Balm"></a>
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Dove Eventone Deodorant Long-Lasting Body Spray for Women (150ml)</p>
+      <p class="price">₹231 <del>₹289 </del> <span class="green">20% off</span></p>
+      <div class="rating"><span>4 ★</span> (1365)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <a href="beBodywise_rollOn.html"><img src="BeBodywise_rollOn.avif" alt="Lip Balm"></a>
+      <div class="badge">Best Seller</div>
+      <p class="title">Be Bodywise 4% AHA BHA Underarm Roll On - Treats Pigmentation & Odour - Lactic Acid & Salicylic Acid (50ml)</p>
+      <p class="price">₹349 <del> </del> <span class="green"></span></p>
+      <div class="rating"><span>4.5 ★</span> (29433)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <a href="chemistAtPlay_rollOn.html"><img src="ChemistAtPlay_RollOn.avif" alt="Lip Balm"></a>
+      <div class="badge">Best Seller</div>
+      <p class="title">Chemist at Play 5% AHA Underarm Roll On, Lactic Acid Deodrants for Men & Women - Aqua Fragrance (40ml)</p>
+      <p class="price">₹319 <del>₹399 </del> <span class="green">20% off</span></p>
+      <div class="rating"><span>4.5 ★</span> (24238)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="Nivea_pearl&beauty_rollOn.webp" alt="Lip Balm">
+      <div class="badge">Best Seller</div>
+      <p class="title">NIVEA Pearl & Beauty Radiance Deo Roll On For Women- 72H Odor Protection- 0% Alcohol (25ml)</p>
+      <p class="price">₹88 <del>₹125 </del> <span class="green">30% off</span></p>
+      <div class="rating"><span>4.5 ★</span> (7121)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="Carmesi_floralSunset_rollOn.jpg" alt="Lip Balm">
+      <div class="badge">Best Seller</div>
+      <p class="title">Carmesi Natural Underarms Roll On Deodorant For Women - Floral Sunset, No Alcohol Or Aluminium (50ml) </p>
+      <p class="price">₹169 <del>₹249 </del> <span class="green">20% off</span></p>
+      <div class="rating"><span>4.3 ★</span> (7363)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="Plum_Vanilla_RollOn.avif" alt="Lip Balm">
+      <div class="badge">Best Seller</div>
+      <p class="title">Plum BodyLovin' Vanilla Vibes Deodorant Roll-On Controls Underarm Odor (50ml)</p>
+      <p class="price">₹325 <del>₹270 </del> <span class="green">20% off</span></p>
+      <div class="rating"><span>4.3 ★</span> (4601)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="Nivea_FreshNatural_rollNo.avif" alt="Lip Balm">
+      <div class="badge">Best Seller</div>
+      <p class="title">NIVEA Fresh Natural Anti Roll-On Deodorant 72H Protection & Long Lasting (50ml)</p>
+      <p class="price">₹137 <del>₹249 </del> <span class="green">45% off</span></p>
+      <div class="rating"><span>4.6 ★</span> (4581)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="Dove_Eventone_rollOn.webp" alt="Lip Balm">
+      <div class="badge">Best Seller</div>
+      <p class="title">Dove Eventone Deodorant Roll on for Women (50ml)</p>
+      <p class="price">₹155 <del>₹259 </del> <span class="green">40% off</span></p>
+      <div class="rating"><span>4.3 ★</span> (3880)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="Dove_original_rollOn.png" alt="Lip Balm">
+      <div class="badge">Best Seller</div>
+      <p class="title">Dove Original Deodorant Roll on Moisturising cream (50ml) (50ml)</p>
+      <p class="price">₹259 <del>₹168 </del> <span class="green">20% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (1426)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="plum_HawaiinRumba_rollOn.avif" alt="Lip Balm">
+      <div class="badge">Best Seller</div>
+      <p class="title">Plum BodyLovin' Hawaiian Rumba Deodorant Roll-On Controls Underarm Odor (50ml)</p>
+      <p class="price">₹270 <del>₹325 </del> <span class="green">17% off</span></p>
+      <div class="rating"><span>4.3 ★</span> (2558)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="Dove_original_rollOn.png" alt="Lip Balm">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Dove Original Deodorant Roll on Moisturising cream (50ml) (50ml)</p>
+      <p class="price">₹259 <del>₹168 </del> <span class="green">20% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (1426)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="Dove_Original_deodrant.webp" alt="Lip Balm">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Dove Original Deodorant Long-Lasting Body Spray Moisturising Cream For Women (150ml)</p>
+      <p class="price">₹217 <del>₹289 </del> <span class="green">25% off</span></p>
+      <div class="rating"><span>4.5 ★</span> (1401)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="EarthRhythm_DeodrantStick.avif" alt="Lip Balm">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Earth Rhythm Brightening & Exfoliating Deodorant Stick - Brightening Deo (30 g)</p>
+      <p class="price">₹374 <del>₹499 </del> <span class="green">25% off</span></p>
+      <div class="rating"><span>4.1 ★</span> (485)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="Yardley_englishRose_rollOn.jpg" alt="Lip Balm">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Yardley English Rose Deodorant Roll-on (50ml)</p>
+      <p class="price">₹177 <del>₹249 </del> <span class="green">29% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (712)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="Yardley_EnglishBlossom_rollOn.jpg" alt="Lip Balm">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Yardley London English Blossom Deodorant Roll-On Anti-Perspirant (50ml)</p>
+      <p class="price">₹177 <del>₹249 </del> <span class="green">29% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (987)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="Yardley_RoyalBouquet_RollOn.jpg" alt="Lip Balm">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Yardley London Royal Bouquet Roll-On Deodorant for Women (50ml)</p>
+      <p class="price">₹177 <del>₹249 </del> <span class="green">29% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (731)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="Yardley_EnglishBlossom_rollOn.jpg" alt="Lip Balm">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Yardley London English Blossom Deodorant Roll-On Anti-Perspirant (50ml)</p>
+      <p class="price">₹177 <del>₹249 </del> <span class="green">29% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (987 )</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+</div>
+
+<!-- footer -->
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>Veloura Beauty</h3>
+      <p>Your trusted destination for luxury beauty products and tips. Bringing confidence and glow to your life.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="ABOUTus.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email: support@veloura.com</p>
+      <p>Phone: ‪+91 234 567 8901‬</p>
+      
+  <div class="footer-bottom">
+    <p>© 2025 Veloura Beauty. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Add to cart javascript -->
+<script>
+  const CART_API_URL = "http://localhost:3000/cart";
+
+  // Function to update cart count badge
+  function updateCartCount() {
+    fetch(CART_API_URL)
+      .then(res => res.json())
+      .then(items => {
+        let count = 0;
+        items.forEach(item => { count += item.qty; });
+        const countSpan = document.getElementById("cart-count");
+        if (countSpan) countSpan.innerText = count;
+      })
+      .catch(() => {
+        const countSpan = document.getElementById("cart-count");
+        if (countSpan) countSpan.innerText = 0;
+    });
+  }
+
+  // Attach event listeners after DOM loads
+  document.addEventListener("DOMContentLoaded", () => {
+    // Update cart count on page load
+    updateCartCount();
+
+    document.querySelectorAll('.product-card .cart-btn').forEach(button => {
+      button.addEventListener('click', async () => {
+        const card = button.closest('.product-card');
+        const title = card.querySelector('.title').innerText.trim();
+        const priceText = card.querySelector('.price').innerText.trim();
+        const price = parseInt(priceText.replace(/[₹,]/g, '').split(' ')[0]);
+        const image = card.querySelector('img').src;
+
+        const product = { title, price, qty: 1, image };
+
+        // Check if the product is already in the cart
+        const existing = await fetch(`${CART_API_URL}?title=${encodeURIComponent(title)}`)
+          .then(res => res.json())
+          .catch(() => []);
+
+        if (existing.length > 0) {
+          // If product exists, update quantity
+          const existingItem = existing[0];
+          fetch(`${CART_API_URL}/${existingItem.id}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ qty: existingItem.qty + 1 })
+          })
+            .then(() => {
+              alert(`Quantity increased for ${title}!`);
+              updateCartCount(); // Update cart count
+            })
+            .catch(() => alert('Error updating quantity.'));
+        } else {
+          // Add as a new product
+          fetch(CART_API_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(product)
+          })
+            .then(() => {
+              alert(`${title} added to cart!`);
+              updateCartCount(); // Update cart count
+            })
+            .catch(() => alert('Error adding product.'));
+          }
+        });
+      });
+    });
+  </script>
+  
+  <script src="../javascript/userAccount.js"></script>
+  <script src="../javascript/search.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LANEIGE LIPBALM | Veloura</title>
+   <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="../css/MACfoundationdetail.css" />
+</head>
+<body>
+  <!-- Bridge for React integration -->
+  <script src="/bridge.js"></script>
+
+
+  <!-- Navbar -->
+ <header class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="Veloura Logo" class="logo-img">
+  <span>Veloura</span></div>
+<div class="navbar">
+  <div class="dropdown">
+    <span class="dropdown-label">Skincare</span>
+    <div class="mega-menu">
+      <div class="mega-column">
+             <h4>Face Care</h4>
+        <ul>
+          <li><a href="facemositurizer.html">Face Moisturizer</a></li>
+          <li><a href="cleansers.html">Cleansers</a></li>
+          <li><a href="serum.html">Serum</a></li>
+          <li><a href="toner.html">Toners</a></li>
+          <li><a href="sunscreen.html">Sunscreens</a></li>
+          <li><a href="mask.html">Masks</a></li>
+          
+        </ul>
+      </div>
+      <div class="mega-column">
+        <h4>Lip Care</h4>
+        <ul>
+          <li><a href="lipbalm.html">Lip balm</a></li>
+          <li><a href="lipscrubs.html">Lip scrub</a></li>
+          <li><a href="lipmasks.css">Lip Masks</a></li>
+        </ul>
+      </div>
+      <div class="mega-column">
+        <h4>Body Care</h4>
+        <ul>
+          <li><a href="#">Lotions & Creams</a></li>
+          <li><a href="#">Body Scrubs</a></li>
+          <li><a href="#">Body sunscreens</a></li>
+          <li><a href="#">Soaps & body wash </a></li>
+        </ul>
+      </div>
+      <div class="mega-column">
+        <h4>Eye Care</h4>
+        <ul>
+          <li><a href="#">undereye cream & serums</a></li>
+          <li><a href="#">eye masks</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Makeup Dropdown -->
+  <div class="dropdown">
+    <span class="dropdown-label">Makeup</span>
+    <div class="mega-menu">
+      <div class="mega-column">
+        <h4>Face</h4>
+        <ul>
+          <li><a href="foundation.html">Foundation</a></li>
+          <li><a href="concealer.html">Concealer</a></li>
+          <li><a href="primer.html">Primer</a></li>
+          <li><a href="highlighter.html">Highlighter</a></li>
+        </ul>
+      </div>
+      <div class="mega-column">
+        <h4>Eyes</h4>
+        <ul>
+          <li><a href="mascara.html">Mascara</a></li>
+          <li><a href="eyeliner.html">Eyeliner</a></li>
+          <li><a href="eyeshadow.html">Eyeshadow</a></li>
+          <li><a href="kajal.html">Kajal</a></li>
+        </ul>
+      </div>
+      <div class="mega-column">
+        <h4>Lips</h4>
+        <ul>
+          <li><a href="lipstick.html">Lipstick</a></li>
+          <li><a href="lipgloss.html">Lip Gloss</a></li>
+          <li><a href="lipliner.html">Lip Liner</a></li>
+          <li><a href="liptints.html">Lip Tints</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fragrances Dropdown -->
+  <div class="dropdown">
+    <span class="dropdown-label">Fragrances</span>
+    <div class="mega-menu">
+      <div class="mega-column">
+        <h4>By Type</h4>
+        <ul>
+          <li><a href="#">Perfume</a></li>
+          <li><a href="#">Body Mists</a></li>
+          <li><a href="#">Roll-ons</a></li>
+        </ul>
+      </div>
+      <div class="mega-column">
+                <h4>By Gender</h4>
+        <ul>
+          <li><a href="fragrances_women.html">For Women</a></li>
+          <li><a href="fragrances_men.html">For Men</a></li>
+          <li><a href="fragrances_unisex.html">Unisex</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Any other links -->
+  <div class="nav-links">
+    <a href="tools.html">Tools</a>
+  </div>
+</div>
+    <div class="icons">
+            <!-- search form so Enter works -->
+  <form id="search-form" onsubmit="handleSearchSubmit(event)" style="display:inline;">
+    <input id="search-input" type="text" placeholder="Search for products or pages..." />
+  </form>
+      <!-- <input type="text" placeholder="Search for products..." /> -->
+      <a href="login.html"><span class="icon">👤</span></a>
+      <a href="cart.html"><span class="icon cart">🛒<span class="badge">0</span></span></a>
+    </div>
+    
+  </header>
+      <!-- Breadcrumb -->
+<nav class="breadcrumb">
+    <a href="home.html">Home</a> ›
+    <a href="serum.html">Skincare</a> ›
+    <a href="#">Lips</a> ›
+    <span>Lipbalm</span>
+</nav>
+
+ <!-- Product Section -->
+  <div class="product-container">
+    <!-- Left Gallery -->
+    <div class="image-gallery">
+      <div class="thumbnails">
+        <img src="langeielipbalm.jpg" class="active" onclick="changeImage(this)">
+        <img src="laneige2.webp" onclick="changeImage(this)">
+        <img src="laneige3.jpeg" onclick="changeImage(this)">
+        <img src="laneige4.jpeg" onclick="changeImage(this)">
+      </div>
+      <div class="main-image">
+        <img src="langeielipbalm.jpg" id="mainProductImage">
+      </div>
+    </div>
+
+    <!-- Right Info -->
+    <div class="product-info">
+      <h1>LANEIGE Lip Glowy Balm Fruits Rouges (10g) </h1>
+      <div class="rating">⭐ 5/5 (21817 ratings)</div>
+      <p class="price">₹750<del>₹638 </del> <span class="green">15% off</span></p>
+      <!-- <div class="offer">🔥 Limited Offer: Buy 1, Get 5% Extra Off</div> -->
+
+      <!-- available shades -->
+       <div class="shades">
+  <p><strong>Available Shades:</strong></p>
+  <span class="shade-box active" style="background: #D64876;" title="berry"
+        data-image="langeielipbalm.jpg" data-shade="berry"></span>
+         <span class="shade-box " style="background: #F5A3C7;" title="gummy bear"
+        data-image="laneigegummybear.webp" data-shade="gummy bear"></span>
+  <span class="shade-box" style="background: #F8C1D9;" title="Sweet Candy"
+        data-image="laneigesweetcandy.webp" data-shade="Sweet Candy"></span>
+  <span class="shade-box" style="background:#E8D5B7;" title="Vanilla"
+        data-image="laneigevanilla.jpg" data-shade="Vanilla"></span>
+  <span class="shade-box" style="background:#C7A8D4;" title="Blueberry"
+        data-image="laneigeblueberry.webp" data-shade="Blueberry"></span>
+        <span class="shade-box" style="background: #F7E89F;" title="mango"
+        data-image="laneigemango.jpg" data-shade="mango"></span>
+        
+</div>
+
+
+
+
+
+      <div class="btns">
+        <!-- <button class="cart-btn">Add to Cart</button> -->
+         <button class="cart-btn" onclick='addToCart("forever52")'>Add to Cart</button>
+
+
+        <button class="buy-btn">Buy Now</button>
+      </div>
+
+    </div>
+  </div>
+<!-- Tabs -->
+<div class="tabs">
+  <div class="tab-buttons">
+    <button class="active" onclick="showTab('desc')">Description</button>
+    <button onclick="showTab('ing')">Ingredients</button>
+    <button onclick="showTab('use')">How to Use</button>
+  </div>
+  <div class="tab-content" id="desc">
+      Laneige Lip Glowy Balm is a lightweight, non-sticky moisturizing balm designed to leave lips feeling soft, hydrated, and instantly supple.  
+      Infused with nourishing shea and murumuru butters as well as fruit extracts, this balm provides long-lasting moisture, a subtle healthy-looking sheen, and helps protect lips from environmental stress.  
+      Ideal for daily use, it smooths flakiness and creates the perfect base for any lipstick or gloss.
+  </div>
+  <div class="tab-content" id="ing" style="display:none;">
+      Key Ingredients:<br><br>
+      • Shea Butter – Richly nourishes and restores moisture to dry lips.<br>
+      • Murumuru Butter – Softens, smooths, and conditions lips.<br>
+      • Coconut Oil – Deeply hydrates and prevents moisture loss.<br>
+      • Fruit Extracts (Berry, Grapefruit, Pear, Peach) – Provide a subtle tint, boost hydration, and leave lips fresh.<br>
+      • Vitamin C – Protects lips from external damage and helps maintain smoothness.<br>
+      • Beeswax – Locks in moisture for a long-lasting soft effect.
+  </div>
+  <div class="tab-content" id="use" style="display:none;">
+      Step 1: Squeeze a small amount of balm from the tube.<br>
+      Step 2: Apply generously over the lips.<br>
+      Step 3: Reapply as needed for lasting moisture and shine.<br>
+      Tip: Use alone for a natural glossy look or under lipstick as a hydrating primer.
+  </div>
+</div>
+
+<!-- Reviews -->
+<div class="reviews">
+  <h3>Customer Reviews</h3>
+  <div class="review"><strong>Sanjana ⭐⭐⭐⭐⭐</strong><p>The best lip balm for dry lips! So glossy and makes my lips super soft all day.</p></div>
+  <div class="review"><strong>Mitali ⭐⭐⭐⭐</strong><p>Loved the berry scent and subtle tint! Not sticky at all and keeps my lips hydrated.</p></div>
+  <div class="review"><strong>Kiara ⭐⭐⭐⭐⭐</strong><p>Lightweight and perfect for daily use. I even use it as a glossy topcoat over matte lipstick.</p></div>
+  <div class="review"><strong>Parul ⭐⭐⭐⭐</strong><p>My lips never get chapped with this balm. Amazing texture and shine!</p></div>
+  <div class="review"><strong>Ira ⭐⭐⭐⭐⭐</strong><p>Feels luxurious and lasts longer than most. Must-have for everyone.</p></div>
+  <div class="review"><strong>Anushka ⭐⭐⭐⭐</strong><p>Yummy fruity scent and makes my lips so smooth. Love it for winter!</p></div>
+  <div class="review"><strong>Jiya ⭐⭐⭐⭐</strong><p>Glossy finish without being heavy. Great base for my regular lipsticks.</p></div>
+  <div class="review"><strong>Charvi ⭐⭐⭐⭐⭐</strong><p>Delivers moisture and shine. Laneige never disappoints!</p></div>
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>Veloura Beauty</h3>
+      <p>Your trusted destination for luxury beauty products and tips. Bringing confidence and glow to your life.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="ABOUTus.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email: support@veloura.com</p>
+      <p>Phone: +91 234 567 8901</p>
+      
+  <div class="footer-bottom">
+    <p>© 2025 Veloura Beauty. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="foundation_1.js"></script>
+</body>
+</html>

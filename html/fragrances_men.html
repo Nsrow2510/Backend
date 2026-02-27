@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veloura Fragrances</title>
+  <link rel="stylesheet" href="../css/fragrances_women.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- Bridge for React integration -->
+  <script src="/bridge.js"></script>
+
+
+  <!-- 🔝 Top Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="../images/logo.png" alt="Veloura Logo">
+      Veloura
+    </div>
+    <div class="navbar">
+      <div class="dropdown">
+        <span class="dropdown-label">Skincare</span>
+        <div class="mega-menu">
+          <div class="mega-column">
+            <h4>Face Care</h4>
+
+            <ul>
+              <li><a href="#">Face Moisturizer</a></li>
+              <li><a href="#">Cleansers</a></li>
+              <li><a href="#">Serum</a></li>
+              <li><a href="#">Toners</a></li>
+              <li><a href="#">Sunscreens</a></li>
+              <li><a href="#">Masks</a></li>
+              
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Lip Care</h4>
+            <ul>
+              <li><a href="lipbalm.html">Lip balm</a></li>
+              <li><a href="lipscrubs.html">Lip scrub</a></li>
+              <li><a href="lipmasks.css">Lip Masks</a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Body Care</h4>
+            <ul>
+              <li><a href="#">Lotions & Creams</a></li>
+              <li><a href="#">Body Scrubs</a></li>
+              <li><a href="#">Body sunscreens</a></li>
+              <li><a href="#">Soaps & body wash </a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Eye Care</h4>
+            <ul>
+              <li><a href="#">undereye cream & serums</a></li>
+              <li><a href="#">eye masks</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Makeup Dropdown -->
+      <div class="dropdown">
+        <span class="dropdown-label">Makeup</span>
+        <div class="mega-menu">
+          <div class="mega-column">
+            <h4>Face</h4>
+            <ul>
+              <li><a href="#">Foundation</a></li>
+              <li><a href="#">Concealer</a></li>
+              <li><a href="#">Primer</a></li>
+              <li><a href="#">Highlighter</a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Eyes</h4>
+            <ul>
+              <li><a href="#">Mascara</a></li>
+              <li><a href="#">Eyeliner</a></li>
+              <li><a href="#">Eyeshadow</a></li>
+              <li><a href="kajal.html">Kajal</a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Lips</h4>
+            <ul>
+              <li><a href="#">Lipstick</a></li>
+              <li><a href="#">Lip Gloss</a></li>
+              <li><a href="#">Lip Liner</a></li>
+              <li><a href="#">Lip Tints</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fragrances Dropdown -->
+      <div class="dropdown">
+        <span class="dropdown-label">Fragrances</span>
+        <div class="mega-menu">
+          <div class="mega-column">
+            <h4>By Gender</h4>
+            <ul>
+              <li><a href="fragrances_women.html">For Women</a></li>
+              <!-- <li><a href="#">For Men</a></li> -->
+              <li><a href="fragrances_unisex.html">Unisex</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Any other links -->
+      <div class="nav-links">
+        <a href="tools.html">Tools</a>
+        <a href="#">Home</a>
+      </div>
+    </div>
+    <div class="icons">
+      <input type="text" id="page-search-input" placeholder="Search for products...">
+      <button type="submit" id="page-search-btn"><i class="fa fa-search"></i></button>
+      <div id="page-search-results"></div>
+      <a href="signin.html"><span class="icon">👤</span></a>
+      <a href="AddToCart.html">
+        <span class="icon cart">🛒<span id="cart-count">0</span></span>
+      </a>
+    </div>
+  </header>
+
+ 
+  <!-- 🏷 Page Title -->
+  <h1 class="section-title">Fragrances</h1>
+
+  <!-- 🛍 Product Grid -->
+
+  <div class="product-grid">
+    <div class="product-card">
+      <a href="jaguar_toilette.html"><img src="jaguar_classBlack_toilette.jpg" alt="plum perfume"></a>
+      <div class="badge">Best Seller</div>
+      <p class="title">Jaguar Classic Black Eau De Toilette (100ml)</p>
+      <p class="price">₹2870 <del>₹4100</del> <span class="green">30% off</span></p>
+      <div class="rating"><span>4.3 ★</span> (2643)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+    
+    <div class="product-card">
+      <a href="dior_perfume.html"><img src="dior_sauvage_perfume.jpg" alt="engage perfume"></a>
+      <div class="badge">Best Seller</div>
+      <p class="title">DIOR Sauvage Eau De Parfum (100ml)</p>
+      <p class="price">₹14200</p>
+      <div class="rating"><span>4.5 ★</span> (970)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <a href="jeanPaul_perfume.html"><img src="jeanPaul_Gaultier_perfume.jpg" alt="wottagirl body mist"></a>
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Jean Paul Gaultier Le Male Le Parfum Eau de Parfum Intense (75ml)</p>
+      <p class="price">₹7330</p>
+      <div class="rating"><span>4.5 ★</span> (505)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <a href="clinique_cologne.html"><img src="clinique_happy_cologne_spray.webp" alt="bellavita perfume"></a>
+      <div class="badge">Best Seller</div>
+      <p class="title">Clinique Happy For Men Cologne Spray (100ml)</p>
+      <p class="price">₹3780 <del>₹9450</del> <span class="green">60% off</span></p>
+      <div class="rating"><span>4.3 ★</span> (593)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="jaguar_classic_blue_toilette.webp" alt="plum body mist">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Jaguar Classic Blue Eau De Toilette For Him (100ml)</p>
+      <p class="price">₹2870 <del>₹4100</del> <span class="green">30% off</span></p>
+      <div class="rating"><span>4.2 ★</span> (545)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+<!-- lipstick -->
+    <div class="product-card">
+      <img src="bellavita_perfume_gitSet.webp" alt="victoria's secret body mist">
+      <div class="badge">Best Seller</div>
+      <p class="title">Bella Vita Luxury Perfumes Gift Set For Men (80ml)</p>
+      <p class="price">₹549 <del>₹849</del> <span class="green">35% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (9926)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="tomFord_ombre_leather_perfume.jpg" alt="ysl perfume">
+      <div class="badge">Best Seller</div>
+      <p class="title">Tom Ford Ombre Leather (10ml)</p>
+      <p class="price">₹3400</p>
+      <div class="rating"><span>4.6 ★</span> (954)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="davidoff_coolWater_perfume.avif" alt="bellavita perfume">
+      <div class="badge">Best Seller</div>
+      <p class="title">Davidoff Cool Water Parfum Man Eau de Parfum 100ml (100ml)</p>
+      <p class="price">₹6200</p>
+      <div class="rating"><span>4.4 ★</span> (139)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="davidoff_coolWater_toilette.webp" alt="aqualogica perfume">
+      <div class="badge">Best Seller</div>
+      <p class="title"> Davidoff Cool Water Eau de Toilette for Men (125ml)</p>
+      <p class="price">₹5900</p>
+      <div class="rating"><span>4.4 ★</span> (793)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="jeanPaul_gaultier_elixir_perfume.webp" alt="bath&body works body mist">
+      <div class="badge">Best Seller</div>
+      <p class="title">Jean Paul Gaultier Le Male Elixir Parfum (125ml)</p>
+      <p class="price">₹10810></p>
+      <div class="rating"><span>4.4 ★</span> (120)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="pacoRabanne_1million_elixir_perfume.webp" alt="bath&body works body mist">
+      <div class="badge">Best Seller</div>
+      <p class="title">Paco Rabanne 1 Million Elixir Parfum Intense (100ml)</p>
+      <p class="price">₹10650</p>
+      <div class="rating"><span>4.6 ★</span> (116)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="dior_sauvage_toilette.jpg" alt="burberry perfume">
+      <div class="badge">Best Seller</div>
+      <p class="title">DIOR Sauvage Eau De Toilette (100ml)</p>
+      <p class="price">₹12400</p>
+      <div class="rating"><span>4.5 ★</span> (1200)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="ysl_myself_perfume.jpg" alt="victoria's secret body mist">
+      <div class="badge">Best Seller</div>
+      <p class="title">Yves Saint Laurent MYSLF Eau De Parfum (100ml)</p>
+      <p class="price">₹11000</p>
+      <div class="rating"><span>4.2 ★</span> (3455)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="skinnByTitan_raw_perfume.webp" alt="bath&body works body mist">
+      <div class="badge">Best Seller</div>
+      <p class="title">Skinn By Titan Raw Perfume For Men EDP (20 ml)</p>
+      <p class="price">₹591 <del>₹695</del> <span class="green">15% off</span></p>
+      <div class="rating"><span>4.5 ★</span> (113)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="giorgioArmani_acuaDiGio_toilette.webp" alt="renee perfume">
+      <div class="badge">Best Seller</div>
+      <p class="title">Giorgio Armani Acqua di Gio Eau de Toilette for Him - A Fresh and Relaxed Men's Fragrance (100ml)</p>
+      <p class="price">₹6970 <del>₹8200</del> <span class="green">15% off</span></p>
+      <div class="rating"><span>4.2 ★</span> (12260)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="ysl_intense_perfume.webp" alt="bathh&body works body mist">
+      <div class="badge">Best Seller</div>
+      <p class="title">Yves Saint Lauren Y Eau De Parfum (100ml)</p>
+      <p class="price">₹10000</p>
+      <div class="rating"><span>4.5 ★</span> (31)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="bellavita_ceo_perfume.jpg" alt="aqualogica bosy mist">
+      <div class="badge">Best Seller</div>
+      <p class="title">Bella Vita Ceo Eau De Perfume for Man (100ml)</p>
+      <p class="price">₹499 <del>₹899 </del> <span class="green">44% off</span></p>
+      <div class="rating"><span>4 ★</span> (513)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="bvlgari_manInBlack_perfume.jpg" alt="plum perfume">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">BVLGARI Man In Black Eau De Parfum (60ml)</p>
+      <p class="price">₹9000</p>
+      <div class="rating"><span>4.4 ★</span> (11712)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="calvinKlein_ckBE_toilette.jpg" alt="victoria's secret body mist">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Calvin Klein CK Be for Men Eau De Toilette (200ml)</p>
+      <p class="price">₹5950</p>
+      <div class="rating"><span>3.3 ★</span> (6)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="valentino_bornInRomeUomo_perfume.webp" alt="bellavita perfume">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Valentino Born In Roma Uomo Eau De Parfum Intense</p>
+      <p class="price">₹10000</p>
+      <div class="rating"><span>4.4 ★</span> (2514)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="tomFord_samplerSet_perfume.avif" alt="bellavita perfume">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Tom Ford Fragrance Sampler Set (8.5ml)</p>
+      <p class="price">₹3300</p>
+      <div class="rating"><span>4.4 ★</span> (1999)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="bellavita_organicVanilla_perfume.avif" alt="embark perfume">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Bella Vita Organic Gourmet Collection Vanilla Eau de Parfum (100ml)</p>
+      <p class="price">₹599 <del>₹799 </del> <span class="green">21% off</span></p>
+      <div class="rating"><span>4.7 ★</span> (10)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="tomFord_blackOrchid_perfume.webp" alt="carlton perfume">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Tom Ford Black Orchid (10ml)</p>
+      <p class="price">₹3200</p>
+      <div class="rating"><span>4.1 ★</span> (2720)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="hermes_terre_d'hermes_toilette.jpg" alt="renee perfume">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Hermès Terre d'Hermès, Eau de Toilette (100ml)</p>
+      <p class="price">₹11000</p>
+      <div class="rating"><span>4.2 ★</span> (2244)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="replica_maison_margiela_toilette.webp" alt="bath&bosy works body mist">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Maison Margiela Replica Jazz Club Eau De Toilette (100ml)</p>
+      <p class="price">₹11200</p>
+      <div class="rating"><span>4.6 ★</span> (22)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="dior_homme_perfume.webp" alt="plum perfume">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">DIOR Homme Intense Eau De Parfum Intense (100ml)</p>
+      <p class="price">₹14200</p>
+      <div class="rating"><span>4.2 ★</span> (11)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="hugoBoss_toilette.jpeg" alt="wishcare roll on">
+      <div class="badge">Best Seller</div>
+      <p class="title">HUGO Man Eau de Toilette (125ml)</p>
+      <p class="price">₹5550</p>
+      <div class="rating"><span>4.3 ★</span> (9660)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="titan_skinn_vergeAndRaw_giftSet.jpg" alt="dove deodrant">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Skinn By Titan Raw and Verge Perfume Giftset 25ml each - Gift for Him (50ml)</p>
+      <p class="price">₹1995</p>
+      <div class="rating"><span>4 ★</span> (1365)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+</div>
+
+<!-- footer -->
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>Veloura Beauty</h3>
+      <p>Your trusted destination for luxury beauty products and tips. Bringing confidence and glow to your life.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="ABOUTus.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email: support@veloura.com</p>
+      <p>Phone: ‪+91 234 567 8901‬</p>
+      
+  <div class="footer-bottom">
+    <p>© 2025 Veloura Beauty. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Add to cart javascript -->
+<script>
+  const CART_API_URL = "http://localhost:3000/cart";
+
+  // Function to update cart count badge
+  function updateCartCount() {
+    fetch(CART_API_URL)
+      .then(res => res.json())
+      .then(items => {
+        let count = 0;
+        items.forEach(item => { count += item.qty; });
+        const countSpan = document.getElementById("cart-count");
+        if (countSpan) countSpan.innerText = count;
+      })
+      .catch(() => {
+        const countSpan = document.getElementById("cart-count");
+        if (countSpan) countSpan.innerText = 0;
+    });
+  }
+
+  // Attach event listeners after DOM loads
+  document.addEventListener("DOMContentLoaded", () => {
+    // Update cart count on page load
+    updateCartCount();
+
+    document.querySelectorAll('.product-card .cart-btn').forEach(button => {
+      button.addEventListener('click', async () => {
+        const card = button.closest('.product-card');
+        const title = card.querySelector('.title').innerText.trim();
+        const priceText = card.querySelector('.price').innerText.trim();
+        const price = parseInt(priceText.replace(/[₹,]/g, '').split(' ')[0]);
+        const image = card.querySelector('img').src;
+
+        const product = { title, price, qty: 1, image };
+
+        // Check if the product is already in the cart
+        const existing = await fetch(`${CART_API_URL}?title=${encodeURIComponent(title)}`)
+          .then(res => res.json())
+          .catch(() => []);
+
+        if (existing.length > 0) {
+          // If product exists, update quantity
+          const existingItem = existing[0];
+          fetch(`${CART_API_URL}/${existingItem.id}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ qty: existingItem.qty + 1 })
+          })
+            .then(() => {
+              alert(`Quantity increased for ${title}!`);
+              updateCartCount(); // Update cart count
+            })
+            .catch(() => alert('Error updating quantity.'));
+        } else {
+          // Add as a new product
+          fetch(CART_API_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(product)
+          })
+            .then(() => {
+              alert(`${title} added to cart!`);
+              updateCartCount(); // Update cart count
+            })
+            .catch(() => alert('Error adding product.'));
+          }
+        });
+      });
+    });
+  </script>
+
+  <script src="../javascript/userAccount.js"></script>
+
+<script src="../javascript/search.js"></script>
+
+</body>
+</html>

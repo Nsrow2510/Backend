@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Veloura | Sign In</title>
+  <meta name="description" content="Veloura Beauty — sign in to your account" />
+  <link rel="stylesheet" href="../css/login.css">
+  <link rel="icon" type="image/png" href="logo.png">
+  <!-- Load Google Identity Services -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <!-- Bridge for React integration -->
+  <script src="/bridge.js"></script>
+
+
+  <main class="auth-wrap">
+
+    <!-- LEFT: hero / brand -->
+    <section class="auth-hero" aria-hidden="false">
+      <div class="brand">
+        <img src="logo_1.jpg" alt="Veloura logo" class="brand-logo">
+        <h1>Veloura</h1>
+      </div>
+
+      <h2 class="hero-title">Welcome back — Glow up with Veloura</h2>
+      <p class="hero-sub">Sign in to access your wishlist, track orders, and get personalised product picks. Secure, fast and designed for beauty lovers.</p>
+
+      <div class="hero-art" role="img" aria-label="beautiful cosmetics display">
+        <img src="https://i.pinimg.com/736x/ad/97/8e/ad978e4dd0d1fd93b595836a0a7c1cfd.jpg" alt="Lip gloss display" />
+      </div>
+
+      <p class="small">Tip: Use "Sign in with Google" for a faster experience. New here? <a href="signup.html" class="signup">Create an account</a></p>
+    </section>
+
+    <!-- RIGHT: sign-in card -->
+    <aside class="auth-card" aria-labelledby="signin-heading">
+      <h2 id="signin-heading">Sign in to your account</h2>
+      <p class="lead">Enter your registered email and password to continue.</p>
+
+      <form id="signin-form" novalidate>
+        <!-- Email -->
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@domain.com" required autocomplete="email">
+          <div id="email-msg" class="msg" aria-live="polite">Please enter a valid email address.</div>
+        </div>
+
+        <!-- Password -->
+        <div class="form-row">
+          <label for="password">Password</label>
+          <div class="pwd-wrap">
+            <input id="password" name="password" type="password" placeholder="Enter your password" required minlength="6" autocomplete="current-password">
+            <button type="button" id="togglePwd" aria-label="Show password" title="Show password" class="pwd-toggle">Show</button>
+          </div>
+          <div id="pwd-msg" class="msg" aria-live="polite">Password must be 6+ characters.</div>
+        </div>
+
+        <!-- Remember / Forgot -->
+        <div class="actions">
+          <label class="checkbox"><input id="remember" type="checkbox"> Remember me</label>
+          <a class="forgot" href="forgot-password.html">Forgot?</a>
+        </div>
+
+        <!-- Sign-in buttons -->
+        <div class="cta-row">
+          <button class="btn" id="signinBtn" type="submit">Sign in</button>
+          <button class="btn secondary" type="button" id="guestBtn">Continue as Guest</button>
+        </div>
+
+        <div id="global-msg" class="msg global" role="status" aria-live="polite"></div>
+
+        <div class="divider" aria-hidden="true">or continue with</div>
+
+        <!-- Social Sign-in -->
+        <div class="socials" role="group" aria-label="social sign in">
+
+          <!-- ✅ Google Sign-in -->
+          <button type="button" id="googleCustomBtn" class="social">
+            <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google logo" class="icon">
+            <span>Continue with Google</span>
+          </button>
+
+          <button type="button" id="appleBtn" class="social">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple logo" class="icon">
+            <span>Continue with Apple</span>
+          </button>
+
+          <button type="button" id="fbBtn" class="social">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook logo" class="icon">
+            <span>Continue with Facebook</span>
+          </button>
+        </div>
+
+        <p class="small">Don't have an account? <a href="signUp.html" class="signup">Sign up</a></p>
+      </form>
+    </aside>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Veloura Beauty</h3>
+        <p>Your trusted destination for luxury beauty products and tips. Bringing confidence and glow to your life.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="ABOUTus.html">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Email: support@veloura.com</p>
+        <p>Phone: +91 234 567 8901</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>©️ 2025 Veloura Beauty. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../javascript/login.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veloura Fragrances</title>
+  <link rel="stylesheet" href="../css/fragrances_women.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- Bridge for React integration -->
+  <script src="/bridge.js"></script>
+
+  <!-- 🔝 Top Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="../images/logo.png" alt="Veloura Logo">
+      Veloura
+    </div>
+
+    <div class="navbar">
+      <div class="dropdown">
+        <span class="dropdown-label">Skincare</span>
+        <div class="mega-menu">
+          <div class="mega-column">
+            <h4>Face Care</h4>
+
+            <ul>
+              <li><a href="#">Face Moisturizer</a></li>
+              <li><a href="#">Cleansers</a></li>
+              <li><a href="#">Serum</a></li>
+              <li><a href="#">Toners</a></li>
+              <li><a href="#">Sunscreens</a></li>
+              <li><a href="#">Masks</a></li>
+              
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Lip Care</h4>
+            <ul>
+              <li><a href="lipbalm.html">Lip balm</a></li>
+              <li><a href="lipscrubs.html">Lip scrub</a></li>
+              <li><a href="lipmasks.css">Lip Masks</a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Body Care</h4>
+            <ul>
+              <li><a href="#">Lotions & Creams</a></li>
+              <li><a href="#">Body Scrubs</a></li>
+              <li><a href="#">Body sunscreens</a></li>
+              <li><a href="#">Soaps & body wash </a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Eye Care</h4>
+            <ul>
+              <li><a href="#">undereye cream & serums</a></li>
+              <li><a href="#">eye masks</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Makeup Dropdown -->
+      <div class="dropdown">
+        <span class="dropdown-label">Makeup</span>
+        <div class="mega-menu">
+          <div class="mega-column">
+            <h4>Face</h4>
+            <ul>
+              <li><a href="#">Foundation</a></li>
+              <li><a href="#">Concealer</a></li>
+              <li><a href="#">Primer</a></li>
+              <li><a href="#">Highlighter</a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Eyes</h4>
+            <ul>
+              <li><a href="#">Mascara</a></li>
+              <li><a href="#">Eyeliner</a></li>
+              <li><a href="#">Eyeshadow</a></li>
+              <li><a href="kajal.html">Kajal</a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Lips</h4>
+            <ul>
+              <li><a href="#">Lipstick</a></li>
+              <li><a href="#">Lip Gloss</a></li>
+              <li><a href="#">Lip Liner</a></li>
+              <li><a href="#">Lip Tints</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fragrances Dropdown -->
+      <div class="dropdown">
+        <span class="dropdown-label">Fragrances</span>
+        <div class="mega-menu">
+          <div class="mega-column">
+            <h4>By Gender</h4>
+            <ul>
+              <!-- <li><a href="#">For Women</a></li> -->
+              <li><a href="fragrances_men.html">For Men</a></li>
+              <li><a href="fragrances_unisex.html">Unisex</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Any other links -->
+      <div class="nav-links">
+        <a href="tools.html">Tools</a>
+        <a href="main.html">Home</a>
+      </div>
+    </div>
+    <div class="icons">
+      <input type="text" id="page-search-input" placeholder="Search for products...">
+      <button type="submit" id="page-search-btn"><i class="fa fa-search"></i></button>
+      <div id="page-search-results"></div>
+      <a href="login.html"><span class="icon">👤</span></a>
+      <a href="AddToCart.html">
+        <span class="icon cart">🛒<span id="cart-count">0</span></span>
+      </a>
+
+    </div>
+  </header>
+
+ 
+  <!-- 🏷 Page Title -->
+  <h1 class="section-title">Fragrances</h1>
+
+  <!-- By Type Selection -->
+  <div class="filter-links">
+    <a href="women_perfume.html">Perfumes</a>
+    <a href="women_mist.html">Body Mists</a>
+    <a href="women_rollOn.html">Roll-ons & Deodrants</a>
+  </div>
+
+  <!-- 🛍 Product Grid -->
+
+  <div class="product-grid">
+    <div class="product-card">
+      <a href="plum_perfume.html"><img src="../images/plum_vanilla_perfume.jpg" alt="plum perfume"></a>
+      <div class="badge">Best Seller</div>
+      <p class="title">Plum Bodylovin' Vanilla Caramello Long Lasting Eau De Parfum With Warm Vanilla & Salted Caramel (50ml)</p>
+      <p class="price">₹728 <del>₹899</del> <span class="green">19% off</span></p>
+      <div class="rating"><span>4.3 ★</span> (2643)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+    
+    <div class="product-card">
+      <a href="engage_perfume.html"><img src="../images/engage_yang_perfume.webp" alt="engage perfume"></a>
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Engage Yang Eau De Parfum For Women (100ml)</p>
+      <p class="price">₹422 <del>₹649</del> <span class="green">50% off</span></p>
+      <div class="rating"><span>4.3 ★</span> (3638)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <a href="wottagirl_mist.html"><img src="../images/wottagirl_vanilla_mist.jpg" alt="wottagirl body mist"></a>
+      <div class="badge">Best Seller</div>
+      <p class="title">Layer'r Wottagirl Vanilla Twist Fragrant Body Splash For Her (135ml)</p>
+      <p class="price">₹220 <del>₹239</del> <span class="green">8% off</span></p>
+      <div class="rating"><span>4.3 ★</span> (21266)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <a href="bellavita_perfume.html"><img src="../images/bellavita_date_perfume.jpg" alt="bellavita perfume"></a>
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Bella Vita Date Women Perfume (100ml)</p>
+      <p class="price">₹575 <del>₹999</del> <span class="green">42% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (6008)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/plum_vanilla_mist.avif" alt="plum body mist">
+      <div class="badge">Best Seller</div>
+      <p class="title">Plum Body Lovin Vanilla Vibes Body Mist For A Long Lasting Vanilla Fragrance (150ml)</p>
+      <p class="price">₹446 <del>₹550</del> <span class="green">19% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (28131)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/victoriaScret_pureSeduction.webp" alt="victoria's secret body mist">
+      <div class="badge">Best Seller</div>
+      <p class="title">Victoria's Secret Pure Seduction Fragrance Mist For Her (250ml)</p>
+      <p class="price">₹1874 <del>₹2499</del> <span class="green">15% off</span></p>
+      <div class="rating"><span>4.1 ★</span> (2789)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/YSL_libre_perfume.avif" alt="ysl perfume">
+      <div class="badge">Best Seller</div>
+      <p class="title">Yves Saint Laurent Libre Eau De Parfum With Lavender Essence, Orange Blossom, Musk & Warm Vanilla (10ml)</p>
+      <p class="price">₹2500</p>
+      <div class="rating"><span>4.3 ★</span> (665)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/bellavita_luxuryGiftSet.jpg" alt="bellavita perfume">
+      <div class="badge">Best Seller</div>
+      <p class="title">Bella Vita Luxury Perfumes Gift Set For Women (80ml)</p>
+      <p class="price">₹549 <del>₹849</del> <span class="green">35% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (25583)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/aqualogica_vanilla_mist.jpg" alt="aqualogica perfume">
+      <div class="badge">Best Seller</div>
+      <p class="title"> Aqualogica Refresh & Sun Kissed Vanilla Perfume Body Mist (150ml)</p>
+      <p class="price">₹419 <del>₹499 </del> <span class="green">16% off</span></p>
+      <div class="rating"><span>4.2 ★</span> (1194)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/bath&body_intoTheNight_mist.jpg" alt="bath&body works body mist">
+      <div class="badge">Best Seller</div>
+      <p class="title">Bath & Body Works Into The Night Fine Fragrance Mist (236ml)</p>
+      <p class="price">₹1799 <del>₹2299</del> <span class="green">22% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (120)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/bath&body_thousandWishes_mist.jpg" alt="bath&body works body mist">
+      <div class="badge">Best Seller</div>
+      <p class="title">Bath & Body Works A Thousand Wishes Fine Fragrance Mist (236ml)</p>
+      <p class="price">₹1799 <del>₹2299</del> <span class="green">22% off</span></p>
+      <div class="rating"><span>4.6 ★</span> (116)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/burberry_goddess_perfume.jpg" alt="burberry perfume">
+      <div class="badge">Best Seller</div>
+      <p class="title">Burberry Goddess Eau De Parfum Pen Spray For Her (10ml)</p>
+      <p class="price">₹2200 <span class="green"></span></p>
+      <div class="rating"><span>4.5 ★</span> (1200)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/victoriaSecret_bareVanilla_mist.jpg" alt="victoria's secret body mist">
+      <div class="badge">Best Seller</div>
+      <p class="title">Victoria's Secret Bare Vanilla Fragrance Mist For Her (250ml)</p>
+      <p class="price">₹2024 <del>₹2699</del> <span class="green">25% off</span></p>
+      <div class="rating"><span>4.2 ★</span> (3455)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/bath&body_youAreTheOne_mist.jpg" alt="bath&body works body mist">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Bath & Body Works You'Re The One Fine Fragrance Mist (236ml)</p>
+      <p class="price">₹1799 <del>₹2299</del> <span class="green">35% off</span></p>
+      <div class="rating"><span>4.5 ★</span> (113)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/renee_bloom_perfume.avif" alt="renee perfume">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Renee Cosmetics Bloom Eau De Parfum, Luxury Perfume for Women, Premium, Long-Lasting Elegance (50ml)</p>
+      <p class="price">₹515 <del>₹599</del> <span class="green">14% off</span></p>
+      <div class="rating"><span>4.2 ★</span> (12260)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/bath&bosy_champagneToast_mist.webp" alt="bathh&body works body mist">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Bath & Body Works Champagne Toast Fine Fragrance Mist (236ml)</p>
+      <p class="price">₹2299 <del>₹1799 </del> <span class="green">22% off</span></p>
+      <div class="rating"><span>4.5 ★</span> (31)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/aqualogica_onTheGoSet_mist.jpg" alt="aqualogica bosy mist">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Aqualogica Refresh + On The Go perfume Body Mist Set of 3 (60ml)</p>
+      <p class="price">₹515 <del>₹599 </del> <span class="green">14% off</span></p>
+      <div class="rating"><span>4 ★</span> (513)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/plum_hawaiian_perfume.avif" alt="plum perfume">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Plum BodyLovin' Hawaiian Rumba Eau De Parfum - Long Lasting Tropical Perfume (15ml)</p>
+      <p class="price">₹260 <del>₹325 </del> <span class="green">20% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (11712)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/victoriaSecret_pineapple_mist.webp" alt="victoria's secret body mist">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Victoria's Secret Pineapple Shea Glow Natural Beauty Body Mist (250ml)</p>
+      <p class="price">₹999 <del>₹2799 </del> <span class="green">64% off</span></p>
+      <div class="rating"><span>3.3 ★</span> (6)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/bellavita_rose_perfume.jpg" alt="bellavita perfume">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Bella Vita Rose Woman Eau De perfume For Women (100ml)</p>
+      <p class="price">₹499 <del>₹899 </del> <span class="green">44% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (2514)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/bellavita_senorita_perfume.jpg" alt="bellavita perfume">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Bella Vita Senorita Perfume For Woman (100ml)</p>
+      <p class="price">₹499 <del>₹899 </del> <span class="green">44% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (1999)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/embark_myPassion_perfume.jpg" alt="embark perfume">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">EMBARK My Passion For Her Eau De Parfume Natural Spray (100ml)</p>
+      <p class="price">₹1497 <del>₹1895 </del> <span class="green">21% off</span></p>
+      <div class="rating"><span>4.7 ★</span> (10)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/Carlton_blush_perfume.webp" alt="carlton perfume">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Carlton London Perfume Limited Edition Blush Perfume for Women (100ml)</p>
+      <p class="price">₹876 <del>₹2190 </del> <span class="green">60% off</span></p>
+      <div class="rating"><span>4.1 ★</span> (2720)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/renee_setOf4.webp" alt="renee perfume">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">RENEE Luxury Perfumes Gift Set For Women, Premium, Long-Lasting Eau De Parfum (15ml Each)</p>
+      <p class="price">₹595 <del>₹999 </del> <span class="green">21% off</span></p>
+      <div class="rating"><span>4.2 ★</span> (2244)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/Bath&Body_Butterfly_perfume.webp" alt="bath&bosy works body mist">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Bath & Body Works Butterfly Fine Fragrance Mist (236ml)</p>
+      <p class="price">₹1499 <del>₹2299 </del> <span class="green">35% off</span></p>
+      <div class="rating"><span>4.6 ★</span> (22)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/Plum_TonkaBella_Perfume.webp" alt="plum perfume">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Plum Bodylovin' Tonka Bella Eau De Parfum - Fruity Floral (50ml)</p>
+      <p class="price">₹755 <del>₹899 </del> <span class="green">16% off</span></p>
+      <div class="rating"><span>4.2 ★</span> (11)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/Wishcare_rollOn.webp" alt="wishcare roll on">
+      <div class="badge">Best Seller</div>
+      <p class="title">Wishcare Aqua Fresh Under Arm Roll On Serum 5% AHA & 3% Kojic Acid - Treats Pigmentation & Odour (50ml)</p>
+      <p class="price">₹299 <del>₹399 </del> <span class="green">25% off</span></p>
+      <div class="rating"><span>4.3 ★</span> (9660)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/Dove_eventone_deodrant.jpg" alt="dove deodrant">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Dove Eventone Deodorant Long-Lasting Body Spray for Women (150ml)</p>
+      <p class="price">₹231 <del>₹289 </del> <span class="green">20% off</span></p>
+      <div class="rating"><span>4 ★</span> (1365)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/BeBodywise_rollOn.avif" alt="be bodywise roll on">
+      <div class="badge">Best Seller</div>
+      <p class="title">Be Bodywise 4% AHA BHA Underarm Roll On - Treats Pigmentation & Odour - Lactic Acid & Salicylic Acid (50ml)</p>
+      <p class="price">₹349 <del> </del> <span class="green"></span></p>
+      <div class="rating"><span>4.5 ★</span> (29433)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/ChemistAtPlay_RollOn.avif" alt="chemist at play roll on">
+      <div class="badge">Best Seller</div>
+      <p class="title">Chemist at Play 5% AHA Underarm Roll On, Lactic Acid Deodrants for Men & Women - Aqua Fragrance (40ml)</p>
+      <p class="price">₹319 <del>₹399 </del> <span class="green">20% off</span></p>
+      <div class="rating"><span>4.5 ★</span> (24238)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/Nivea_pearl&beauty_rollOn.webp" alt="nivea roll on">
+      <div class="badge">Best Seller</div>
+      <p class="title">NIVEA Pearl & Beauty Radiance Deo Roll On For Women- 72H Odor Protection- 0% Alcohol (25ml)</p>
+      <p class="price">₹88 <del>₹125 </del> <span class="green">30% off</span></p>
+      <div class="rating"><span>4.5 ★</span> (7121)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/Carmesi_floralSunset_rollOn.jpg" alt="carmesi roll on">
+      <div class="badge">Best Seller</div>
+      <p class="title">Carmesi Natural Underarms Roll On Deodorant For Women - Floral Sunset, No Alcohol Or Aluminium (50ml) </p>
+      <p class="price">₹169 <del>₹249 </del> <span class="green">20% off</span></p>
+      <div class="rating"><span>4.3 ★</span> (7363)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/Plum_Vanilla_RollOn.avif" alt="plum deodrant">
+      <div class="badge">Best Seller</div>
+      <p class="title">Plum BodyLovin' Vanilla Vibes Deodorant Roll-On Controls Underarm Odor (50ml)</p>
+      <p class="price">₹325 <del>₹270 </del> <span class="green">20% off</span></p>
+      <div class="rating"><span>4.3 ★</span> (4601)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/Nivea_FreshNatural_rollNo.avif" alt="nivea roll on">
+      <div class="badge">Best Seller</div>
+      <p class="title">NIVEA Fresh Natural Anti Roll-On Deodorant 72H Protection & Long Lasting (50ml)</p>
+      <p class="price">₹137 <del>₹249 </del> <span class="green">45% off</span></p>
+      <div class="rating"><span>4.6 ★</span> (4581)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/Dove_Eventone_rollOn.webp" alt="dove deodrant">
+      <div class="badge">Best Seller</div>
+      <p class="title">Dove Eventone Deodorant Roll on for Women (50ml)</p>
+      <p class="price">₹155 <del>₹259 </del> <span class="green">40% off</span></p>
+      <div class="rating"><span>4.3 ★</span> (3880)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/Dove_original_rollOn.png" alt="dove roll on">
+      <div class="badge">Best Seller</div>
+      <p class="title">Dove Original Deodorant Roll on Moisturising cream (50ml) (50ml)</p>
+      <p class="price">₹259 <del>₹168 </del> <span class="green">20% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (1426)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/plum_HawaiinRumba_rollOn.avif" alt="plum roll on">
+      <div class="badge">Best Seller</div>
+      <p class="title">Plum BodyLovin' Hawaiian Rumba Deodorant Roll-On Controls Underarm Odor (50ml)</p>
+      <p class="price">₹270 <del>₹325 </del> <span class="green">17% off</span></p>
+      <div class="rating"><span>4.3 ★</span> (2558)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/Dove_original_rollOn.png" alt="dove roll on">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Dove Original Deodorant Roll on Moisturising cream (50ml) (50ml)</p>
+      <p class="price">₹259 <del>₹168 </del> <span class="green">20% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (1426)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/Dove_Original_deodrant.webp" alt="dove roll on">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Dove Original Deodorant Long-Lasting Body Spray Moisturising Cream For Women (150ml)</p>
+      <p class="price">₹217 <del>₹289 </del> <span class="green">25% off</span></p>
+      <div class="rating"><span>4.5 ★</span> (1401)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/EarthRhythm_DeodrantStick.avif" alt="earcth rhythm deodrant">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Earth Rhythm Brightening & Exfoliating Deodorant Stick - Brightening Deo (30 g)</p>
+      <p class="price">₹374 <del>₹499 </del> <span class="green">25% off</span></p>
+      <div class="rating"><span>4.1 ★</span> (485)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/Yardley_englishRose_rollOn.jpg" alt="yardley deodrant roll on">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Yardley English Rose Deodorant Roll-on (50ml)</p>
+      <p class="price">₹177 <del>₹249 </del> <span class="green">29% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (712)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/Yardley_EnglishBlossom_rollOn.jpg" alt="yardley roll on">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Yardley London English Blossom Deodorant Roll-On Anti-Perspirant (50ml)</p>
+      <p class="price">₹177 <del>₹249 </del> <span class="green">29% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (987)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/Yardley_RoyalBouquet_RollOn.jpg" alt="yardley roll on">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Yardley London Royal Bouquet Roll-On Deodorant for Women (50ml)</p>
+      <p class="price">₹177 <del>₹249 </del> <span class="green">29% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (731)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="../images/Yardley_EnglishBlossom_rollOn.jpg" alt="yarrdley roll on">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Yardley London English Blossom Deodorant Roll-On Anti-Perspirant (50ml)</p>
+      <p class="price">₹177 <del>₹249 </del> <span class="green">29% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (987 )</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+</div>
+
+<!-- footer -->
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>Veloura Beauty</h3>
+      <p>Your trusted destination for luxury beauty products and tips. Bringing confidence and glow to your life.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="ABOUTus.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="24575154544b5650645241484b5156450a474b49">[email&#160;protected]</a></p>
+      <p>Phone: ‪+91 234 567 8901‬</p>
+      
+  <div class="footer-bottom">
+    <p>© 2025 Veloura Beauty. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Add to cart javascript -->
+<script>
+  const CART_API_URL = "http://localhost:3000/cart";
+
+  // Update cart count badge in the navbar
+  function updateCartCount() {
+    fetch(CART_API_URL)
+      .then(res => res.json())
+      .then(items => {
+        let count = 0;
+        items.forEach(item => { count += (item.qty || 1); });
+        const countSpan = document.getElementById("cart-count");
+        if (countSpan) countSpan.innerText = count;
+      })
+      .catch(() => {
+        const countSpan = document.getElementById("cart-count");
+        if (countSpan) countSpan.innerText = 0;
+      });
+  }
+
+  // Attach Add to Cart listeners after DOM loads
+  document.addEventListener("DOMContentLoaded", () => {
+    updateCartCount();
+
+    document.querySelectorAll('.product-card .cart-btn').forEach(button => {
+      button.addEventListener('click', async () => {
+        const card = button.closest('.product-card');
+        const title = card.querySelector('.title').innerText.trim();
+        const priceNode = card.querySelector('.price').childNodes[0];
+        const price = parseInt(priceNode.textContent.replace(/[₹,\s]/g, '').trim());
+        const image = card.querySelector('img').getAttribute('src');
+
+        // Check if the product already exists in the cart
+        let existing = [];
+        try {
+          existing = await fetch(`${CART_API_URL}?title=${encodeURIComponent(title)}`).then(r => r.json());
+        } catch {
+          alert('Cannot connect to cart server. Make sure JSON Server is running on port 3000.');
+          return;
+        }
+
+        if (existing.length > 0) {
+          // Product already in cart — increase quantity
+          const existingItem = existing[0];
+          fetch(`${CART_API_URL}/${existingItem.id}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ qty: (existingItem.qty || 1) + 1 })
+          })
+            .then(() => {
+              alert(`Quantity increased for "${title}"!`);
+              updateCartCount();
+            })
+            .catch(() => alert('Error updating quantity.'));
+        } else {
+          // New product — add to cart
+          fetch(CART_API_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ title, price, qty: 1, image })
+          })
+            .then(() => {
+              alert(`"${title}" added to cart!`);
+              updateCartCount();
+            })
+            .catch(() => alert('Error adding to cart.'));
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>

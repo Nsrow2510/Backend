@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Veloura Tools</title>
+  <link rel="stylesheet" href="../css/tools.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <script src="/bridge.js"></script>
+
+  <!-- 🔝 Top Navbar -->
+  <header class="navbar">
+    <div class="logo">Veloura</div>
+    <div class="navbar">
+      <div class="dropdown">
+        <span class="dropdown-label">Skincare</span>
+        <div class="mega-menu">
+          <div class="mega-column">
+            <h4>Face Care</h4>
+            <ul>
+              <li><a href="#">Face Moisturizer</a></li>
+              <li><a href="#">Cleansers</a></li>
+              <li><a href="#">Serum</a></li>
+              <li><a href="#">Toners</a></li>
+              <li><a href="#">Sunscreens</a></li>
+              <li><a href="#">Masks</a></li>
+              
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Lip Care</h4>
+            <ul>
+              <li><a href="lipbalm.html">Lip balm</a></li>
+              <li><a href="lipscrubs.html">Lip scrub</a></li>
+              <li><a href="lipmasks.css">Lip Masks</a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Body Care</h4>
+            <ul>
+              <li><a href="#">Lotions & Creams</a></li>
+              <li><a href="#">Body Scrubs</a></li>
+              <li><a href="#">Body sunscreens</a></li>
+              <li><a href="#">Soaps & body wash </a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Eye Care</h4>
+            <ul>
+              <li><a href="#">undereye cream & serums</a></li>
+              <li><a href="#">eye masks</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Makeup Dropdown -->
+      <div class="dropdown">
+        <span class="dropdown-label">Makeup</span>
+        <div class="mega-menu">
+          <div class="mega-column">
+            <h4>Face</h4>
+            <ul>
+              <li><a href="#">Foundation</a></li>
+              <li><a href="#">Concealer</a></li>
+              <li><a href="#">Primer</a></li>
+              <li><a href="#">Highlighter</a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Eyes</h4>
+            <ul>
+              <li><a href="#">Mascara</a></li>
+              <li><a href="#">Eyeliner</a></li>
+              <li><a href="#">Eyeshadow</a></li>
+              <li><a href="kajal.html">Kajal</a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Lips</h4>
+            <ul>
+              <li><a href="#">Lipstick</a></li>
+              <li><a href="#">Lip Gloss</a></li>
+              <li><a href="#">Lip Liner</a></li>
+              <li><a href="#">Lip Tints</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fragrances Dropdown -->
+      <div class="dropdown">
+        <span class="dropdown-label">Fragrances</span>
+        <div class="mega-menu">
+          <div class="mega-column">
+            <h4>By Gender</h4>
+            <ul>
+              <li><a href="fragrances_women.html">For Women</a></li>
+              <li><a href="fragrances_men.html">For Men</a></li>
+              <li><a href="#">Unisex</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Any other links -->
+    <div class="nav-links">
+        <a href="javascript:NavHelper.goToHome()">Home</a>
+      </div>
+    </div>
+    <div class="icons">
+      <input type="text" id="page-search-input" placeholder="Search for products...">
+      <button type="submit" id="page-search-btn"><i class="fa fa-search"></i></button>
+      <div id="page-search-results"></div>
+      <a href="javascript:NavHelper.goToLogin()"><span class="icon">👤</span></a>
+      <a href="AddToCart.html"><span class="icon cart">🛒<span id="cart-count" style="font-size: 12px; margin-left: 2px;">0</span></span></a>
+    </div>
+  </header>
+
+
+  <!-- 🏷 Page Title -->
+  <h1 class="section-title">Tools</h1>
+
+  <!-- 🛍 Product Grid -->
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="Bronson_BLackhead_remover.webp" alt=" bronson blackhead remover">
+      <div class="badge">Best Seller</div>
+      <p class="title">Bronson Professional Black Head Remover Tool - Round</p>
+      <p class="price">₹50 <del>₹100</del> <span class="green">45% off</span></p>
+      <div class="rating"><span>4.3 ★</span> (635)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+    
+    <div class="product-card">
+      <img src="Bronson_pore_cleaner.avif" alt="bronson cleaner">
+      <div class="badge">Best Seller</div>
+      <p class="title">Bronson Professional Pore Cleanser Blackhead Dermasuction Remover Battery Operated With 4 Nozzles</p>
+      <p class="price">₹500 <del>₹1000</del> <span class="green">50% off</span></p>
+      <div class="rating"><span>4.3 ★</span> (548)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="insight_eyebrow_brush.avif" alt="insight eyebrow brush">
+      <p class="title">Insight Professional Eyebrow Brush - IE 121</p>
+      <p class="price">₹126 <del>₹135</del> <span class="green">7% off</span></p>
+      <div class="rating"><span>4.3 ★</span> (5)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="protouch_comb.webp" alt="protouch comb">
+      <div class="badge">Best Seller</div>
+      <p class="title">PROTOUCH LED Hair Growth Therapy Comb - Reduces Hair Fall, Boost Hair Regrowth, Head Massager</p>
+      <p class="price">₹2549 <del>₹2999</del> <span class="green">15% off</span></p>
+      <div class="rating"><span>3.9★</span> (18)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="fyoli_powder_puff.webp" alt="fyoli powder puff">
+      <div class="badge">Best Seller</div>
+      <p class="title">FYOLI Triangle Pizza Powder Puff And Beauty Blender (Colour May Vary) (1pc)</p>
+      <p class="price">₹67 <del>₹78</del> <span class="green">31% off</span></p>
+      <div class="rating"><span>4 ★</span> (176)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+<!-- lipstick -->
+    <div class="product-card">
+      <img src="matra_storage_bag.avif" alt="matra storage bag">
+      <div class="badge">Best Seller</div>
+      <p class="title">Matra Travel Makeup Bag Cosmetic Storage Leather Vanity Pouch - Brown</p>
+      <p class="price">₹594 <del>₹699</del> <span class="green">15% off</span></p>
+      <div class="rating"><span>3.3 ★</span> (1546)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="bronson_blendSponge.avif" alt="bronson blend sponge">
+      <p class="title">Bronson Professional Beauty Blender Sponge Makeup Applicator, Puffs (Colour May Vary) (1 Pcs)</p>
+      <p class="price">₹50 <del>₹325</del> <span class="green">85% off</span></p>
+      <div class="rating"><span>4.3 ★</span> (665)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="matra_scalp_massager.avif" alt="matra scalp massager">
+      <div class="badge">Best Seller</div>
+      <p class="title">Matra Silicone Hair Scalp Massager & Anti Dandruff Shampoo Brush With Detachable Handle (Any Color) (1 pcs)</p>
+      <p class="price">₹127 <del>₹159</del> <span class="green">5% off</span></p>
+      <div class="rating"><span>4.2 ★</span> (1631)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="bronson_softBrushes.webp" alt="bronson soft brushes">
+      <div class="badge">Best Seller</div>
+      <p class="title"> Bronson Professional Super Soft Bristles Hd Finish Bamboomakeup Brush Set With Pouch (11 Pcs)</p>
+      <p class="price">₹350 <del>₹550 </del> <span class="green">36% off</span></p>
+      <div class="rating"><span>4.1 ★</span> (4134)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="Guerlain_mirror.webp" alt="guerlain mirror">
+      <div class="badge">Best Seller</div>
+      <p class="title">Guerlain L'ecaille Rouge G The Double Mirror Jewel Case (53g)</p>
+      <p class="price">₹3700 <span class="green"></span></p>
+      <div class="rating"><span>4.7 ★</span> (33)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="caresmith_faceRoller.jpg" alt="caresmith face roller">
+      <div class="badge">Best Seller</div>
+      <p class="title">Caresmith Bloom All Metal Face Roller Cooling Zinc Alloy Sculting Rollers with Solid Metal Handle (1 pieces)</p>
+      <p class="price">₹900 <del>₹1500</del> <span class="green">40% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (520)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="Ras_jadeRollerAndGuaSha.avif" alt="ras jade roller and gua sha">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">RAS Luxury Oils Jade Face Beauty Tools Set - Gua Sha & Face Roller (2 Pcs)</p>
+      <p class="price">₹2717 <del>₹4180 </del> <span class="green">35% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (504)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="tangle_detangle_hairbrush.jpg" alt="tangle detangle hairbrush">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Tangle Teezer Wet Detangler Hairbrush for Detangling With Less Breakage - Millennial Pink</p>
+      <p class="price">₹1700 <span class="green"></span></p>
+      <div class="rating"><span>4.5 ★</span> (1492)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="Bronson_iceRoller.avif" alt="bronson ice roller">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Bronson Professional Classic Silicone Ice Facial Roller (Color May Vary) (100 g)</p>
+      <p class="price">₹118 <del>₹300 </del> <span class="green">35% off</span></p>
+      <div class="rating"><span>4 ★</span> (4319)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="Vega_eyelashCurler.webp" alt="vega eyelash curler">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">VEGA Premium Eyelash Curler (EC-02)</p>
+      <p class="price">₹270 <span class="green">35% off</span></p>
+      <div class="rating"><span>4.3 ★</span> (15062)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="Braun_electricFaceHairRemover.jpg" alt="braunn electric face hair remover">
+      <div class="badge">Best Seller</div>
+      <p class="title">Braun Face Mini Hair Remover Electric for Women FS1000</p>
+      <p class="price">₹1869 <del>₹2199 </del> <span class="green">15% off</span></p>
+      <div class="rating"><span>4.3 ★</span> (9537)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+</div>
+
+<!-- footer -->
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>Veloura Beauty</h3>
+      <p>Your trusted destination for luxury beauty products and tips. Bringing confidence and glow to your life.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="ABOUTus.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email: support@veloura.com</p>
+      <p>Phone: ‪+91 234 567 8901‬</p>
+      
+  <div class="footer-bottom">
+    <p>© 2025 Veloura Beauty. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Add to cart javascript -->
+<script>
+  const CART_API_URL = "http://localhost:3000/cart";
+
+// Attach event listeners after DOM loads
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('.product-card .cart-btn').forEach(button => {
+      button.addEventListener('click', async () => {
+        const card = button.closest('.product-card');
+        const title = card.querySelector('.title').innerText.trim();
+        const priceText = card.querySelector('.price').innerText.trim();
+        const price = parseInt(priceText.replace(/[₹,]/g, '').split(' ')[0]);
+        const image = card.querySelector('img').src;
+
+        const product = { title, price, qty: 1, image };
+
+        // Check if the product is already in the cart
+        const existing = await fetch(`${CART_API_URL}?title=${encodeURIComponent(title)}`)
+          .then(res => res.json())
+          .catch(() => []);
+
+        if (existing.length > 0) {
+          // If product exists, update quantity
+          const existingItem = existing[0];
+          fetch(`${CART_API_URL}/${existingItem.id}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ qty: existingItem.qty + 1 })
+          })
+            .then(() => alert(`Quantity increased for ${title}!`))
+            .catch(() => alert('Error updating quantity.'));
+        } else {
+          // Add as a new product
+          fetch(CART_API_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(product)
+          })
+            .then(() => alert(`${title} added to cart!`))
+            .catch(() => alert('Error adding product.'));
+        }
+      });
+    });
+  });
+</script>
+
+<script href="search.js"></script>
+</body>
+</html>

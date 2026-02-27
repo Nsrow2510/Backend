@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Veloura - Makeup</title>
+  <link rel="icon" type="image/png" href="../images/logo.png">
+  <link rel="stylesheet" href="../css/home.css"/>
+</head>
+<body>
+  <script src="/bridge.js"></script>
+<!-- Navbar -->
+<header class="navbar">
+  <!-- Left: Logo -->
+  <div class="nav-left">
+    <div class="logo">
+      <img src="../images/logo.png" alt="Veloura Logo" class="logo-img">
+      <span>Veloura</span>
+    </div>
+  </div>
+
+  <!-- Center: Dropdown Menus -->
+  <nav class="nav-center">
+    <div class="dropdown">
+      <span class="dropdown-label">Skincare</span>
+      <div class="mega-menu">
+        <div class="mega-column">
+          <h4>Face Care</h4>
+          <ul>
+            <li><a href="facemositurizer.html">Face Moisturizer</a></li>
+            <li><a href="cleansers.html">Cleansers</a></li>
+            <li><a href="serum.html">Serum</a></li>
+            <li><a href="toner.html">Toners</a></li>
+            <li><a href="sunscreen.html">Sunscreens</a></li>
+            <li><a href="mask.html">Face Masks</a></li>
+          </ul>
+        </div>
+        <div class="mega-column">
+          <h4>Lip Care</h4>
+          <ul>
+            <li><a href="lipbalm.html">Lip Balm</a></li>
+            <li><a href="lipscrubs.html">Lip Scrub</a></li>
+            <li><a href="lipmasks.html">Lip Masks</a></li>
+          </ul>
+        </div>
+        <div class="mega-column">
+          <h4>Body Care</h4>
+          <ul>
+            <li><a href="#">Lotions & Creams</a></li>
+            <li><a href="#">Body Scrubs</a></li>
+            <li><a href="#">Body Sunscreens</a></li>
+            <li><a href="#">Soaps & Body Wash</a></li>
+          </ul>
+        </div>
+        <div class="mega-column">
+          <h4>Eye Care</h4>
+          <ul>
+            <li><a href="#">Undereye Creams & Serums</a></li>
+            <li><a href="#">Eye Masks</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <span class="dropdown-label">Makeup</span>
+      <div class="mega-menu">
+        <div class="mega-column">
+          <h4>Face</h4>
+          <ul>
+            <li><a href="foundation.html">Foundation</a></li>
+            <li><a href="concealer.html">Concealer</a></li>
+            <li><a href="primer.html">Primer</a></li>
+            <li><a href="highlighter.html">Highlighter</a></li>
+          </ul>
+        </div>
+        <div class="mega-column">
+          <h4>Eyes</h4>
+          <ul>
+            <li><a href="mascara.html">Mascara</a></li>
+            <li><a href="eyeliner.html">Eyeliner</a></li>
+            <li><a href="eyeshadow.html">Eyeshadow</a></li>
+            <li><a href="kajal.html">Kajal</a></li>
+          </ul>
+        </div>
+        <div class="mega-column">
+          <h4>Lips</h4>
+          <ul>
+            <li><a href="lipstick.html">Lipstick</a></li>
+            <li><a href="lipgloss.html">Lip Gloss</a></li>
+            <li><a href="lipliner.html">Lip Liner</a></li>
+            <li><a href="lip_tint.html">Lip Tints</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <span class="dropdown-label">Fragrances</span>
+      <div class="mega-menu">
+        <div class="mega-column">
+          <h4>By Type</h4>
+          <ul>
+            <li><a href="#">Perfume</a></li>
+            <li><a href="#">Body Mists</a></li>
+            <li><a href="#">Roll-ons</a></li>
+          </ul>
+        </div>
+        <div class="mega-column">
+          <h4>By Gender</h4>
+          <ul>
+            <li><a href="fragrances_women.html">For Women</a></li>
+            <li><a href="fragrances_men.html">For Men</a></li>
+            <li><a href="fragrances_unisex.html">Unisex</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <a href="tools.html" class="nav-link">Tools</a>
+  </nav>
+
+  <!-- Right: Search + Icons -->
+  <div class="nav-right">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search for products..." />
+      <button id="searchButtn">Search</button>
+    </div>
+
+    <a href="javascript:NavHelper.goToLogin()" class="icon-link">👤</a>
+    <a href="cart.html" class="icon-link cart">
+      🛒<span id="cart-count">0</span>
+    </a>
+  </div>
+</header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Discover Your<br><span>Natural Beauty</span></h1>
+        <p>
+          Elevate your beauty routine with our curated collection of premium cosmetics, skincare, and tools designed to make you feel confident and radiant.
+        </p>
+        <div class="hero-buttons">
+          <a href="#" class="btn primary">Shop Now</a>
+          <a href="#" class="btn secondary">Explore Collection</a>
+        </div>
+        <div class="features">
+          <div><strong>100+</strong><br>Premium Products</div>
+          <div><strong>24/7</strong><br>Beauty Support</div>
+          <div><strong>Free</strong><br>Shipping</div>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="../images/mainpageiamge.png" alt="Makeup Products" />
+      </div>
+    </div>
+  </section>
+
+  <section class="bestsellers-section">
+  <h2>Bestsellers</h2>
+  <p class="subtitle">Explore the most loved products by our customers</p>
+  <div class="product-grid">
+
+  <!-- Product 1 -->
+  <div class="product-box">
+    <div class="product-labels">
+      <span class="label bestseller">BESTSELLER</span>
+    </div>
+    <a href="langeiedetail.html">
+      <img src="../images/langeielipbalm.jpg" alt="LANEIGE Lip Glowy Balm" class="product-image">
+    </a>
+    <h3 class="product-name">LANEIGE Lip Glowy Balm Berry Fruits Rouges(10g)</h3>
+    <div class="price-row">
+      <span class="mrp">MRP: <del>₹750</del></span>
+      <span class="price">₹638</span>
+      <span class="discount">15% Off</span>
+    </div>
+    <button class="add-to-cart-btn" onclick="addToCart('prod-1', 'LANEIGE Lip Glowy Balm', '₹638', 'langeielipbalm.jpg')">Add to Cart</button>
+
+    <div class="bottom-details">
+      <div class="rating-stars">★★★★★ <span>(21817)</span></div>
+      <p class="shade-count">6 Shades</p>
+    </div>
+  </div>
+
+  <!-- Product 2 -->
+  <div class="product-box">
+    <div class="product-labels">
+      <span class="label bestseller">BESTSELLER</span>
+      <span class="label featured">FEATURED</span>
+    </div>
+    <a href="dotnkeyserumdetail.html">
+      <img src="../images/dotnkeyserum.jpg" alt="dotnkey face Serum" class="product-image">
+    </a>
+    <h3 class="product-name">DOT & KEY 10% vitamin C + E face Serum</h3>
+    <div class="price-row">
+      <span class="mrp">MRP: <del>₹499</del></span>
+      <span class="price">₹429</span>
+      <span class="discount">14% Off</span>
+    </div>
+    <button class="add-to-cart-btn" onclick="addToCart('prod-2', 'DOT & KEY Vitamin C Serum', '₹429', 'dotnkeyserum.jpg')">Add to Cart</button>
+
+    <div class="bottom-details">
+      <div class="rating-stars">★★★★☆ <span>(24291)</span></div>
+      <p class="shade-count">2 Sizes</p>
+    </div>
+  </div>
+
+  <!-- Product 3 -->
+  <div class="product-box">
+    <div class="product-labels">
+      <span class="label bestseller">BESTSELLER</span>
+    </div>
+    <a href="MACfoundationdetail.html">
+      <img src="../images/macfoundation.avif" alt="foundation" class="product-image">
+    </a>
+    <h3 class="product-name">M.A.C studio fix fluid spf 15 soft matte foundation</h3>
+    <div class="price-row">
+      <span class="mrp">MRP: <del>₹4000</del></span>
+      <span class="price">₹3400</span>
+      <span class="discount">15% Off</span>
+    </div>
+    <button class="add-to-cart-btn" onclick="addToCart('prod-3', 'M.A.C Foundation', '₹3400', 'macfoundation.avif')">Add to Cart</button>
+
+    <div class="bottom-details">
+      <div class="rating-stars">★★★★☆ <span>(13550)</span></div>
+      <p class="shade-count">5 shades</p>
+    </div>
+  </div>
+
+  <!-- Product 4 -->
+  <div class="product-box">
+    <div class="product-labels">
+      <span class="label bestseller">BESTSELLER</span>
+      <span class="label featured">FEATURED</span>
+    </div>
+    <a href="brosonbrushesdetail.html">
+      <img src="../images/bronsonbrushes.webp" alt="10-Piece Brush Set" class="product-image">
+    </a>
+    <h3 class="product-name">Bronson Professional premium 10-Piece Brush Set</h3>
+    <div class="price-row">
+      <span class="mrp">MRP: <del>₹450</del></span>
+      <span class="price">₹360</span>
+      <span class="discount">20% Off</span>
+    </div>
+    <button class="add-to-cart-btn" onclick="addToCart('prod-4', 'Bronson Brush Set', '₹360', 'bronsonbrushes.webp')">Add to Cart</button>
+
+    <div class="bottom-details">
+      <div class="rating-stars">★★★★★ <span>(12045)</span></div>
+    </div>
+  </div>
+
+</div>
+  </section>
+
+  <section class="featured-products-section">
+  <h2>Featured Products</h2>
+  <p class="subtitle">Handpicked favorites to elevate your beauty routine</p>
+
+  <div class="product-grid">
+
+    <!-- Product 5 -->
+    <div class="product-box">
+      <div class="product-labels">
+        <span class="label featured">FEATURED</span>
+        <span class="label bestseller">BESTSELLER</span>
+      </div>
+      <a href="foundation_7.html">
+        <img src="../images/foundation_1.avif" alt="Liquid Foundation" class="product-image">
+      </a>
+      <h3 class="product-name">L'Oreal Paris Infallible 24H Tinted Serum Foundation</h3>
+      
+      <div class="price-row">
+        <span class="mrp"><del>₹999</del></span>
+        <span class="price">₹749</span>
+        <span class="discount">25% Off</span>
+      </div>
+      <button class="add-to-cart-btn" onclick="addToCart('prod-5', 'L\'Oreal Foundation', '₹749', 'foundation_1.avif')">Add to Cart</button>
+      <div class="rating-stars">★★★★★ <span>(589)</span></div>
+      <p class="shade-count">7 Shades</p>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="product-box">
+      <div class="product-labels">
+        <span class="label featured">FEATURED</span>
+      </div>
+      <a href="mascara_3.html">
+        <img src="../images/L'Oreal Paris mascara.webp" alt="Volumizing Mascara" class="product-image">
+      </a>
+      <h3 class="product-name">L'Oreal Paris Voluminous Panorama Waterproof</h3>
+  
+      <div class="price-row">
+        <span class="mrp"><del>₹999</del></span>
+        <span class="price">₹899</span>
+        <span class="discount">10% Off</span>
+      </div>
+      <button class="add-to-cart-btn" onclick="addToCart('prod-6', 'L\'Oreal Mascara', '₹899', 'L\'Oreal Paris mascara.webp')">Add to Cart</button>
+      <div class="rating-stars">★★★★☆ <span>(1895)</span></div>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="product-box">
+      <div class="product-labels">
+        <span class="label featured">FEATURED</span>
+      </div>
+      <a href="highlighter.html">
+        <img src="../images/facecandahighlighter.avif" alt="Radiant Highlighter" class="product-image">
+      </a>
+      <h3 class="product-name">Face Canada Strobe Cream Primer + Highlighter</h3>
+      
+      <div class="price-row">
+        <span class="mrp"><del>₹599</del></span>
+        <span class="price">₹495</span>
+        <span class="discount">17% Off</span>
+      </div>
+      <button class="add-to-cart-btn" onclick="addToCart('prod-7', 'Face Canada Highlighter', '₹495', 'facecandahighlighter.avif')">Add to Cart</button>
+      <div class="rating-stars">★★★★☆ <span>(1764)</span></div>
+      <p class="shade-count">5 Shades</p>
+    </div>
+
+    <!-- Product 8 -->
+    <div class="product-box">
+      <a href="lipgloss-detail.html">
+        <img src="../images/kajal1.avif" alt="kajal" class="product-image">
+      </a>
+      <h3 class="product-name">Lakme Eyeconic Kajal in Deep Black Twist Up Pencil</h3>
+    
+      <div class="price-row">
+        <span class="mrp"><del>₹210</del></span>
+        <span class="price">₹200</span>
+        <span class="discount">5% Off</span>
+      </div>
+      <button class="add-to-cart-btn" onclick="addToCart('prod-8', 'Lakme Kajal', '₹200', 'kajal1.avif')">Add to Cart</button>
+      <div class="rating-stars">★★★★☆ <span>(47542)</span></div>
+      <p class="shade-count">5 Shades</p>
+    </div>
+
+  </div>
+</section>
+
+  
+<section class="beauty-tips-section">
+  <h2>Beauty Tips & Tutorials</h2>
+  <p class="subtitle">Unlock the secrets to flawless beauty with expert tips and step-by-step tutorials</p>
+
+  <div class="tips-cards">
+    <article class="tip-card">
+      <div class="image-wrapper">
+        <img src="../images/perfectwinglinervideo.webp" alt="Perfect Winged Eyeliner">
+      </div>
+      <div class="content">
+        <h3>Perfect Winged Eyeliner</h3>
+        <p>Master the art of winged eyeliner with our step-by-step guide for flawless results every time.</p>
+        <a href="perfecteyeliner.html" class="read-more">Read More →</a>
+      </div>
+    </article>
+
+    <article class="tip-card">
+      <div class="image-wrapper">
+        <img src="../images/skincareroutine.jpg" alt="Morning Skincare Routine">
+      </div>
+      <div class="content">
+        <h3>Morning Skincare Routine</h3>
+        <p>Start your day right with this refreshing morning skincare routine for glowing, healthy skin.</p>
+        <a href="morningskincare.html" class="read-more">Read More →</a>
+      </div>
+    </article>
+
+    <article class="tip-card">
+      <div class="image-wrapper">
+        <img src="../images/color matching video.jpg" alt="Color Matching Foundation">
+      </div>
+      <div class="content">
+        <h3>Color Matching Foundation</h3>
+        <p>Find your perfect foundation shade with our expert tips for color matching different skin tones.</p>
+        <a href="matchingcolour.html" class="read-more">Read More →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <h2>What Our Customers Say</h2>
+    <p class="subtitle">Join thousands of satisfied customers who trust Veloura for their beauty needs</p>
+
+    <div class="testimonial-cards">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"Absolutely love the L'Oréal serum foundation! It blends so smoothly and gives a natural glow. Fast delivery too!"<p>
+        <div class="customer-info">
+          <img src="../images/userimag.webp" alt="Aarushi mehta" />
+          <div>
+            <strong>Aarushi Mheta</strong>
+            <p>Mumbai, India</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"This site has everything I need — affordable prices, amazing brands, and even surprise gifts. I'm obsessed!"</p>
+        <div class="customer-info">
+          <img src="../images/userimag.webp" alt="Emma Rodriguez" />
+          <div>
+            <strong>Simran</strong>
+            <p>Delhi, India</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"I was skeptical, but the Minimalist facewash really cleared my skin. Will reorder for sure!"</p>
+        <div class="customer-info">
+          <img src="../images/userimag.webp" alt="Lily Wang" />
+          <div>
+            <strong>Priya Sharma</strong>
+            <p>Pune,India</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Chatbot -->
+
+<!-- Floating Chat Button -->
+  <div class="chat-btn" id="chat-btn">💬</div>
+
+  <!-- Chat Box -->
+  <div class="chat-box" id="chat-box">
+    <div class="chat-header">Beauty Bot </div>
+    <div class="chat-content">
+      <p> Let's find your perfect product ✨</p>
+
+      <!-- Step 1: Concern Area -->
+      <div id="step1">
+        <label>Select Concern Area:</label>
+        <select id="area">
+          <option value="">--Choose--</option>
+          <option value="face">Face</option>
+          <option value="eyes">Eyes</option>
+          <option value="lips">Lips</option>
+        </select>
+      </div>
+
+      <!-- Step 2: Skin Type (only for face) -->
+      <div id="step2" style="display:none;">
+        <label>Select Skin Type:</label>
+        <select id="skinType">
+          <option value="">--Choose--</option>
+          <option value="oily">Oily</option>
+          <option value="dry">Dry</option>
+          <option value="normal">Normal</option>
+          <option value="combination">Combination</option>
+          <option value="sensitive">Sensitive</option>
+        </select>
+      </div>
+
+      <!-- Step 3: Issue (face, eyes or lips) -->
+      <div id="step3" style="display:none;">
+        <label id="issueLabel">Select Issue:</label>
+        <select id="issue">
+          <option value="">--Choose--</option>
+        </select>
+      </div>
+
+      <!-- Suggest button -->
+      <button id="suggestBtn" style="display:none;">Get Suggestion</button>
+
+      <div id="result"></div>
+    </div>
+  </div>
+
+
+
+
+
+<section class="instagram-section">
+  <div class="instagram-header">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm4.75-.75a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z"/>
+    </svg>
+    <span>#VelouraBeauty</span>
+  </div>
+  <p class="subtitle">See how our community creates stunning looks with Veloura products</p>
+  
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=140&q=80" alt="Product 1" />
+    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=140&q=80" alt="Product 2" />
+    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=140&q=80" alt="Product 3" />
+    <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=140&q=80" alt="Product 4" />
+  </div>
+
+<a href="insta.html">
+  <button class="follow-button">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm4.75-.75a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z"/>
+    </svg>
+    Follow @VelouraBeauty
+  </button>
+</a>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>Veloura Beauty</h3>
+      <p>Your trusted destination for luxury beauty products and tips. Bringing confidence and glow to your life.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="ABOUTus.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email: support@veloura.com</p>
+      <p>Phone: +91 234 567 8901</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Veloura Beauty. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script src="../javascript/script.js"></script>
+</body>
+</html>

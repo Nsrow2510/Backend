@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veloura | Mascara</title>
+   <link rel="icon" type="image/png" href="../images/logo.png">
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+<body>
+  <!-- Bridge for React integration -->
+  <script src="/bridge.js"></script>
+
+
+  <!-- Navbar -->
+ <header class="navbar">
+    <div class="logo">
+      <img src="../images/logo.png" alt="Veloura Logo" class="logo-img">
+  <span>Veloura</span></div>
+<div class="navbar">
+  <div class="dropdown">
+    <span class="dropdown-label">Skincare</span>
+    <div class="mega-menu">
+      <div class="mega-column">
+        <h4>Face Care</h4>
+        <ul>
+          <li><a href="facemositurizer.html">Face Moisturizer</a></li>
+          <li><a href="cleansers.html">Cleansers</a></li>
+          <li><a href="serum.html">Serum</a></li>
+          <li><a href="toner.html">Toners</a></li>
+          <li><a href="sunscreen.html">Sunscreens</a></li>
+          <li><a href="mask.html">Masks</a></li>
+          
+        </ul>
+      </div>
+      <div class="mega-column">
+        <h4>Lip Care</h4>
+        <ul>
+          <li><a href="lipbalm.html">Lip balm</a></li>
+          <li><a href="lipscrubs.html">Lip scrub</a></li>
+          <li><a href="lipmasks.css">Lip Masks</a></li>
+        </ul>
+      </div>
+      <div class="mega-column">
+        <h4>Body Care</h4>
+        <ul>
+          <li><a href="#">Lotions & Creams</a></li>
+          <li><a href="#">Body Scrubs</a></li>
+          <li><a href="#">Body sunscreens</a></li>
+          <li><a href="#">Soaps & body wash </a></li>
+        </ul>
+      </div>
+      <div class="mega-column">
+        <h4>Eye Care</h4>
+        <ul>
+          <li><a href="#">undereye cream & serums</a></li>
+          <li><a href="#">eye masks</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Makeup Dropdown -->
+  <div class="dropdown">
+    <span class="dropdown-label">Makeup</span>
+    <div class="mega-menu">
+      <div class="mega-column">
+        <h4>Face</h4>
+        <ul>
+          <li><a href="foundation.html">Foundation</a></li>
+          <li><a href="concealer.html">Concealer</a></li>
+          <li><a href="primer.html">Primer</a></li>
+          <li><a href="highlighter.html">Highlighter</a></li>
+        </ul>
+      </div>
+      <div class="mega-column">
+        <h4>Eyes</h4>
+        <ul>
+          <li><a href="mascara.html">Mascara</a></li>
+          <li><a href="eyeliner.html">Eyeliner</a></li>
+          <li><a href="eyeshadow.html">Eyeshadow</a></li>
+          <li><a href="kajal.html">Kajal</a></li>
+        </ul>
+      </div>
+      <div class="mega-column">
+        <h4>Lips</h4>
+        <ul>
+          <li><a href="lipstick.html">Lipstick</a></li>
+          <li><a href="lipgloss.html">Lip Gloss</a></li>
+          <li><a href="lipliner.htm">Lip Liner</a></li>
+          <li><a href="liptints.html">Lip Tints</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fragrances Dropdown -->
+  <div class="dropdown">
+    <span class="dropdown-label">Fragrances</span>
+    <div class="mega-menu">
+      <div class="mega-column">
+        <h4>By Type</h4>
+        <ul>
+          <li><a href="#">Perfume</a></li>
+          <li><a href="#">Body Mists</a></li>
+          <li><a href="#">Roll-ons</a></li>
+        </ul>
+      </div>
+      <div class="mega-column">
+        <h4>By Gender</h4>
+        <ul>
+          <li><a href="#">For Women</a></li>
+          <li><a href="#">For Men</a></li>
+          <li><a href="#">Unisex</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Any other links -->
+  <div class="nav-links">
+    <a href="#">Tools</a>
+  </div>
+</div>
+    <div class="icons">
+        <!-- search form so Enter works -->
+  <form id="search-form" onsubmit="handleSearchSubmit(event)" style="display:inline;">
+    <input id="search-input" type="text" placeholder="Search for products or pages (e.g. 'highlighter', 'serum')..." />
+  </form>
+
+
+      <!-- <input type="text" placeholder="Search for products..." /> -->
+      <a href="signin.html"><span class="icon">👤</span></a>
+      <a href="cart.html"><span class="icon cart">🛒<span class="badge" id="cart-count">0</span></span></a>
+    </div>
+    
+  </header>
+      <!-- Breadcrumb -->
+<nav class="breadcrumb">
+    <a href="home.html">Home</a> ›
+    <a href="serum.html">Makeup</a> ›
+    <a href="#">Face</a> ›
+    <span>Mascara</span>
+</nav>
+
+
+  <!-- Page Layout -->  <!-- Page Layout -->
+ <div class="main-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+    <!-- Filter Dropdown -->
+    <div class="filter-box">
+      <label for="filter">Filter:</label>
+      <select id="filter" onchange="filterProducts()">
+        <option value="all">All</option>
+        <option value="maybelline">Maybelline</option>
+        <option value="lakme">Lakme</option>
+        <option value="mars">Mars</option>
+        <option value="loreal">L'Oreal Paris</option>
+    
+        <option value="swiss">Swiss Beauty</option>
+        <option value="mac">M.A.C</option>
+
+      </select>
+    </div>
+          <!-- sort dropdown -->
+<div class="sort-box">
+  <label for="sort">Sort by:</label>
+  <select id="sort" onchange="sortProducts()">
+    <option value="default">Default</option>
+    <option value="lowToHigh">Price: Low to High</option>
+    <option value="highToLow">Price: High to Low</option>
+  </select>
+</div>
+
+    </aside>  
+
+    <!-- Products -->
+    <section class="products" id="product-list"></section>
+  </div>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>Veloura Beauty</h3>
+      <p>Your trusted destination for luxury beauty products and tips. Bringing confidence and glow to your life.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="ABOUTus.html">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+        
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email: support@veloura.com</p>
+      <p>Phone: +91 234 567 8901</p>
+      
+  <div class="footer-bottom">
+    <p>© 2025 Veloura Beauty. All rights reserved.</p>
+  </div>
+</footer>
+<script src="cartSave.js"></script>
+
+
+  <script src="../javascript/mascara.js"></script>
+</body>
+</html>

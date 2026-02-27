@@ -1,0 +1,120 @@
+/* Reset some */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.contact-section {
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+  padding: 40px 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(234, 81, 118, 0.2);
+  /* overflow: hidden; */
+  z-index: 1;
+}
+
+h2 {
+  /* font-weight: 700; */
+  font-size: 34px;
+  font-family: cursive;
+  /* letter-spacing: 1.2px; */
+  color: #a32460;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px 14px 12px;
+  font-size: 1rem;
+  border: 2px solid #e8b4c4;
+  border-radius: 12px;
+  background: #fff;
+  transition: border-color 0.3s;
+  font-weight: 500;
+  resize: none;
+}
+
+.input-group textarea {
+  padding-top: 15px;
+  min-height: 100px;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: #a32460;
+}
+
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  color: #999;
+  /* pointer-events: none; */
+  /* transform: translateY(-50%); */
+  /* transition: top 0.3s, font-size 0.3s, color 0.3s; */
+  background: white;
+  padding: 0 6px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.input-group input:not(:placeholder-shown) + label,
+.input-group input:focus + label,
+.input-group textarea:not(:placeholder-shown) + label,
+.input-group textarea:focus + label {
+  top: -10px;
+  font-size: 0.75rem;
+  color: #a32460;
+}
+
+.submit-btn {
+  background-color: #a32460;
+  border: none;
+  border-radius: 14px;
+  padding: 14px 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #7e1c49;
+}
+
+#form-status {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #a32460;
+  min-height: 24px;
+}

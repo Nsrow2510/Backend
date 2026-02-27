@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veloura Fragrances</title>
+  <link rel="stylesheet" href="../css/fragrances_women.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- Bridge for React integration -->
+  <script src="/bridge.js"></script>
+
+
+  <!-- 🔝 Top Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="../images/logo.png" alt="Veloura Logo">
+      Veloura
+    </div>
+    <div class="navbar">
+      <div class="dropdown">
+        <span class="dropdown-label">Skincare</span>
+        <div class="mega-menu">
+          <div class="mega-column">
+            <h4>Face Care</h4>
+
+            <ul>
+              <li><a href="#">Face Moisturizer</a></li>
+              <li><a href="#">Cleansers</a></li>
+              <li><a href="#">Serum</a></li>
+              <li><a href="#">Toners</a></li>
+              <li><a href="#">Sunscreens</a></li>
+              <li><a href="#">Masks</a></li>
+              
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Lip Care</h4>
+            <ul>
+              <li><a href="lipbalm.html">Lip balm</a></li>
+              <li><a href="lipscrubs.html">Lip scrub</a></li>
+              <li><a href="lipmasks.css">Lip Masks</a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Body Care</h4>
+            <ul>
+              <li><a href="#">Lotions & Creams</a></li>
+              <li><a href="#">Body Scrubs</a></li>
+              <li><a href="#">Body sunscreens</a></li>
+              <li><a href="#">Soaps & body wash </a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Eye Care</h4>
+            <ul>
+              <li><a href="#">undereye cream & serums</a></li>
+              <li><a href="#">eye masks</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Makeup Dropdown -->
+      <div class="dropdown">
+        <span class="dropdown-label">Makeup</span>
+        <div class="mega-menu">
+          <div class="mega-column">
+            <h4>Face</h4>
+            <ul>
+              <li><a href="#">Foundation</a></li>
+              <li><a href="#">Concealer</a></li>
+              <li><a href="#">Primer</a></li>
+              <li><a href="#">Highlighter</a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Eyes</h4>
+            <ul>
+              <li><a href="#">Mascara</a></li>
+              <li><a href="#">Eyeliner</a></li>
+              <li><a href="#">Eyeshadow</a></li>
+              <li><a href="kajal.html">Kajal</a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Lips</h4>
+            <ul>
+              <li><a href="#">Lipstick</a></li>
+              <li><a href="#">Lip Gloss</a></li>
+              <li><a href="#">Lip Liner</a></li>
+              <li><a href="#">Lip Tints</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fragrances Dropdown -->
+      <div class="dropdown">
+        <span class="dropdown-label">Fragrances</span>
+        <div class="mega-menu">
+          <div class="mega-column">
+            <h4>By Gender</h4>
+            <ul>
+              <li><a href="fragrances_women.html">For Women</a></li>
+              <li><a href="fragrances_men.html">For Men</a></li>
+              <!-- <li><a href="#">Unisex</a></li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Any other links -->
+      <div class="nav-links">
+        <a href="tools.html">Tools</a>
+        <a href="#">Home</a>
+      </div>
+    </div>
+    <div class="icons">
+      <input type="text" id="page-search-input" placeholder="Search for products...">
+      <button type="submit" id="page-search-btn"><i class="fa fa-search"></i></button>
+      <div id="page-search-results"></div>
+      <a href="signin.html"><span class="icon">👤</span></a>
+      <a href="AddToCart.html">
+        <span class="icon cart">🛒<span id="cart-count">0</span></span>
+      </a>
+    </div>
+  </header>
+
+ 
+  <!-- 🏷 Page Title -->
+  <h1 class="section-title">Fragrances</h1>
+
+  <!-- By Type Selection -->
+  <!-- <div class="filter-links">
+    <a href="women_perfume.html">Perfumes</a>
+    <a href="women_mist.html">Body Mists</a>
+    <a href="women_rollOn.html">Roll-ons & Deodrants</a>
+  </div> -->
+
+  <!-- 🛍 Product Grid -->
+
+  <div class="product-grid">
+    <div class="product-card">
+      <a href="ajmal_perfume.html"><img src="ajmal_ascend_perfume.jpg" alt="plum perfume"></a>
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Ajmal Ascend EDP Perfume For Women And Men (50ml)</p>
+      <p class="price">₹350 <del>₹1000</del> <span class="green">65% off</span></p>
+      <div class="rating"><span>4.3 ★</span> (2643)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+    
+    <div class="product-card">
+      <a href="engage_luxurySet.html"><img src="engage_luxuryPefume_giftSet.avif" alt="engage perfume"></a>
+      <div class="badge">Best Seller</div>
+      <p class="title">Engage Luxury Perfume Gift Pack For Unisex (100ml)</p>
+      <p class="price">₹699 <del>₹999</del> <span class="green">50% off</span></p>
+      <div class="rating"><span>4.3 ★</span> (3638)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <a href="bellavita_luxurySet.html"><img src="bellavita_unisex_perfumeSet.webp" alt="wottagirl body mist"></a>
+      <div class="badge">Best Seller</div>
+      <p class="title">Bella Vita Unisex Luxury Perfume Gift Set (80ml)</p>
+      <p class="price">₹549 <del>₹849</del> <span class="green">8% off</span></p>
+      <div class="rating"><span>4.3 ★</span> (21266)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <a href="vokka_perfume.html"><img src="thai_oud_unisex_perfume.webp" alt="bellavita perfume"></a>
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Vokka Thai Oud Luxury Long Lasting Woody Perfume (100ml)</p>
+      <p class="price">₹241 <del>₹1149</del> <span class="green">79% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (6008)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="bellavita_organic_unisexScents.avif" alt="plum body mist">
+      <div class="badge">Best Seller</div>
+      <p class="title">Bella Vita Organic Unisex Scents Eau de Parfum Gift Set (80ml)</p>
+      <p class="price">₹499 <del>₹849</del> <span class="green">19% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (28131)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="laFrench_moodSwing_perfume.webp" alt="victoria's secret body mist">
+      <div class="badge">Best Seller</div>
+      <p class="title">La French Mood Swing Perfume for Men and Women (100ml)</p>
+      <p class="price">₹447 <del>₹799</del> <span class="green">44% off</span></p>
+      <div class="rating"><span>4.1 ★</span> (2789)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="laFrench_balck_perfume.avif" alt="ysl perfume">
+      <div class="badge">Best Seller</div>
+      <p class="title">La French Black Long Lasting Premium Luxury Fragrance Perfume (50ml)</p>
+      <p class="price">₹299 <del>₹499</del> <span class="green">40% off</span></p>
+      <div class="rating"><span>4.3 ★</span> (665)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="laFrench_perfumeGiftSet.avif" alt="bellavita perfume">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">La French Happiness- Euphoria- Mood Swing & Invoke Luxury Perfume Gift Set For Unisex (80 ml)</p>
+      <p class="price">₹450 <del>₹849</del> <span class="green">47% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (25583)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="bellavitta_fresh_unisex_toilette.jpg" alt="aqualogica perfume">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title"> Bella Vita Fresh Eau De Toilette Unisex Perfume for Men and Women (100ml)/p>
+      <p class="price">₹499 <del>₹899</del> <span class="green">16% off</span></p>
+      <div class="rating"><span>4.2 ★</span> (1194)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="ramsons_laOpale_perfume.webp" alt="bath&body works body mist">
+      <div class="badge">Best Seller</div>
+      <p class="title">Ramsons Laopale Eau De Perfume (100ml)</p>
+      <p class="price">₹399</p>
+      <div class="rating"><span>4.4 ★</span> (120)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="bellavita_setOf10.webp" alt="bath&body works body mist">
+      <div class="badge">Best Seller</div>
+      <p class="title">Bella Vita Perfumes Trial - Pack of 10 (50 ml)</p>
+      <p class="price">₹349 <del>₹399</del> <span class="green">13% off</span></p>
+      <div class="rating"><span>4.6 ★</span> (116)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="bellavita_whiteOud_perfume.avif" alt="burberry perfume">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Bella Vita White-Oud Eau De Perfume For Men & Women (100ml)</p>
+      <p class="price">₹575 <del>₹999</del> <span class="green">42% off</span></p>
+      <div class="rating"><span>4.5 ★</span> (1200)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="engage_oneSoul_perfume.jpg" alt="victoria's secret body mist">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Engage One Soul Unisex Perfume (100ml)</p>
+      <p class="price">₹552 <del>₹649</del> <span class="green">15% off</span></p>
+      <div class="rating"><span>4.2 ★</span> (3455)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="vokka_oud_unisex_perfume.webp" alt="bath&body works body mist">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Vokka Oud Luxury Long Lasting Smokey Perfume (100ml)</p>
+      <p class="price">₹241 <del>₹1149</del> <span class="green">79% off</span></p>
+      <div class="rating"><span>4.5 ★</span> (113)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="embark_wood_perfume.avif" alt="renee perfume">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Embark Wood OUD EDP Unisex (50ml)</p>
+      <p class="price">₹1610 <del>₹1695</del> <span class="green">5% off</span></p>
+      <div class="rating"><span>4.2 ★</span> (12260)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="bellavita_skai_cologne.jpg" alt="bathh&body works body mist">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Bella Vita Skai Aquatic Unisex Eau De Cologne Perfume (100ml)</p>
+      <p class="price">₹499 <del>₹699 </del> <span class="green">29% off</span></p>
+      <div class="rating"><span>4.5 ★</span> (31)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+   
+</div>
+
+<!-- footer -->
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>Veloura Beauty</h3>
+      <p>Your trusted destination for luxury beauty products and tips. Bringing confidence and glow to your life.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="ABOUTus.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email: support@veloura.com</p>
+      <p>Phone: ‪+91 234 567 8901‬</p>
+      
+  <div class="footer-bottom">
+    <p>© 2025 Veloura Beauty. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Add to cart javascript -->
+<script>
+  const CART_API_URL = "http://localhost:3000/cart";
+
+  // Function to update cart count badge
+  function updateCartCount() {
+    fetch(CART_API_URL)
+      .then(res => res.json())
+      .then(items => {
+        let count = 0;
+        items.forEach(item => { count += item.qty; });
+        const countSpan = document.getElementById("cart-count");
+        if (countSpan) countSpan.innerText = count;
+      })
+      .catch(() => {
+        const countSpan = document.getElementById("cart-count");
+        if (countSpan) countSpan.innerText = 0;
+    });
+  }
+
+  // Attach event listeners after DOM loads
+  document.addEventListener("DOMContentLoaded", () => {
+    // Update cart count on page load
+    updateCartCount();
+
+    document.querySelectorAll('.product-card .cart-btn').forEach(button => {
+      button.addEventListener('click', async () => {
+        const card = button.closest('.product-card');
+        const title = card.querySelector('.title').innerText.trim();
+        const priceText = card.querySelector('.price').innerText.trim();
+        const price = parseInt(priceText.replace(/[₹,]/g, '').split(' ')[0]);
+        const image = card.querySelector('img').src;
+
+        const product = { title, price, qty: 1, image };
+
+        // Check if the product is already in the cart
+        const existing = await fetch(`${CART_API_URL}?title=${encodeURIComponent(title)}`)
+          .then(res => res.json())
+          .catch(() => []);
+
+        if (existing.length > 0) {
+          // If product exists, update quantity
+          const existingItem = existing[0];
+          fetch(`${CART_API_URL}/${existingItem.id}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ qty: existingItem.qty + 1 })
+          })
+            .then(() => {
+              alert(`Quantity increased for ${title}!`);
+              updateCartCount(); // Update cart count
+            })
+            .catch(() => alert('Error updating quantity.'));
+        } else {
+          // Add as a new product
+          fetch(CART_API_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(product)
+          })
+            .then(() => {
+              alert(`${title} added to cart!`);
+              updateCartCount(); // Update cart count
+            })
+            .catch(() => alert('Error adding product.'));
+          }
+        });
+      });
+    });
+  </script>
+
+  <script src="../javascript/userAccount.js"></script>
+  <script src="../javascript/search.js"></script>
+
+</body>
+</html>

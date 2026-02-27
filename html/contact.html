@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us - Veloura Beauty</title>
+  <link rel="stylesheet" href="../css/contact.css" />
+</head>
+<body>
+  <!-- Bridge for React integration -->
+  <script src="/bridge.js"></script>
+
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <h2>Contact Us</h2>
+      <form id="contact-form" novalidate>
+        <div class="input-group">
+          <input type="text" id="name" name="name" required autocomplete="off" />
+          <label for="name">Full Name</label>
+        </div>
+
+        <div class="input-group">
+          <input type="email" id="email" name="email" required autocomplete="off" />
+          <label for="email">Email Address</label>
+        </div>
+
+        <div class="input-group">
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <label for="message">Your Message</label>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+      <div id="form-status"></div>
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById('contact-form');
+const statusDiv = document.getElementById('form-status');
+
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  // Clear previous status and disable submit button during processing
+  statusDiv.textContent = '';
+  const submitBtn = form.querySelector('button[type="submit"]');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+
+  // Simple validation helper function
+  function isValidEmail(email) {
+    return /\S+@\S+\.\S+/.test(email);
+  }
+
+  try {
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+
+    if (!name || !email || !message) {
+      throw new Error('Please fill out all fields.');
+    }
+
+    if (!isValidEmail(email)) {
+      throw new Error('Please enter a valid email.');
+    }
+
+    // POST message to JSON Server
+    const response = await fetch('http://localhost:3000/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, message, date: new Date().toISOString() })
+    });
+    if (!response.ok) throw new Error('Server error. Please try again.');
+
+    // Simulate async sending delay removed since real API call included above
+    // await new Promise(res => setTimeout(res, 1500));
+
+    statusDiv.style.color = 'green';
+    statusDiv.textContent = 'Thank you for contacting us! We will get back to you soon.';
+    form.reset();
+  } catch (error) {
+    statusDiv.style.color = 'red';
+    statusDiv.textContent = error.message || 'An error occurred. Please try again.';
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send Message';
+  }
+});
+
+
+  </script>
+</body>
+</html>

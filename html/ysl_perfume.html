@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/productPage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <script src="/bridge.js"></script>
+  <!-- 🔝 Top Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="veloura.png" alt="Veloura Logo">
+      Veloura
+    </div>
+    <div class="navbar">
+      <div class="dropdown">
+        <span class="dropdown-label">Skincare</span>
+        <div class="mega-menu">
+          <div class="mega-column">
+            <h4>Face Care</h4>
+
+            <ul>
+              <li><a href="#">Face Moisturizer</a></li>
+              <li><a href="#">Cleansers</a></li>
+              <li><a href="#">Serum</a></li>
+              <li><a href="#">Toners</a></li>
+              <li><a href="#">Sunscreens</a></li>
+              <li><a href="#">Masks</a></li>
+              
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Lip Care</h4>
+            <ul>
+              <li><a href="lipbalm.html">Lip balm</a></li>
+              <li><a href="lipscrubs.html">Lip scrub</a></li>
+              <li><a href="lipmasks.css">Lip Masks</a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Body Care</h4>
+            <ul>
+              <li><a href="#">Lotions & Creams</a></li>
+              <li><a href="#">Body Scrubs</a></li>
+              <li><a href="#">Body sunscreens</a></li>
+              <li><a href="#">Soaps & body wash </a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Eye Care</h4>
+            <ul>
+              <li><a href="#">undereye cream & serums</a></li>
+              <li><a href="#">eye masks</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Makeup Dropdown -->
+      <div class="dropdown">
+        <span class="dropdown-label">Makeup</span>
+        <div class="mega-menu">
+          <div class="mega-column">
+            <h4>Face</h4>
+            <ul>
+              <li><a href="#">Foundation</a></li>
+              <li><a href="#">Concealer</a></li>
+              <li><a href="#">Primer</a></li>
+              <li><a href="#">Highlighter</a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Eyes</h4>
+            <ul>
+              <li><a href="#">Mascara</a></li>
+              <li><a href="#">Eyeliner</a></li>
+              <li><a href="#">Eyeshadow</a></li>
+              <li><a href="kajal.html">Kajal</a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Lips</h4>
+            <ul>
+              <li><a href="#">Lipstick</a></li>
+              <li><a href="#">Lip Gloss</a></li>
+              <li><a href="#">Lip Liner</a></li>
+              <li><a href="#">Lip Tints</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fragrances Dropdown -->
+      <div class="dropdown">
+        <span class="dropdown-label">Fragrances</span>
+        <div class="mega-menu">
+          <div class="mega-column">
+            <h4>By Gender</h4>
+            <ul>
+              <li><a href="fragrances_women.html">For Women</a></li>
+              <li><a href="fragrances_men.html">For Men</a></li>
+              <li><a href="fragrances_unisex.html">Unisex</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Any other links -->
+      <div class="nav-links">
+        <a href="tools.html">Tools</a>
+        <a href="javascript:NavHelper.goToHome()">Home</a>
+      </div>
+    </div>
+    <div class="icons">
+      <input type="text" id="page-search-input" placeholder="Search for products...">
+      <button type="submit" id="page-search-btn"><i class="fa fa-search"></i></button>
+      <div id="page-search-results"></div>
+      <a href="javascript:NavHelper.goToLogin()"><span class="icon">👤</span></a>
+      <a href="AddToCart.html">
+        <span class="icon cart">🛒<span id="cart-count">0</span></span>
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    <aside class="gallery-thumbnails">
+      <div class="thumb-list">
+        <img src="YSL_libre_perfume.avif" class="thumbnail selected" alt="">
+        <img src="https://media.kohlsimg.com/is/image/kohls/6638229?wid=1000&hei=1000&op_sharpen=1" class="thumbnail" alt="">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.OI_TDVfldLZNZ9UdMYLvCgAAAA?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" class="thumbnail" alt="">
+        <img src="https://images-static.nykaa.com/media/catalog/product/9/a/9a28f793614272648418_4.jpg" class="thumbnail" alt="">
+        <img src="https://i.pinimg.com/736x/3a/ee/8d/3aee8df667a2d3d035f1436267a793a0.jpg" class="thumbnail" alt="">
+      </div>
+    </aside>
+    <section class="gallery-main">
+      <img src="img1.jpg" id="mainProductImage" alt="Product">
+    </section>
+    <section class="product-info">
+      <h1 class="title">Yves Saint Laurent Libre Eau De Parfum With Lavender Essence, Orange Blossom, Musk & Warm Vanilla (10ml)</h1>
+      <div class="product-rating">
+        <span class="stars">★★★★☆</span>
+        <span class="rate-value">4.5/5</span>
+        <span class="rating-count">665 ratings</span>
+        <span class="review-count">8160 reviews</span>
+      </div>
+      <div class="product-price">
+        <!-- <span class="old-price">₹4100</span> -->
+        <span class="new-price">₹2500</span>
+        <!-- <span class="discount">30% Off</span> -->
+      </div>
+      <div class="tax-note">inclusive of all taxes</div>
+      <button class="cart-btn">Add to Cart</button>
+      <div class="features">
+        <span>100% Genuine Products</span>
+        <span>Easy Return Policy</span>
+      </div>
+    </section>
+  </main>
+
+  <section class="ratings-reviews">
+    <h2>Ratings & Reviews</h2>
+    <div class="ratings-main">
+      <span class="rating-score">4.4/5</span>
+      <span class="rating-desc">Overall Rating</span>
+      <span class="rating-count">2085 verified ratings</span>
+      <div class="divider"></div>
+      <div class="review-message">Write a review and win 100 reward points !</div>
+      <button class="write-review">Write Review</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-col brand">
+      <h2>Veloura Beauty</h2>
+      <p>Your trusted destination for luxury beauty products and tips. Bringing confidence and glow to your life.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <a href="#">About Us</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h3>Contact Us</h3>
+      <span>Email: support@veloura.com</span>
+      <span>Phone: +91 234 567 8901</span>
+      <hr>
+      <span class="copyright">&copy; 2025 Veloura Beauty. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    const CART_API_URL = "http://localhost:3000/cart";
+
+// Cart count badge update function
+  function updateCartCount() {
+    fetch(CART_API_URL)
+      .then(res => res.json())
+      .then(items => {
+        let count = 0;
+        items.forEach(item => { count += item.qty; });
+        const countSpan = document.getElementById("cart-count");
+        if (countSpan) countSpan.innerText = count;
+      })
+      .catch(() => {
+        const countSpan = document.getElementById("cart-count");
+        if (countSpan) countSpan.innerText = 0;
+      });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    updateCartCount(); // Update badge on page load
+
+    document.querySelectorAll('.cart-btn').forEach(button => {
+      button.addEventListener('click', async () => {
+        // --- CORRECT PRODUCT INFO SELECTION FOR SINGLE PRODUCT PAGE ---
+        const titleElem = document.querySelector('.title');
+        const priceElem = document.querySelector('.product-price .new-price');
+        const imageElem = document.getElementById('mainProductImage');
+
+        if (!titleElem || !priceElem || !imageElem) {
+          alert('Product info missing!');
+          return;
+        }
+
+        const title = titleElem.innerText.trim();
+        const priceText = priceElem.innerText.trim();
+        const price = parseInt(priceText.replace(/[₹,]/g, '').split(' ')[0]);
+        const image = imageElem.src;
+
+        if (!title || isNaN(price) || !image) {
+          alert('Product data is invalid!');
+          return;
+        }
+
+        const product = { title, price, qty: 1, image };
+
+        // --- CART LOGIC ---
+        const existing = await fetch(`${CART_API_URL}?title=${encodeURIComponent(title)}`)
+          .then(res => res.json())
+          .catch(() => []);
+
+        if (existing.length > 0) {
+          const existingItem = existing[0];
+          fetch(`${CART_API_URL}/${existingItem.id}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ qty: existingItem.qty + 1 })
+          })
+          .then(() => {
+            alert(`Quantity increased for ${title}!`);
+            updateCartCount(); // Update badge after update
+          })
+          .catch(() => alert('Error updating quantity.'));
+        } else {
+          fetch(CART_API_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(product)
+          })
+          .then(() => {
+            alert(`${title} added to cart!`);
+            updateCartCount(); // Update badge after add
+          })
+          .catch(() => alert('Error adding product.'));
+        }
+      });
+    });
+  });
+
+
+
+  </script>
+
+  <script src="userAccount.js"></script>
+  <script src="thumbnail.js"></script>
+</body>
+</html>

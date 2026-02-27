@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veloura Fragrances</title>
+  <link rel="stylesheet" href="../css/fragrances_women.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- Bridge for React integration -->
+  <script src="/bridge.js"></script>
+
+
+  <!-- 🔝 Top Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="veloura.png" alt="Veloura Logo">
+      Veloura
+    </div>
+    <div class="navbar">
+      <div class="dropdown">
+        <span class="dropdown-label">Skincare</span>
+        <div class="mega-menu">
+          <div class="mega-column">
+            <h4>Face Care</h4>
+
+            <ul>
+              <li><a href="#">Face Moisturizer</a></li>
+              <li><a href="#">Cleansers</a></li>
+              <li><a href="#">Serum</a></li>
+              <li><a href="#">Toners</a></li>
+              <li><a href="#">Sunscreens</a></li>
+              <li><a href="#">Masks</a></li>
+              
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Lip Care</h4>
+            <ul>
+              <li><a href="lipbalm.html">Lip balm</a></li>
+              <li><a href="lipscrubs.html">Lip scrub</a></li>
+              <li><a href="lipmasks.css">Lip Masks</a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Body Care</h4>
+            <ul>
+              <li><a href="#">Lotions & Creams</a></li>
+              <li><a href="#">Body Scrubs</a></li>
+              <li><a href="#">Body sunscreens</a></li>
+              <li><a href="#">Soaps & body wash </a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Eye Care</h4>
+            <ul>
+              <li><a href="#">undereye cream & serums</a></li>
+              <li><a href="#">eye masks</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Makeup Dropdown -->
+      <div class="dropdown">
+        <span class="dropdown-label">Makeup</span>
+        <div class="mega-menu">
+          <div class="mega-column">
+            <h4>Face</h4>
+            <ul>
+              <li><a href="#">Foundation</a></li>
+              <li><a href="#">Concealer</a></li>
+              <li><a href="#">Primer</a></li>
+              <li><a href="#">Highlighter</a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Eyes</h4>
+            <ul>
+              <li><a href="#">Mascara</a></li>
+              <li><a href="#">Eyeliner</a></li>
+              <li><a href="#">Eyeshadow</a></li>
+              <li><a href="kajal.html">Kajal</a></li>
+            </ul>
+          </div>
+          <div class="mega-column">
+            <h4>Lips</h4>
+            <ul>
+              <li><a href="#">Lipstick</a></li>
+              <li><a href="#">Lip Gloss</a></li>
+              <li><a href="#">Lip Liner</a></li>
+              <li><a href="#">Lip Tints</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fragrances Dropdown -->
+      <div class="dropdown">
+        <span class="dropdown-label">Fragrances</span>
+        <div class="mega-menu">
+          <div class="mega-column">
+            <h4>By Gender</h4>
+            <ul>
+              <!-- <li><a href="#">For Women</a></li> -->
+              <li><a href="#">For Men</a></li>
+              <li><a href="#">Unisex</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Any other links -->
+      <div class="nav-links">
+        <a href="tools.html">Tools</a>
+        <a href="#">Home</a>
+      </div>
+    </div>
+    <div class="icons">
+      <input type="text" id="page-search-input" placeholder="Search for products...">
+      <button type="submit" id="page-search-btn"><i class="fa fa-search"></i></button>
+      <div id="page-search-results"></div>
+      <a href="signin.html"><span class="icon">👤</span></a>
+      <a href="AddToCart.html">
+        <span class="icon cart">🛒<span id="cart-count">0</span></span>
+      </a>
+    </div>
+  </header>
+
+ 
+  <!-- 🏷 Page Title -->
+  <h1 class="section-title">Fragrances</h1>
+
+  <!-- By Type Selection -->
+  <div class="filter-links">
+    <a href="fragrances_women.html">All</a>
+    <a href="women_perfume.html">Perfumes</a>
+    <a href="women_rollOn.html">Roll-ons & Deodrants</a>
+  </div>
+
+  <!-- 🛍 Product Grid -->
+
+  <div class="product-grid">
+    <div class="product-card">
+      <a href="wottagirl_mist.html"><img src="wottagirl_vanilla_mist.jpg" alt="Lip Balm"></a>
+      <div class="badge">Best Seller</div>
+      <p class="title">Layer'r Wottagirl Vanilla Twist Fragrant Body Splash For Her (135ml)</p>
+      <p class="price">₹220 <del>₹239</del> <span class="green">8% off</span></p>
+      <div class="rating"><span>4.3 ★</span> (21266)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <a href="plum_mist.html"><img src="plum_vanilla_mist.avif" alt="Lip Balm"></a>
+      <div class="badge">Best Seller</div>
+      <p class="title">Plum Body Lovin Vanilla Vibes Body Mist For A Long Lasting Vanilla Fragrance (150ml)</p>
+      <p class="price">₹446 <del>₹550</del> <span class="green">19% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (28131)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <a href="victoriaSecret_mist.html"><img src="victoriaScret_pureSeduction.webp" alt="Lip Balm"></a>
+      <div class="badge">Best Seller</div>
+      <p class="title">Victoria's Secret Pure Seduction Fragrance Mist For Her (250ml)</p>
+      <p class="price">₹1874 <del>₹2499</del> <span class="green">15% off</span></p>
+      <div class="rating"><span>4.1 ★</span> (2789)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <a href="aqualogica_mist.html"><img src="aqualogica_vanilla_mist.jpg" alt="Lip Balm"></a>
+      <div class="badge">Best Seller</div>
+      <p class="title"> Aqualogica Refresh & Sun Kissed Vanilla Perfume Body Mist (150ml)</p>
+      <p class="price">₹419 <del>₹499 </del> <span class="green">16% off</span></p>
+      <div class="rating"><span>4.2 ★</span> (1194)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="bath&body_intoTheNight_mist.jpg" alt="Lip Balm">
+      <div class="badge">Best Seller</div>
+      <p class="title">Bath & Body Works Into The Night Fine Fragrance Mist (236ml)</p>
+      <p class="price">₹1799 <del>₹2299</del> <span class="green">22% off</span></p>
+      <div class="rating"><span>4.4 ★</span> (120)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="bath&body_thousandWishes_mist.jpg" alt="Lip Balm">
+      <div class="badge">Best Seller</div>
+      <p class="title">Bath & Body Works A Thousand Wishes Fine Fragrance Mist (236ml)</p>
+      <p class="price">₹1799 <del>₹2299</del> <span class="green">22% off</span></p>
+      <div class="rating"><span>4.6 ★</span> (116)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="victoriaSecret_bareVanilla_mist.jpg" alt="Lip Balm">
+      <div class="badge">Best Seller</div>
+      <p class="title">Victoria's Secret Bare Vanilla Fragrance Mist For Her (250ml)</p>
+      <p class="price">₹2024 <del>₹2699</del> <span class="green">25% off</span></p>
+      <div class="rating"><span>4.2 ★</span> (3455)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="bath&body_youAreTheOne_mist.jpg" alt="Lip Balm">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Bath & Body Works You'Re The One Fine Fragrance Mist (236ml)</p>
+      <p class="price">₹1799 <del>₹2299</del> <span class="green">35% off</span></p>
+      <div class="rating"><span>4.5 ★</span> (113)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="bath&bosy_champagneToast_mist.webp" alt="Lip Balm">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Bath & Body Works Champagne Toast Fine Fragrance Mist (236ml)</p>
+      <p class="price">₹2299 <del>₹1799 </del> <span class="green">22% off</span></p>
+      <div class="rating"><span>4.5 ★</span> (31)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="aqualogica_onTheGoSet_mist.jpg" alt="Lip Balm">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Aqualogica Refresh + On The Go perfume Body Mist Set of 3 (60ml)</p>
+      <p class="price">₹515 <del>₹599 </del> <span class="green">14% off</span></p>
+      <div class="rating"><span>4 ★</span> (513)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="victoriaSecret_pineapple_mist.webp" alt="Lip Balm">
+      <!-- <div class="badge">Best Seller</div> -->
+      <p class="title">Victoria's Secret Pineapple Shea Glow Natural Beauty Body Mist (250ml)</p>
+      <p class="price">₹999 <del>₹2799 </del> <span class="green">64% off</span></p>
+      <div class="rating"><span>3.3 ★</span> (6)</div>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+</div>
+
+<!-- footer -->
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>Veloura Beauty</h3>
+      <p>Your trusted destination for luxury beauty products and tips. Bringing confidence and glow to your life.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="ABOUTus.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email: support@veloura.com</p>
+      <p>Phone: ‪+91 234 567 8901‬</p>
+      
+  <div class="footer-bottom">
+    <p>© 2025 Veloura Beauty. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const CART_API_URL = "http://localhost:3000/cart";
+
+  // Function to update cart count badge
+  function updateCartCount() {
+    fetch(CART_API_URL)
+      .then(res => res.json())
+      .then(items => {
+        let count = 0;
+        items.forEach(item => { count += item.qty; });
+        const countSpan = document.getElementById("cart-count");
+        if (countSpan) countSpan.innerText = count;
+      })
+      .catch(() => {
+        const countSpan = document.getElementById("cart-count");
+        if (countSpan) countSpan.innerText = 0;
+    });
+  }
+
+  // Attach event listeners after DOM loads
+  document.addEventListener("DOMContentLoaded", () => {
+    // Update cart count on page load
+    updateCartCount();
+
+    document.querySelectorAll('.product-card .cart-btn').forEach(button => {
+      button.addEventListener('click', async () => {
+        const card = button.closest('.product-card');
+        const title = card.querySelector('.title').innerText.trim();
+        const priceText = card.querySelector('.price').innerText.trim();
+        const price = parseInt(priceText.replace(/[₹,]/g, '').split(' ')[0]);
+        const image = card.querySelector('img').src;
+
+        const product = { title, price, qty: 1, image };
+
+        // Check if the product is already in the cart
+        const existing = await fetch(`${CART_API_URL}?title=${encodeURIComponent(title)}`)
+          .then(res => res.json())
+          .catch(() => []);
+
+        if (existing.length > 0) {
+          // If product exists, update quantity
+          const existingItem = existing[0];
+          fetch(`${CART_API_URL}/${existingItem.id}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ qty: existingItem.qty + 1 })
+          })
+            .then(() => {
+              alert(`Quantity increased for ${title}!`);
+              updateCartCount(); // Update cart count
+            })
+            .catch(() => alert('Error updating quantity.'));
+        } else {
+          // Add as a new product
+          fetch(CART_API_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(product)
+          })
+            .then(() => {
+              alert(`${title} added to cart!`);
+              updateCartCount(); // Update cart count
+            })
+            .catch(() => alert('Error adding product.'));
+          }
+        });
+      });
+    });
+  </script>
+
+  <script src="../javascript/userAccount.js"></script>
+  <script src="../javascript/search.js"></script>
+
+
+</body>
+</html>

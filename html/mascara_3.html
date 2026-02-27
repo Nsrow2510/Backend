@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L'Oreal Paris Voluminous Waterproof Mascara | Velora</title>
+   <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="../css/MACfoundationdetail.css" />
+</head>
+<body>
+  <!-- Bridge for React integration -->
+  <script src="/bridge.js"></script>
+
+
+  <!-- Navbar -->
+ <header class="navbar">
+    <div class="logo">
+      <img src="logo_1.jpg" alt="Veloura Logo" class="logo-img">
+  <span>Veloura</span></div>
+<div class="navbar">
+  <div class="dropdown">
+    <span class="dropdown-label">Skincare</span>
+    <div class="mega-menu">
+      <div class="mega-column">
+        <h4>Face Care</h4>
+        <ul>
+          <li><a href="facemositurizer.html">Face Moisturizer</a></li>
+          <li><a href="cleansers.html">Cleansers</a></li>
+          <li><a href="serum.html">Serum</a></li>
+          <li><a href="toner.html">Toners</a></li>
+          <li><a href="sunscreen.html">Sunscreens</a></li>
+          <li><a href="mask.html">Masks</a></li>
+          
+        </ul>
+      </div>
+      <div class="mega-column">
+        <h4>Lip Care</h4>
+        <ul>
+          <li><a href="lipbalm.html">Lip balm</a></li>
+          <li><a href="lipscrubs.html">Lip scrub</a></li>
+          <li><a href="lipmasks.css">Lip Masks</a></li>
+        </ul>
+      </div>
+      <div class="mega-column">
+        <h4>Body Care</h4>
+        <ul>
+          <li><a href="#">Lotions & Creams</a></li>
+          <li><a href="#">Body Scrubs</a></li>
+          <li><a href="#">Body sunscreens</a></li>
+          <li><a href="#">Soaps & body wash </a></li>
+        </ul>
+      </div>
+      <div class="mega-column">
+        <h4>Eye Care</h4>
+        <ul>
+          <li><a href="#">undereye cream & serums</a></li>
+          <li><a href="#">eye masks</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Makeup Dropdown -->
+  <div class="dropdown">
+    <span class="dropdown-label">Makeup</span>
+    <div class="mega-menu">
+      <div class="mega-column">
+        <h4>Face</h4>
+        <ul>
+          <li><a href="foundation.html">Foundation</a></li>
+          <li><a href="concealer.html">Concealer</a></li>
+          <li><a href="primer.html">Primer</a></li>
+          <li><a href="highlighter.html">Highlighter</a></li>
+        </ul>
+      </div>
+      <div class="mega-column">
+        <h4>Eyes</h4>
+        <ul>
+          <li><a href="mascara.html">Mascara</a></li>
+          <li><a href="eyeliner.html">Eyeliner</a></li>
+          <li><a href="eyeshadow.html">Eyeshadow</a></li>
+          <li><a href="kajal.html">Kajal</a></li>
+        </ul>
+      </div>
+      <div class="mega-column">
+        <h4>Lips</h4>
+        <ul>
+          <li><a href="lipstick.html">Lipstick</a></li>
+          <li><a href="lipgloss.html">Lip Gloss</a></li>
+          <li><a href="lipliner.html">Lip Liner</a></li>
+          <li><a href="liptints.html">Lip Tints</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fragrances Dropdown -->
+  <div class="dropdown">
+    <span class="dropdown-label">Fragrances</span>
+    <div class="mega-menu">
+      <div class="mega-column">
+        <h4>By Type</h4>
+        <ul>
+          <li><a href="#">Perfume</a></li>
+          <li><a href="#">Body Mists</a></li>
+          <li><a href="#">Roll-ons</a></li>
+        </ul>
+      </div>
+      <div class="mega-column">
+        <h4>By Gender</h4>
+        <ul>
+          <li><a href="#">For Women</a></li>
+          <li><a href="#">For Men</a></li>
+          <li><a href="#">Unisex</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Any other links -->
+  <div class="nav-links">
+    <a href="#">Tools</a>
+  </div>
+</div>
+    <div class="icons">
+            <!-- search form so Enter works -->
+  <form id="search-form" onsubmit="handleSearchSubmit(event)" style="display:inline;">
+    <input id="search-input" type="text" placeholder="Search for products or pages..." />
+  </form>
+      <!-- <input type="text" placeholder="Search for products..." /> -->
+      <a href="signin.html"><span class="icon">👤</span></a>
+      <a href="cart.html"><span class="icon cart">🛒<span class="badge">0</span></span></a>
+    </div>
+    
+  </header>
+      <!-- Breadcrumb -->
+<nav class="breadcrumb">
+    <a href="home.html">Home</a> ›
+    <a href="serum.html">Makeup</a> ›
+    <a href="#">Eyes</a> ›
+    <span>Mascara</span>
+</nav>
+
+ <!-- Product Section -->
+  <div class="product-container">
+    <!-- Left Gallery -->
+    <div class="image-gallery">
+      <div class="thumbnails">
+        <img src="loreal mascara.jpg" class="active" onclick="changeImage(this)">
+        <img src="a_1.avif" onclick="changeImage(this)">
+        <img src="a_3.avif" onclick="changeImage(this)">
+        <img src="a_2.avif" onclick="changeImage(this)">
+      </div>
+      <div class="main-image">
+        <img src="loreal mascara.jpg" id="mainProductImage">
+      </div>
+    </div>
+
+    <!-- Right Info -->
+    <div class="product-info">
+      <h1>L'Oreal Paris Voluminous Panorama Waterproof Mascara Volumizing, Clump Free, Smudge free</h1>
+      <div class="rating">⭐ 4.5/5 (1850 ratings)</div>
+      <p class="price">₹899<del>₹999</del> <span class="green">30% off</span></p>
+      <!-- <div class="offer">🔥 Limited Offer: Buy 1, Get 5% Extra Off</div> -->
+
+      <!-- available shades -->
+       <!-- <div class="shades">
+  <p><strong>Available Shades:</strong></p>
+  <span class="shade-box active" style="background:#BF8C6E;" title="Caramel"
+        data-image="mayblline concealer.avif" data-shade="caramel"></span>
+  <span class="shade-box" style="background:#E4B89A;" title="122 Sand"
+        data-image="z_8.avif" data-shade="122 sand"></span>
+  <span class="shade-box" style="background:#F3D3BD;" title="Ivory"
+        data-image="z_9_3.avif" data-shade="ivory"></span>
+  <span class="shade-box" style="background:#F5E3D4;" title="Fair"
+        data-image="z_10_1.jpg" data-shade="fair"></span>
+</div>
+ -->
+
+
+      <div class="btns">
+        <!-- <button class="cart-btn">Add to Cart</button> -->
+         <button class="cart-btn" onclick='addToCart("forever52")'>Add to Cart</button>
+
+
+        <button class="buy-btn">Buy Now</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <div class="tab-buttons">
+      <button class="active" onclick="showTab('desc')">Description</button>
+      <!-- <button onclick="showTab('ing')">Ingredients</button> -->
+      <button onclick="showTab('use')">How to Use</button>
+    </div>
+    <div class="tab-content" id="desc">
+        A volumising and lengthening mascara designed to thicken and extend lashes while resisting water, sweat and smudging for long-wear performance.    </div>
+    <!-- <div class="tab-content" id="ing" style="display:none;"></div> -->
+    <div class="tab-content" id="use" style="display:none;">
+        Step 1: Position wand horizontally and wiggle from side to side and base to tip to achieve maximum volume and length and lift.<br>
+        Step 2: Hold wand vertically and stroke upward to curl and separate.<br>
+    </div>
+</div>
+
+
+  <!-- Reviews -->
+  <div class="reviews">
+    <h3>Customer Reviews</h3>
+    <div class="review"><strong>Mannat ⭐⭐⭐⭐⭐</strong><p>🤩Amazing product<br> </p></div>
+    <div class="review"><strong>Pooja ⭐⭐⭐⭐</strong><p>Satisfied 😁</p></div>
+    <div class="review"><strong>Gurpreet ⭐⭐⭐⭐⭐</strong><p>Nice<br></p></div>
+    <div class="review"><strong>Navneet ⭐⭐⭐⭐</strong><p>good to go.</p></div>
+    <div class="review"><strong>Ayushi ⭐⭐⭐⭐</strong><p>"Best product"😀<br> </p></div>
+    <div class="review"><strong>Neharika ⭐⭐⭐⭐</strong><p>😍</p></div>
+    <div class="review"><strong>Monika ⭐⭐⭐⭐</strong><p>This product is sooo gooood. </p></div>
+    <div class="review"><strong>Geeta ⭐⭐⭐⭐</strong><p>  Good </p></div> 
+
+  </div>
+
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>Veloura Beauty</h3>
+      <p>Your trusted destination for luxury beauty products and tips. Bringing confidence and glow to your life.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="ABOUTus.html">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+        
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email: support@veloura.com</p>
+      <p>Phone: +91 234 567 8901</p>
+      
+  <div class="footer-bottom">
+    <p>© 2025 Veloura Beauty. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="foundation_1.js"></script>
+</body>
+</html>

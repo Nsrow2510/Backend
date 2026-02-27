@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M.A.C studio fix fluid spf 15 soft matte foundation | Veloura</title>
+   <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="../css/MACfoundationdetail.css" />
+</head>
+<body>
+  <!-- Bridge for React integration -->
+  <script src="/bridge.js"></script>
+
+
+  <!-- Navbar -->
+ <header class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="Veloura Logo" class="logo-img">
+  <span>Veloura</span></div>
+<div class="navbar">
+  <div class="dropdown">
+    <span class="dropdown-label">Skincare</span>
+    <div class="mega-menu">
+      <div class="mega-column">
+             <h4>Face Care</h4>
+        <ul>
+          <li><a href="facemositurizer.html">Face Moisturizer</a></li>
+          <li><a href="cleansers.html">Cleansers</a></li>
+          <li><a href="serum.html">Serum</a></li>
+          <li><a href="toner.html">Toners</a></li>
+          <li><a href="sunscreen.html">Sunscreens</a></li>
+          <li><a href="mask.html">Masks</a></li>
+          
+        </ul>
+      </div>
+      <div class="mega-column">
+        <h4>Lip Care</h4>
+        <ul>
+          <li><a href="lipbalm.html">Lip balm</a></li>
+          <li><a href="lipscrubs.html">Lip scrub</a></li>
+          <li><a href="lipmasks.html">Lip Masks</a></li>
+        </ul>
+      </div>
+      <div class="mega-column">
+        <h4>Body Care</h4>
+        <ul>
+          <li><a href="#">Lotions & Creams</a></li>
+          <li><a href="#">Body Scrubs</a></li>
+          <li><a href="#">Body sunscreens</a></li>
+          <li><a href="#">Soaps & body wash </a></li>
+        </ul>
+      </div>
+      <div class="mega-column">
+        <h4>Eye Care</h4>
+        <ul>
+          <li><a href="#">undereye cream & serums</a></li>
+          <li><a href="#">eye masks</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Makeup Dropdown -->
+  <div class="dropdown">
+    <span class="dropdown-label">Makeup</span>
+    <div class="mega-menu">
+      <div class="mega-column">
+        <h4>Face</h4>
+        <ul>
+          <li><a href="foundation.html">Foundation</a></li>
+          <li><a href="concealer.html">Concealer</a></li>
+          <li><a href="primer.html">Primer</a></li>
+          <li><a href="highlighter.html">Highlighter</a></li>
+        </ul>
+      </div>
+      <div class="mega-column">
+        <h4>Eyes</h4>
+        <ul>
+          <li><a href="mascara.html">Mascara</a></li>
+          <li><a href="eyeliner.html">Eyeliner</a></li>
+          <li><a href="eyeshadow.html">Eyeshadow</a></li>
+          <li><a href="kajal.html">Kajal</a></li>
+        </ul>
+      </div>
+      <div class="mega-column">
+        <h4>Lips</h4>
+        <ul>
+          <li><a href="lipstick.html">Lipstick</a></li>
+          <li><a href="lipgloss.html">Lip Gloss</a></li>
+          <li><a href="lipliner.html">Lip Liner</a></li>
+          <li><a href="liptints.html">Lip Tints</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fragrances Dropdown -->
+  <div class="dropdown">
+    <span class="dropdown-label">Fragrances</span>
+    <div class="mega-menu">
+      <div class="mega-column">
+        <h4>By Type</h4>
+        <ul>
+          <li><a href="#">Perfume</a></li>
+          <li><a href="#">Body Mists</a></li>
+          <li><a href="#">Roll-ons</a></li>
+        </ul>
+      </div>
+      <div class="mega-column">
+                <h4>By Gender</h4>
+        <ul>
+          <li><a href="fragrances_women.html">For Women</a></li>
+          <li><a href="fragrances_men.html">For Men</a></li>
+          <li><a href="fragrances_unisex.html">Unisex</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Any other links -->
+  <div class="nav-links">
+    <a href="tools.html">Tools</a>
+  </div>
+</div>
+    <div class="icons">
+            <!-- search form so Enter works -->
+  <form id="search-form" onsubmit="handleSearchSubmit(event)" style="display:inline;">
+    <input id="search-input" type="text" placeholder="Search for products or pages..." />
+  </form>
+      <!-- <input type="text" placeholder="Search for products..." /> -->
+      <a href="login.html"><span class="icon">👤</span></a>
+      <a href="cart.html"><span class="icon cart">🛒<span class="badge">0</span></span></a>
+    </div>
+    
+  </header>
+      <!-- Breadcrumb -->
+<nav class="breadcrumb">
+    <a href="home.html">Home</a> ›
+    <a href="serum.html">Makeup</a> ›
+    <a href="#">Face</a> ›
+    <span>Foundation</span>
+</nav>
+
+ <!-- Product Section -->
+  <div class="product-container">
+    <!-- Left Gallery -->
+    <div class="image-gallery">
+      <div class="thumbnails">
+        <img src="macfoundation.avif" class="active" onclick="changeImage(this)">
+        <img src="macfoundation2.avif" onclick="changeImage(this)">
+        <img src="macfoundation3.avif" onclick="changeImage(this)">
+        <img src="macfoundation4.webp" onclick="changeImage(this)">
+      </div>
+      <div class="main-image">
+        <img src="macfoundation.avif" id="mainProductImage">
+      </div>
+    </div>
+
+    <!-- Right Info -->
+    <div class="product-info">
+      <h1>M.A.C Studio Fix Fluid SPF 15 Soft Matte Foundation With Hyaluronic Acid </h1>
+      <div class="rating">⭐ 4.5/5 (13550 ratings)</div>
+      <p class="price">₹3400<del>₹4000 </del> <span class="green">15% off</span></p>
+      <!-- <div class="offer">🔥 Limited Offer: Buy 1, Get 5% Extra Off</div> -->
+
+      <!-- available shades -->
+       <div class="shades">
+  <p><strong>Available Shades:</strong></p>
+  <span class="shade-box active" style="background:#E2A576;;" title="NC20"
+        data-image="macfoundation.avif" data-shade="NC20"></span>
+         <span class="shade-box " style="background: #E2A576;;" title="C5.5"
+        data-image="macfoundationnc5.5.avif" data-shade="C 5.5"></span>
+  <span class="shade-box" style="background:#F5CFB3;" title="NW10"
+        data-image="macfoundationnw10.avif" data-shade="115"></span>
+  <span class="shade-box" style="background:#D19063;" title="NW18"
+        data-image="macfoundationnw18.avif" data-shade="118"></span>
+  <span class="shade-box" style="background:#AA6B42;" title="NW35"
+        data-image="macfoundationnw35.avif" data-shade="125"></span>
+        
+</div>
+
+
+
+
+
+      <div class="btns">
+        <!-- <button class="cart-btn">Add to Cart</button> -->
+         <button class="cart-btn" onclick='addToCart("forever52")'>Add to Cart</button>
+
+
+        <button class="buy-btn">Buy Now</button>
+      </div>
+
+    </div>
+  </div>
+<!-- Tabs -->
+<div class="tabs">
+  <div class="tab-buttons">
+    <button class="active" onclick="showTab('desc')">Description</button>
+    <button onclick="showTab('ing')">Ingredients</button>
+    <button onclick="showTab('use')">How to Use</button>
+  </div>
+  <div class="tab-content" id="desc">
+      M.A.C Studio Fix Fluid SPF 15 is an iconic, high-coverage liquid foundation with a soft matte finish and long-wearing, oil-controlling formula. Enriched with hydrating hyaluronic acid, it delivers a flawless, photo-ready look that lasts all day while keeping skin comfortably balanced. Suitable for all skin types, this foundation offers buildable coverage and helps protect against sun damage with SPF 15.
+  </div>
+  <div class="tab-content" id="ing" style="display:none;">
+      Water/Aqua/Eau, Cyclopentasiloxane, Trimethylsiloxysilicate, Glycerin, PEG-10 Dimethicone, Dimethicone, Sodium Hyaluronate (Hyaluronic Acid), Silica, Tocopheryl Acetate (Vitamin E), Magnesium Sulfate, Disteardimonium Hectorite, Aluminum Hydroxide, Phenoxyethanol, Xanthan Gum, Parfum/Fragrance, [+/- Iron Oxides (CI 77491, CI 77492, CI 77499), Titanium Dioxide (CI 77891)].
+  </div>
+  <div class="tab-content" id="use" style="display:none;">
+      Step 1: Apply a small amount of foundation to the center of your face.<br>
+      Step 2: Blend outwards with a brush, sponge, or fingertips to achieve an even, flawless finish.<br>
+      Step 3: For additional coverage, apply extra product in thin layers as needed.<br>
+      Step 4: Always shake well before use. Best results when set with powder.<br>
+      Step 5: Remove with a gentle makeup remover or face wash at the end of the day.
+  </div>
+</div>
+
+<!-- Reviews -->
+<div class="reviews">
+  <h3>Customer Reviews</h3>
+  <div class="review"><strong>Kavya ⭐⭐⭐⭐⭐</strong><p>Incredible coverage and so lightweight! My skin stays matte yet feels comfortable for hours.</p></div>
+  <div class="review"><strong>Shalini ⭐⭐⭐⭐</strong><p>Perfect for special occasions—blurs pores and looks amazing in photos! 💖</p></div>
+  <div class="review"><strong>Meera ⭐⭐⭐⭐⭐</strong><p>Love the shade range and lasting power. Never cakes up, even on my oily T-zone!</p></div>
+  <div class="review"><strong>Ayushi ⭐⭐⭐⭐</strong><p>The best foundation for humid weather. Still flawless at the end of the day.</p></div>
+  <div class="review"><strong>Jasleen ⭐⭐⭐⭐</strong><p>Can be applied light or full coverage. Hyaluronic acid really makes my skin feel hydrated underneath.</p></div>
+  <div class="review"><strong>Tanaya ⭐⭐⭐⭐⭐</strong><p>Always get compliments on my complexion when I use this foundation. Dreamy finish!</p></div>
+  <div class="review"><strong>Priyanka ⭐⭐⭐⭐</strong><p>Doesn't oxidize and stays true to color. Looks so smooth in every lighting. 😍</p></div>
+  <div class="review"><strong>Srishti ⭐⭐⭐⭐</strong><p>Finally, a foundation that controls oil and doesn't dry me out.</p></div>
+</div>
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>Veloura Beauty</h3>
+      <p>Your trusted destination for luxury beauty products and tips. Bringing confidence and glow to your life.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="ABOUTus.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email: support@veloura.com</p>
+      <p>Phone: +91 234 567 8901</p>
+      
+  <div class="footer-bottom">
+    <p>© 2025 Veloura Beauty. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="foundation_1.js"></script>
+</body>
+</html>
