@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign Up - Veloura</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="../css/signup.css">
+</head>
+<body>
+  <!-- Bridge for React integration -->
+
+  <div class="container">
+    <div class="form-panel">
+      <h2>Create your Veloura account</h2>
+      <form id="signupForm" autocomplete="off">
+        <label>Name</label>
+        <input type="text" id="name" required>
+
+        <label>Email</label>
+        <input type="email" id="email" required>
+        <div id="email-hint" class="hint"></div>
+
+        <label>Mobile Number</label>
+        <input type="text" id="mobile" maxlength="15" required>
+        <div id="mobile-hint" class="hint"></div>
+
+        <label>Password</label>
+        <input type="password" id="password" required autocomplete="new-password">
+        <div id="pw-hint" class="hint"></div>
+
+        <label>Confirm Password</label>
+        <input type="password" id="confirmPassword" required>
+        <div id="cpw-hint" class="hint"></div>
+
+        <button type="submit">Sign Up</button>
+        <p>Already have an account? <a href="login.html">Sign in</a></p>
+      </form>
+      <div id="success"></div>
+    </div>
+    <div class="img-panel">
+      <img src="https://i.pinimg.com/1200x/a1/a5/24/a1a52471db1666dfd3e7133151ee70cc.jpg" alt="Beauty Collection"/>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-content">
+      <div>
+        <strong>Veloura Beauty</strong>
+        <p>Your trusted destination for luxury beauty products and tips. Bringing confidence and glow to your life.</p>
+      </div>
+      <div>
+        <strong>Quick Links</strong>
+        <p>About Us</p>
+        <p>Contact</p>
+      </div>
+      <div>
+        <strong>Contact Us</strong>
+        <p>Email: support@veloura.com</p>
+        <p>Phone: +91 234 567 8901</p>
+      </div>
+    </div>
+    <div class="footer-copy">©️ 2025 Veloura Beauty. All rights reserved.</div>
+  </footer>
+
+  <script src="../javascript/signup.js"></script>
+</body>
+</html>
