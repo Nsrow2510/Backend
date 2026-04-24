@@ -1,11 +1,90 @@
 {
   "users": [
     {
-      "id": 1772551970387,
+      "id": 1772875374784,
       "name": "navneet",
-      "email": "navneetsrow@gmail.com",
-      "mobile": "7986034016",
+      "email": "navneet@gmail.com",
+      "mobile": "9876543210",
       "password": "Navneet.k_2510"
+    },
+    {
+      "id": 1773031378201,
+      "name": "Navneet",
+      "email": "navneet@hotmail.com",
+      "mobile": "9876543210",
+      "password": "Navneet.k_2510"
+    }
+  ],
+  "cart": [
+    {
+      "id": 1772729747458,
+      "userId": 1772729713651,
+      "productName": "Engage Yang Eau De Parfum For Women (100ml)",
+      "price": 422,
+      "image": "../images/engage_yang_perfume.webp",
+      "quantity": 1
+    },
+    {
+      "id": 1772729749919,
+      "userId": 1772729713651,
+      "productName": "Bella Vita Date Women Perfume (100ml)",
+      "price": 575,
+      "image": "../images/bellavita_date_perfume.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 1773029961567,
+      "userId": 1772875374784,
+      "productName": "Engage Yang Eau De Parfum For Women (100ml)",
+      "price": 422,
+      "image": "../images/engage_yang_perfume.webp",
+      "quantity": 1
+    },
+    {
+      "id": 1773049947062,
+      "userId": 1773031378201,
+      "productName": "Plum Bodylovin' Vanilla Caramello Long Lasting Eau De Parfum With Warm Vanilla & Salted Caramel (50ml)",
+      "price": 728,
+      "image": "../images/plum_vanilla_perfume.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 1773049949307,
+      "userId": 1773031378201,
+      "productName": "Engage Yang Eau De Parfum For Women (100ml)",
+      "price": 422,
+      "image": "../images/engage_yang_perfume.webp",
+      "quantity": 1
+    }
+  ],
+  "messages": [
+    {
+      "id": 1772727352164,
+      "name": "navneet",
+      "email": "navneet@gmail.com",
+      "message": "hello",
+      "date": "2026-03-05T16:15:52.164Z"
+    },
+    {
+      "id": 1772729771264,
+      "name": "harman",
+      "email": "harman@gmail.com",
+      "message": "hey",
+      "date": "2026-03-05T16:56:11.264Z"
+    },
+    {
+      "id": 1772875476768,
+      "name": "navneet",
+      "email": "navneet@gmail.com",
+      "message": "hello",
+      "date": "2026-03-07T09:24:36.768Z"
+    },
+    {
+      "id": 1773021596750,
+      "name": "navneet",
+      "email": "navneet@gmail.com",
+      "message": "hello",
+      "date": "2026-03-09T01:59:56.750Z"
     }
   ]
 }

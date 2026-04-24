@@ -7,7 +7,7 @@ document.getElementById("signin-form").addEventListener("submit", function(e) {
 
   globalMsg.innerText = "";
 
-  fetch("http://localhost:3000/login", {
+  fetch("http://localhost:3000/api/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -22,14 +22,17 @@ document.getElementById("signin-form").addEventListener("submit", function(e) {
 
     if (res.status === 200) {
 
-      globalMsg.style.color = "green";
-      globalMsg.innerText = data.message;
+  // USER ID SAVE
+  localStorage.setItem("userId", data.user.id);
 
-      setTimeout(() => {
-        window.location.href = "fragrances_women.html";
-      }, 3500);
+  globalMsg.style.color = "green";
+  globalMsg.innerText = data.message;
 
-    }
+  setTimeout(() => {
+    window.location.href = "main.html";
+  }, 3500);
+
+}
 
     else if (res.status === 404) {
 

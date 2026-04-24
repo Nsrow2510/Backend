@@ -61,7 +61,7 @@ signupForm.addEventListener("submit", async function(event) {
 
   try {
 
-    const res = await fetch("http://localhost:3000/register", {
+    const res = await fetch("http://localhost:3000/api/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -76,18 +76,18 @@ signupForm.addEventListener("submit", async function(event) {
 
     const data = await res.json();
 
-    if (res.status === 201) {
+    if (res.ok) {
 
-      successDiv.innerText = "Account created successfully! Redirecting to login...";
-      successDiv.style.color = "green";
+  successDiv.innerText = "Account created successfully! You can login now.";
+  successDiv.style.color = "green";
 
-      signupForm.reset();
+  signupForm.reset();
 
-      setTimeout(() => {
-        window.location.href = "login.html";
-      }, 2000);
+  setTimeout(() => {
+    window.location.href = "login.html";
+  }, 2000);
 
-    } else {
+}  else {
 
       successDiv.innerText = data.message;
       successDiv.style.color = "red";

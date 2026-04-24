@@ -558,79 +558,68 @@
     <div class="footer-contact">
       <h4>Contact Us</h4>
       <p>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="24575154544b5650645241484b5156450a474b49">[email&#160;protected]</a></p>
-      <p>Phone: ‪+91 234 567 8901‬</p>
+      <p>Phone: +91 234 567 8901</p>
       
   <div class="footer-bottom">
-    <p>© 2025 Veloura Beauty. All rights reserved.</p>
+    <p>©️ 2025 Veloura Beauty. All rights reserved.</p>
   </div>
 </footer>
 
 <!-- Add to cart javascript -->
+<!-- Add to cart javascript -->
 <script>
-  const CART_API_URL = "http://localhost:3000/cart";
+  const storedUserId = localStorage.getItem("userId");
 
-  // Update cart count badge in the navbar
-  function updateCartCount() {
-    fetch(CART_API_URL)
-      .then(res => res.json())
-      .then(items => {
-        let count = 0;
-        items.forEach(item => { count += (item.qty || 1); });
-        const countSpan = document.getElementById("cart-count");
-        if (countSpan) countSpan.innerText = count;
-      })
-      .catch(() => {
-        const countSpan = document.getElementById("cart-count");
-        if (countSpan) countSpan.innerText = 0;
-      });
+  // if (!storedUserId) {
+  //   alert("Please login first.");
+  //   window.location.href = "login.html";
+  // }
+
+  const USER_ID = parseInt(storedUserId);
+  const CART_API = "http://localhost:3000/api";
+
+  async function updateCartCount() {
+    try {
+      const items = await fetch(`${CART_API}/cart/${USER_ID}`).then(r => r.json());
+      let count = 0;
+      items.forEach(item => { count += (item.quantity || 1); });
+      const countSpan = document.getElementById("cart-count");
+      if (countSpan) countSpan.innerText = count;
+    } catch {
+      const countSpan = document.getElementById("cart-count");
+      if (countSpan) countSpan.innerText = 0;
+    }
   }
 
-  // Attach Add to Cart listeners after DOM loads
   document.addEventListener("DOMContentLoaded", () => {
     updateCartCount();
 
     document.querySelectorAll('.product-card .cart-btn').forEach(button => {
       button.addEventListener('click', async () => {
         const card = button.closest('.product-card');
-        const title = card.querySelector('.title').innerText.trim();
-        const priceNode = card.querySelector('.price').childNodes[0];
-        const price = parseInt(priceNode.textContent.replace(/[₹,\s]/g, '').trim());
-        const image = card.querySelector('img').getAttribute('src');
+        const productName = card.querySelector('.title').innerText.trim();
 
-        // Check if the product already exists in the cart
-        let existing = [];
+      const priceText = card.querySelector('.price').childNodes[0].textContent;
+      const price = parseInt(priceText.replace(/[₹,\s]/g,''));
+
+      const image = card.querySelector("img").getAttribute("src");
+
         try {
-          existing = await fetch(`${CART_API_URL}?title=${encodeURIComponent(title)}`).then(r => r.json());
-        } catch {
-          alert('Cannot connect to cart server. Make sure JSON Server is running on port 3000.');
-          return;
-        }
-
-        if (existing.length > 0) {
-          // Product already in cart — increase quantity
-          const existingItem = existing[0];
-          fetch(`${CART_API_URL}/${existingItem.id}`, {
-            method: 'PATCH',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ qty: (existingItem.qty || 1) + 1 })
-          })
-            .then(() => {
-              alert(`Quantity increased for "${title}"!`);
-              updateCartCount();
-            })
-            .catch(() => alert('Error updating quantity.'));
-        } else {
-          // New product — add to cart
-          fetch(CART_API_URL, {
+          await fetch(`${CART_API}/add-to-cart`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ title, price, qty: 1, image })
+            body: JSON.stringify({
+            userId: USER_ID,
+            productName,
+            price,
+            image,
+            quantity: 1
           })
-            .then(() => {
-              alert(`"${title}" added to cart!`);
-              updateCartCount();
-            })
-            .catch(() => alert('Error adding to cart.'));
+          });
+          alert(`"${productName}" added to cart!`);
+          updateCartCount();
+        } catch {
+          alert('Cannot connect to cart server. Make sure server.js is running on port 3000.');
         }
       });
     });

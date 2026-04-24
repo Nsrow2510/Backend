@@ -1,12 +1,18 @@
-const CART_API_URL = "http://localhost:3000/cart";
-const cartlist = document.getElementById("cartlist");
+// const USER_ID = 1772551970387;  // your logged in user id
+console.log("AddToCart.js is running");
+const storedUserId = localStorage.getItem("userId");
 
+const USER_ID = parseInt(storedUserId);
+
+const CART_API_URL = `http://localhost:3000/api/cart/${USER_ID}`;
+const cartlist = document.getElementById("cartlist");
+// if (!cartlist) return;
 // Update cart count badge in navbar
 async function updateCartCount() {
   try {
     const items = await fetch(CART_API_URL).then(r => r.json());
     let count = 0;
-    items.forEach(item => { count += (item.qty || 1); });
+    items.forEach(item => { count += (item.quantity || 1); });
     const countSpan = document.getElementById("cart-count");
     if (countSpan) countSpan.innerText = count;
   } catch {
@@ -21,7 +27,7 @@ async function getCartItems() {
   try {
     items = await fetch(CART_API_URL).then(r => r.json());
   } catch {
-    cartlist.innerHTML = "<p>Could not load cart. Make sure JSON Server is running on port 3000.</p>";
+    cartlist.innerHTML = "<p>Could not connect to backend. Make sure server.js is running.</p>";
     return;
   }
 
@@ -38,23 +44,30 @@ async function getCartItems() {
 
   items.forEach(item => {
     const price = item.price || 0;
-    const qty = item.qty || 1;
+    const qty = item.quantity || 1;
     totalAmount += price * qty;
     totalQty += qty;
 
     const div = document.createElement("div");
     div.className = "cart-item";
     div.innerHTML = `
-      <img src="${item.image.startsWith('http') ? item.image : item.image}" width="70" alt="${item.title}">
-      <div>
-        <p>${item.title}</p>
-        <p>₹${price} x ${qty} = <strong>₹${price * qty}</strong></p>
-        <button class="qty-btn" data-id="${item.id}" data-action="decrease">-</button>
-        <span style="margin: 0 8px;">${qty}</span>
-        <button class="qty-btn" data-id="${item.id}" data-action="increase">+</button>
-        <button class="remove-btn" data-id="${item.id}">Remove</button>
-      </div>
-    `;
+  <div class="cart-item-inner">
+
+    <img src="${item.image}" class="cart-img">
+
+    <div class="cart-details">
+      <p>${item.productName}</p>
+      <p>₹${price} x ${qty} = <strong>₹${price * qty}</strong></p>
+
+      <button class="qty-btn" data-id="${item.id}" data-action="decrease">-</button>
+      <span>${qty}</span>
+      <button class="qty-btn" data-id="${item.id}" data-action="increase">+</button>
+
+      <button class="remove-btn" data-id="${item.id}">Remove</button>
+    </div>
+
+  </div>
+`;
     cartlist.appendChild(div);
   });
 
@@ -71,14 +84,14 @@ async function changeQty(id, newQty) {
     await removeFromCart(id);
   } else {
     try {
-      await fetch(`${CART_API_URL}/${id}`, {
+      await fetch(`http://localhost:3000/add-to-cart/${id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ qty: newQty })
+        body: JSON.stringify({ quantity: newQty })
       });
       getCartItems();
     } catch {
-      alert('Error updating quantity. Make sure JSON Server is running.');
+      alert('Cannot connect to backend server. Make sure server.js is running.');
     }
   }
 }
@@ -86,7 +99,7 @@ async function changeQty(id, newQty) {
 // Remove item from cart
 async function removeFromCart(id) {
   try {
-    await fetch(`${CART_API_URL}/${id}`, { method: 'DELETE' });
+    await fetch(`http://localhost:3000/add-to-cart/${id}`, { method: 'DELETE' });
     getCartItems();
   } catch {
     alert('Error removing item. Make sure JSON Server is running.');
@@ -102,7 +115,7 @@ cartlist.addEventListener("click", async (event) => {
     const action = target.getAttribute("data-action");
     const items = await fetch(CART_API_URL).then(r => r.json()).catch(() => []);
     const item = items.find(i => String(i.id) === String(id));
-    const currentQty = item ? (item.qty || 1) : 1;
+    const currentQty = item ? (item.quantity || 1) : 1;
     if (action === "increase") changeQty(id, currentQty + 1);
     else if (action === "decrease") changeQty(id, currentQty - 1);
 
@@ -113,15 +126,14 @@ cartlist.addEventListener("click", async (event) => {
 });
 
 // Load cart on page load
-document.addEventListener("DOMContentLoaded", () => {
-  getCartItems();
+// Load cart immediately
+getCartItems();
 
-  const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get("order") === "success") {
-    alert("Thank you for your order!");
-    history.replaceState(null, '', window.location.pathname);
-  }
-});
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get("order") === "success") {
+  alert("Thank you for your order!");
+  history.replaceState(null, '', window.location.pathname);
+}
 
 // Checkout button
 document.getElementById('checkout-btn')?.addEventListener('click', () => {
