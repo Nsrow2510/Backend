@@ -2,7 +2,7 @@
 console.log("AddToCart.js is running");
 const storedUserId = localStorage.getItem("userId");
 
-const USER_ID = parseInt(storedUserId);
+const USER_ID = storedUserId;
 
 const CART_API_URL = `http://localhost:3000/api/cart/${USER_ID}`;
 const cartlist = document.getElementById("cartlist");
@@ -59,11 +59,11 @@ async function getCartItems() {
       <p>${item.productName}</p>
       <p>₹${price} x ${qty} = <strong>₹${price * qty}</strong></p>
 
-      <button class="qty-btn" data-id="${item.id}" data-action="decrease">-</button>
+      <button class="qty-btn" data-id="${item._id}" data-action="decrease">-</button>
       <span>${qty}</span>
-      <button class="qty-btn" data-id="${item.id}" data-action="increase">+</button>
+      <button class="qty-btn" data-id="${item._id}" data-action="increase">+</button>
 
-      <button class="remove-btn" data-id="${item.id}">Remove</button>
+      <button class="remove-btn" data-id="${item._id}">Remove</button>
     </div>
 
   </div>
@@ -84,7 +84,7 @@ async function changeQty(id, newQty) {
     await removeFromCart(id);
   } else {
     try {
-      await fetch(`http://localhost:3000/add-to-cart/${id}`, {
+      await fetch(`http://localhost:3000/api/cart/${id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ quantity: newQty })
@@ -99,7 +99,7 @@ async function changeQty(id, newQty) {
 // Remove item from cart
 async function removeFromCart(id) {
   try {
-    await fetch(`http://localhost:3000/add-to-cart/${id}`, { method: 'DELETE' });
+    await fetch(`http://localhost:3000/api/cart/${id}`, { method: 'DELETE' });
     getCartItems();
   } catch {
     alert('Error removing item. Make sure JSON Server is running.');
@@ -114,7 +114,7 @@ cartlist.addEventListener("click", async (event) => {
     const id = target.getAttribute("data-id");
     const action = target.getAttribute("data-action");
     const items = await fetch(CART_API_URL).then(r => r.json()).catch(() => []);
-    const item = items.find(i => String(i.id) === String(id));
+    const item = items.find(i => String(i._id) === String(id));
     const currentQty = item ? (item.quantity || 1) : 1;
     if (action === "increase") changeQty(id, currentQty + 1);
     else if (action === "decrease") changeQty(id, currentQty - 1);

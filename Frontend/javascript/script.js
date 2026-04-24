@@ -1,83 +1,62 @@
 // ==================== CART FUNCTIONALITY ====================
-let cart = [];
-const cartBadge = document.querySelector(".badge");
+const USER_ID = localStorage.getItem("userId");
+const CART_API = "http://localhost:3000/api";
 
-function updateCartCount() {
-  if (cartBadge) {
-    const totalQty = cart.reduce((sum, item) => sum + item.quantity, 0);
-    cartBadge.textContent = totalQty;
+// Add to cart
+async function addToCart(productName, price, image) {
+  if (!USER_ID) {
+    alert("Login first!");
+    window.location.href = "login.html";
+    return;
+  }
+
+  try {
+    await fetch(`${CART_API}/cart`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        userId: USER_ID,
+        productName,
+        price: parseInt(price.replace("₹","")),
+        image,
+        quantity: 1
+      })
+    });
+
+    alert(`"${productName}" added to cart!`);
+    updateCartCount();
+
+  } catch (err) {
+    console.log(err);
+    alert("Server error");
   }
 }
 
-function addToCart(id, name, price, image) {
-  const existing = cart.find(item => item.id === id);
-  if (existing) {
-    existing.quantity += 1;
-  } else {
-    cart.push({ id, name, price, image, quantity: 1 });
+// Update cart count
+async function updateCartCount() {
+  if (!USER_ID) return;
+
+  try {
+    const res = await fetch(`${CART_API}/cart/${USER_ID}`);
+    const items = await res.json();
+
+    let count = 0;
+    items.forEach(item => {
+      count += item.quantity || 1;
+    });
+
+    document.getElementById("cart-count").innerText = count;
+  } catch {
+    document.getElementById("cart-count").innerText = 0;
   }
+}
+
+// Page load
+document.addEventListener("DOMContentLoaded", () => {
   updateCartCount();
-  updateButton(id);
-}
-
-function increaseQty(id) {
-  const item = cart.find(p => p.id === id);
-  if (item) {
-    item.quantity += 1;
-    updateCartCount();
-    updateButton(id);
-  }
-}
-
-function decreaseQty(id) {
-  const index = cart.findIndex(p => p.id === id);
-  if (index !== -1) {
-    cart[index].quantity -= 1;
-    if (cart[index].quantity <= 0) {
-      cart.splice(index, 1);
-    }
-    updateCartCount();
-    updateButton(id);
-  }
-}
-
-function updateButton(productId) {
-  const buttons = document.querySelectorAll('.add-to-cart-btn');
-  const controls = document.querySelectorAll('.quantity-controls');
-  buttons.forEach(btn => {
-    const btnOnclick = btn.getAttribute('onclick');
-    if (btnOnclick && btnOnclick.includes(productId)) {
-      const inCart = cart.find(item => item.id === productId);
-      if (inCart) {
-        btn.outerHTML = `
-          <div class="quantity-controls">
-            <button class="qty-btn" onclick="decreaseQty('${productId}')">−</button>
-            <span class="qty">${inCart.quantity}</span>
-            <button class="qty-btn" onclick="increaseQty('${productId}')">+</button>
-          </div>
-        `;
-      }
-    }
-  });
-  controls.forEach(control => {
-    const qtySpan = control.querySelector('.qty');
-    if (qtySpan) {
-      const decreaseBtn = control.querySelector('.qty-btn');
-      if (decreaseBtn) {
-        const onclickAttr = decreaseBtn.getAttribute('onclick');
-        if (onclickAttr) {
-          const id = onclickAttr.match(/'([^']+)'/)[1];
-          const inCart = cart.find(item => item.id === id);
-          if (inCart) {
-            qtySpan.textContent = inCart.quantity;
-          } else {
-            control.outerHTML = `<button class="add-to-cart-btn" onclick="addToCart('${id}', 'Product', '₹0', 'image.jpg')">Add to Cart</button>`;
-          }
-        }
-      }
-    }
-  });
-}
+});
 
 // ==================== SEARCH FUNCTIONALITY ====================
 document.getElementById("searchButtn").addEventListener("click", function() {

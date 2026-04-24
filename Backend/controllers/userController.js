@@ -25,5 +25,8 @@ exports.loginUser = async (req, res) => {
     return res.status(401).json({ message: "Wrong password" });
   }
 
-  res.json({ message: "Login success", user });
+  res.json({
+  message: "Login successful",
+  userId: user._id   
+});
 };

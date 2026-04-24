@@ -23,7 +23,7 @@ document.getElementById("signin-form").addEventListener("submit", function(e) {
     if (res.status === 200) {
 
   // USER ID SAVE
-  localStorage.setItem("userId", data.user.id);
+  localStorage.setItem("userId", data.userId);
 
   globalMsg.style.color = "green";
   globalMsg.innerText = data.message;
