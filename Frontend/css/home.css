@@ -385,6 +385,38 @@ body {
   text-align: center;
 }
 
+.logout-btn {
+  background-color: #d63384;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 0;
+}
+
+.logout-btn:hover {
+  background-color: #b0266b;
+}
+
+#profile-btn {
+  text-decoration: none;
+  color: #ad1457;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border: 2px solid #e8b4c4;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+#profile-btn:hover {
+  background: #ad1457;
+  color: white;
+}
+
 /* ==================== HERO SECTION ==================== */
 .hero {
   background: #e9b6c6;

@@ -1,5 +1,6 @@
 const User = require("../models/userModel");
 
+// ================= REGISTER =================
 exports.registerUser = async (req, res) => {
   const { name, email, mobile, password } = req.body;
 
@@ -13,6 +14,7 @@ exports.registerUser = async (req, res) => {
   res.status(201).json({ message: "Account created", user });
 };
 
+// ================= LOGIN =================
 exports.loginUser = async (req, res) => {
   const { email, password } = req.body;
 
@@ -26,7 +28,23 @@ exports.loginUser = async (req, res) => {
   }
 
   res.json({
-  message: "Login successful",
-  userId: user._id   
-});
+    message: "Login successful",
+    userId: user._id   
+  });
+};
+
+// ================= GET USER BY ID =================
+exports.getUserById = async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id);
+
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    res.json(user);
+
+  } catch (err) {
+    res.status(500).json({ message: "Server error" });
+  }
 };

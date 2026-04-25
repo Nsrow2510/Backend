@@ -102,7 +102,7 @@
           <div class="mega-column">
             <h4>By Gender</h4>
             <ul>
-              <!-- <li><a href="#">For Women</a></li> -->
+              <li><a href="fragrances_women.html">For Women</a></li>
               <li><a href="fragrances_men.html">For Men</a></li>
               <li><a href="fragrances_unisex.html">Unisex</a></li>
             </ul>
@@ -117,15 +117,30 @@
       </div>
     </div>
     <div class="icons">
-      <input type="text" id="page-search-input" placeholder="Search for products...">
-      <button type="submit" id="page-search-btn"><i class="fa fa-search"></i></button>
-      <div id="page-search-results"></div>
-      <a href="login.html"><span class="icon">👤</span></a>
-      <a href="AddToCart.html">
-        <span class="icon cart">🛒<span id="cart-count">0</span></span>
-      </a>
+  <input type="text" id="page-search-input" placeholder="Search for products...">
+  <button type="submit" id="page-search-btn"><i class="fa fa-search"></i></button>
+  <div id="page-search-results"></div>
 
-    </div>
+  <!-- 👤 LOGIN -->
+  <a href="login.html">
+    <span class="icon">👤</span>
+  </a>
+
+  <!-- 👤 PROFILE -->
+  <a href="profile.html" id="profile-btn" class="icon" style="display:none;">
+    Profile
+  </a>
+
+  <!-- 🛒 CART -->
+  <a href="AddToCart.html">
+    <span class="icon cart">🛒<span id="cart-count">0</span></span>
+  </a>
+
+  <!-- 🔓 LOGOUT -->
+  <button id="logout-btn" class="logout-btn" onclick="logout()" style="display:none;">
+    Logout
+  </button>
+</div>
   </header>
 
   <section class="hero">

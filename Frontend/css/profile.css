@@ -1,0 +1,59 @@
+/* ===== BODY ===== */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f3dfe5;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* ===== HEADING ===== */
+h2 {
+  margin-top: 40px;
+  color: #ad1457;
+}
+
+/* ===== PROFILE BOX ===== */
+.profile-box {
+  width: 350px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+/* ===== TEXT ===== */
+.profile-box p {
+  font-size: 15px;
+  margin: 12px 0;
+  padding: 10px;
+  background: #fce4ec;
+  border-radius: 8px;
+}
+
+/* ===== LABEL ===== */
+.profile-box strong {
+  color: #ad1457;
+}
+
+/* ===== LOGOUT BUTTON ===== */
+.profile-box button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  background: #ad1457;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.profile-box button:hover {
+  background: #880e4f;
+  transform: scale(1.03);
+}

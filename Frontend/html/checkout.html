@@ -1,278 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Veloura Checkout</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f6e9f0;
-      color: #4b1c2f;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .navbar {
-      background-color: #fce4ec;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 6px rgba(186,104,200,0.15);
-    }
-
-    .logo {
-      font-weight: bold;
-      font-size: 1.5rem;
-      color: #ad1457;
-    }
-
-    .nav-links a {
-      margin-left: 1rem;
-      text-decoration: none;
-      font-weight: bold;
-      color: #ad1457;
-      transition: color 0.3s ease;
-    }
-
-    .nav-links a:hover {
-      color: #e91e63;
-    }
-
-    .checkout-container {
-      max-width: 600px;
-      margin: 2rem auto 4rem;
-      padding: 1.5rem 2rem;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(186,104,200,0.13);
-    }
-
-    h1, h2 {
-      color: #be138e;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    #cart-items {
-      margin-bottom: 1rem;
-      max-height: 200px;
-      overflow-y: auto;
-      border-bottom: 1px solid #eaeaea;
-      padding-bottom: 1rem;
-    }
-
-    .cart-item {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 0.75rem;
-      font-weight: 600;
-    }
-
-    .cart-summary p {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 2rem;
-    }
-
-    form label {
-      display: block;
-      margin: 0.75rem 0 0.25rem;
-      font-weight: 600;
-      color: #701a53;
-    }
-
-    form input {
-      width: 100%;
-      padding: 0.5rem 0.75rem;
-      border: 1px solid #e9b1d1;
-      border-radius: 6px;
-      font-size: 1rem;
-      box-sizing: border-box;
-      background: #fdf0f6;
-      color: #701a53;
-      transition: border-color 0.3s;
-    }
-
-    form input:focus {
-      border-color: #be138e;
-      outline: none;
-    }
-
-    .place-order-btn {
-      margin-top: 1.5rem;
-      background-color: #be138e;
-      color: white;
-      font-size: 1.1rem;
-      font-weight: 700;
-      padding: 0.75rem;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      width: 100%;
-      transition: background-color 0.3s ease;
-    }
-
-    .place-order-btn:hover {
-      background-color: #95126b;
-    }
-
-    #order-message {
-      margin-top: 1rem;
-      font-weight: bold;
-      text-align: center;
-      color: #3c763d;
-    }
-  </style>
+  <title>Checkout</title>
+  <link rel="stylesheet" href="../css/checkout.css">
 </head>
 <body>
-  <!-- Bridge for React integration -->
-  <script src="/bridge.js"></script>
 
-  <header class="navbar">
-    <div class="logo">Veloura</div>
-    <nav class="nav-links">
-      <a href="AddToCart.html">Cart</a>
-      <a href="index.html">Home</a>
-    </nav>
-  </header>
+<h2>Checkout</h2>
 
-  <main class="checkout-container">
-    <h1>Checkout</h1>
+<div class="checkout-container">
 
+  <!-- USER INFO -->
+  <div class="user-info">
+    <h3>User Details</h3>
+    <p><strong>Name:</strong> <span id="name"></span></p>
+    <p><strong>Email:</strong> <span id="email"></span></p>
+  </div>
+
+  <!-- ADDRESS -->
+  <div class="address-box">
+    <h3>Delivery Address</h3>
+    <textarea id="address" placeholder="Enter your address..."></textarea>
+  </div>
+
+  <!-- CART ITEMS -->
+  <div class="cart-box">
+    <h3>Your Items</h3>
     <div id="cart-items"></div>
+    <h4 id="total"></h4>
+  </div>
 
-    <div class="cart-summary">
-      <p id="total-amount">Total: ₹0</p>
-    </div>
+  <!-- PLACE ORDER -->
+  <button id="place-order-btn">Place Order</button>
 
-    <form id="checkout-form">
-      <h2>Shipping Information</h2>
+</div>
 
-      <label for="name">Name</label>
-      <input id="name" type="text" placeholder="Full Name" required />
-
-      <label for="email">Email</label>
-      <input id="email" type="email" placeholder="Email Address" required />
-
-      <label for="mobile">Mobile Number</label>
-      <input id="mobile" type="tel" placeholder="Mobile Number" pattern="[0-9]{10}" title="Enter 10 digit phone number" required />
-
-      <label for="address">Address</label>
-      <input id="address" type="text" placeholder="Shipping Address" required />
-
-      <button type="submit" class="place-order-btn">Place Order</button>
-    </form>
-
-    <div id="order-message"></div>
-  </main>
-
-  <script>
-    const cartItemsDiv = document.getElementById("cart-items");
-    const totalAmountP = document.getElementById("total-amount");
-    const checkoutForm = document.getElementById("checkout-form");
-    const orderMessageDiv = document.getElementById("order-message");
-
-    const storedUser = (() => { try { return JSON.parse(localStorage.getItem("velouraUser")) } catch { return null } })();
-    if (!storedUser) {
-      alert("Please login first!");
-      window.location.href = "/login";
-    }
-
-    if (storedUser) {
-      checkoutForm.name.value = storedUser.name || "";
-      checkoutForm.email.value = storedUser.email || "";
-      checkoutForm.mobile.value = storedUser.mobile || "";
-      checkoutForm.address.value = storedUser.address || "";
-
-      function parsePrice(val) {
-        if (typeof val === 'number') return val;
-        if (typeof val === 'string') {
-          const n = parseInt(val.replace(/[^0-9]/g, ''));
-          return isNaN(n) ? 0 : n;
-        }
-        return 0;
-      }
-
-      function loadCart() {
-        const items = window.CartBridge ? window.CartBridge.getCart() : [];
-        cartItemsDiv.innerHTML = "";
-        if (!items.length) {
-          cartItemsDiv.innerHTML = "<p>Your cart is empty.</p>";
-          totalAmountP.innerText = "";
-          checkoutForm.style.display = "none";
-          return;
-        }
-        let total = 0;
-        items.forEach(item => {
-          const price = item.newPrice !== undefined ? parsePrice(item.newPrice) : parsePrice(item.price);
-          const qty = item.quantity || item.qty || 1;
-          total += price * qty;
-          const title = item.name || item.title || '';
-          const div = document.createElement("div");
-          div.className = "cart-item";
-          div.textContent = `${title} (x${qty}) - ₹${price * qty}`;
-          cartItemsDiv.appendChild(div);
-        });
-        totalAmountP.innerText = `Total: ₹${total}`;
-        checkoutForm.style.display = "block";
-      }
-
-      loadCart();
-      window.addEventListener('cartUpdated', loadCart);
-
-      checkoutForm.addEventListener("submit", event => {
-        event.preventDefault();
-        const name = checkoutForm.name.value.trim();
-        const email = checkoutForm.email.value.trim();
-        const mobile = checkoutForm.mobile.value.trim();
-        const address = checkoutForm.address.value.trim();
-        if (!name || !email || !mobile || !address) {
-          alert("Please fill in all required fields.");
-          return;
-        }
-
-        const items = window.CartBridge ? window.CartBridge.getCart() : [];
-        if (!items.length) {
-          alert("Your cart is empty. Add items before placing an order.");
-          return;
-        }
-
-        const order = {
-          name,
-          email,
-          mobile,
-          address,
-          items,
-          totalAmount: items.reduce((sum, item) => {
-            const price = item.newPrice !== undefined ? parsePrice(item.newPrice) : parsePrice(item.price);
-            const qty = item.quantity || item.qty || 1;
-            return sum + price * qty;
-          }, 0),
-          orderDate: new Date().toISOString(),
-        };
-
-        try {
-          const ORDERS_KEY = 'veloura_orders';
-          const orders = (() => { try { return JSON.parse(localStorage.getItem(ORDERS_KEY)) || [] } catch { return [] } })();
-          orders.push(order);
-          try { localStorage.setItem(ORDERS_KEY, JSON.stringify(orders)) } catch (e) { }
-          const updatedUser = { ...storedUser, address };
-          try { localStorage.setItem('velouraUser', JSON.stringify(updatedUser)) } catch (e) { }
-          if (window.CartBridge) window.CartBridge.clearCart();
-          orderMessageDiv.style.color = "#3c763d";
-          orderMessageDiv.textContent = "Order placed successfully! Redirecting to cart in 5 seconds...";
-          checkoutForm.reset();
-          setTimeout(() => { window.location.href = "AddToCart.html"; }, 5000);
-        } catch (e) {
-          orderMessageDiv.style.color = "#d9534f";
-          orderMessageDiv.textContent = "Failed to place order. Please try again.";
-        }
-      });
-    }
-  </script>
+<script src="../javascript/checkout.js"></script>
 </body>
 </html>

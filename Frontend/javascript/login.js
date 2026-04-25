@@ -1,4 +1,4 @@
-document.getElementById("signin-form").addEventListener("submit", function(e) {
+document.getElementById("signin-form").addEventListener("submit", async function (e) {
   e.preventDefault();
 
   const email = document.getElementById("email").value.trim();
@@ -7,55 +7,62 @@ document.getElementById("signin-form").addEventListener("submit", function(e) {
 
   globalMsg.innerText = "";
 
-  fetch("http://localhost:3000/api/login", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      email: email,
-      password: password
-    })
-  })
-  .then(async res => {
+  try {
+    const res = await fetch("http://localhost:3000/api/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ email, password })
+    });
+
     const data = await res.json();
 
+    // ✅ SUCCESS LOGIN
     if (res.status === 200) {
 
-  // USER ID SAVE
-  localStorage.setItem("userId", data.userId);
+      const userId = data.userId || data._id || data.user?._id;
 
-  globalMsg.style.color = "green";
-  globalMsg.innerText = data.message;
+      if (!userId) {
+        globalMsg.style.color = "red";
+        globalMsg.innerText = "User ID not received from server!";
+        return;
+      }
 
-  setTimeout(() => {
-    window.location.href = "main.html";
-  }, 3500);
+      // SAVE USER
+      localStorage.setItem("userId", userId);
 
-}
+      globalMsg.style.color = "green";
+      globalMsg.innerText = data.message || "Login successful!";
 
+      // REDIRECT
+      setTimeout(() => {
+        window.location.href = "main.html";
+      }, 1500); // shorter time
+
+    }
+
+    // ❌ USER NOT FOUND
     else if (res.status === 404) {
-
       globalMsg.style.color = "red";
-      globalMsg.innerText = data.message;
-
-      // setTimeout(() => {
-      //   window.location.href = "../html/signup.html";
-      // }, 4000);
-
+      globalMsg.innerText = data.message || "User not found";
     }
 
+    
     else if (res.status === 401) {
-
       globalMsg.style.color = "red";
-      globalMsg.innerText = data.message;
-
+      globalMsg.innerText = data.message || "Invalid password";
     }
 
-  })
-  .catch(err => {
+  
+    else {
+      globalMsg.style.color = "red";
+      globalMsg.innerText = "Something went wrong!";
+    }
+
+  } catch (err) {
     globalMsg.style.color = "red";
     globalMsg.innerText = "Server error. Try again.";
-  });
-
+    console.log(err);
+  }
 });

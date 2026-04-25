@@ -1,6 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const logger = require("./middlewares/logger");
+const errorHandler = require("./middlewares/errorHandler");
 
 const dotenv = require("dotenv");
 const connectDB = require("./database/db");
@@ -43,7 +45,7 @@ app.use('/frontend', express.static(path.join(__dirname, '../Frontend')));
 /* ============================= */
 
 app.use(express.json());
-
+app.use(logger);
 
 /* ============================= */
 /* ROUTES */
@@ -53,7 +55,6 @@ app.use("/api", userRoutes);
 app.use("/api", cartRoutes);
 app.use("/api", contactRoutes);
 
-
 /* ============================= */
 /* DEFAULT ROUTE */
 /* ============================= */
@@ -62,6 +63,13 @@ app.get("/", (req, res) => {
   res.send("API running...");
 });
 
+/* ============================= */
+
+/* ERROR HANDLER (LAST) */
+
+/* ============================= */
+
+app.use(errorHandler);
 
 /* ============================= */
 /* START SERVER */

@@ -23,3 +23,12 @@ exports.deleteCart = async (req, res) => {
   await Cart.findByIdAndDelete(req.params.id);
   res.json({ message: "Item deleted" });
 };
+
+exports.deleteUserCart = async (req, res) => {
+  try {
+    await Cart.deleteMany({ userId: req.params.userId });
+    res.json({ message: "Cart cleared" });
+  } catch {
+    res.status(500).json({ message: "Error clearing cart" });
+  }
+};
