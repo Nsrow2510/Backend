@@ -18,28 +18,39 @@ document.getElementById("signin-form").addEventListener("submit", async function
 
     const data = await res.json();
 
+    // ✅ DEBUG (optional)
+    console.log("Full response:", data);
+
     // ✅ SUCCESS LOGIN
     if (res.status === 200) {
 
-      const userId = data.userId || data._id || data.user?._id;
+      // 🔐 TOKEN CHECK + STORE
+      if (data.token) {
+        console.log("Token generated ✅");
+        console.log("Token:", data.token);
 
-      if (!userId) {
-        globalMsg.style.color = "red";
-        globalMsg.innerText = "User ID not received from server!";
-        return;
+        localStorage.setItem("token", data.token);
+      } else {
+        console.log("Token NOT generated ❌");
       }
 
-      // SAVE USER
-      localStorage.setItem("userId", userId);
+      // 👤 USER ID HANDLE
+      const userId = data.userId || data._id || data.user?._id;
 
+      if (userId) {
+        localStorage.setItem("userId", userId);
+      } else {
+        console.log("User ID not received");
+      }
+
+      // ✅ MESSAGE
       globalMsg.style.color = "green";
       globalMsg.innerText = data.message || "Login successful!";
 
-      // REDIRECT
+      // 🔁 REDIRECT
       setTimeout(() => {
         window.location.href = "main.html";
-      }, 1500); // shorter time
-
+      }, 1500);
     }
 
     // ❌ USER NOT FOUND
@@ -48,21 +59,21 @@ document.getElementById("signin-form").addEventListener("submit", async function
       globalMsg.innerText = data.message || "User not found";
     }
 
-    
+    // ❌ WRONG PASSWORD
     else if (res.status === 401) {
       globalMsg.style.color = "red";
       globalMsg.innerText = data.message || "Invalid password";
     }
 
-  
+    // ❌ OTHER ERROR
     else {
       globalMsg.style.color = "red";
-      globalMsg.innerText = "Something went wrong!";
+      globalMsg.innerText = data.message || "Something went wrong!";
     }
 
   } catch (err) {
     globalMsg.style.color = "red";
     globalMsg.innerText = "Server error. Try again.";
-    console.log(err);
+    console.log("Error:", err);
   }
 });

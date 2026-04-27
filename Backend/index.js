@@ -1,6 +1,9 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const http = require('http');            // 👈 ADD
+const socketIo = require('socket.io');   // 👈 ADD
+
 const logger = require("./middlewares/logger");
 const errorHandler = require("./middlewares/errorHandler");
 
@@ -12,33 +15,47 @@ const userRoutes = require("./routes/userRoutes");
 const cartRoutes = require("./routes/cartRoutes");
 const contactRoutes = require("./routes/contactRoutes");
 
-dotenv.config();
+require("dotenv").config();
 connectDB();
 
 const app = express();
+const server = http.createServer(app);   
 
 /* ============================= */
-/* CORS CONFIGURATION */
+/* SOCKET.IO SETUP */
 /* ============================= */
 
-app.use(cors({
-  origin: [
-    'http://127.0.0.1:5500',
-    'http://localhost:5500',
-    'http://127.0.0.1:3000',
-    'http://localhost:3000'
-  ],
-  methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type']
-}));
+const io = socketIo(server, {
+  cors: {
+    origin: "*"
+  }
+});
 
+/* SOCKET CONNECTION */
+io.on('connection', (socket) => {
+  console.log('User connected:', socket.id);
+
+  socket.on('add-to-cart', (data) => {
+    console.log('Cart event:', data);
+    io.emit('cart-updated', data);
+  });
+
+  socket.on('disconnect', () => {
+    console.log('User disconnected:', socket.id);
+  });
+});
 
 /* ============================= */
-/* SERVE STATIC FILES */
+/* CORS */
+/* ============================= */
+
+app.use(cors());
+
+/* ============================= */
+/* STATIC FILES */
 /* ============================= */
 
 app.use('/frontend', express.static(path.join(__dirname, '../Frontend')));
-
 
 /* ============================= */
 /* MIDDLEWARE */
@@ -48,7 +65,7 @@ app.use(express.json());
 app.use(logger);
 
 /* ============================= */
-/* ROUTES */
+/* API ROUTES */
 /* ============================= */
 
 app.use("/api", userRoutes);
@@ -60,13 +77,11 @@ app.use("/api", contactRoutes);
 /* ============================= */
 
 app.get("/", (req, res) => {
-  res.send("API running...");
+  res.sendFile(path.join(__dirname, "../Frontend/html/main.html")); 
 });
 
 /* ============================= */
-
-/* ERROR HANDLER (LAST) */
-
+/* ERROR HANDLER */
 /* ============================= */
 
 app.use(errorHandler);
@@ -75,6 +90,6 @@ app.use(errorHandler);
 /* START SERVER */
 /* ============================= */
 
-app.listen(3000, () => {
+server.listen(3000, () => {   
   console.log("Server running on http://localhost:3000");
 });

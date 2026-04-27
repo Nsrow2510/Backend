@@ -567,6 +567,11 @@
 
 <!-- Add to cart javascript -->
 <!-- Add to cart javascript -->
+ <script src="/socket.io/socket.io.js"></script>
+
+<script>
+  const socket = io();   
+</script>
 <script>
   const storedUserId = localStorage.getItem("userId");
 
@@ -625,5 +630,6 @@
     });
   });
 </script>
+
 </body>
 </html>

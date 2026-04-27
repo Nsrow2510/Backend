@@ -1,3 +1,4 @@
+console.log("SIGNUP JS LOADED ✅");
 const signupForm = document.getElementById("signupForm");
 const successDiv = document.getElementById("success");
 

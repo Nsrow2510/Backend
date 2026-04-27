@@ -1,10 +1,30 @@
+// const express = require("express");
+// const router = express.Router();
+
+// const { registerUser, loginUser, getUserById } = require("../controllers/userController");
+
+// router.post("/register", registerUser);
+// router.post("/login", loginUser);
+// router.get("/users/:id", getUserById);
+
+// module.exports = router;
+
 const express = require("express");
 const router = express.Router();
 
-const { registerUser, loginUser, getUserById } = require("../controllers/userController");
+const {
+  registerUser,
+  loginUser,
+  getUserProfile
+} = require("../controllers/userController");
 
+const authMiddleware = require("../middlewares/authMiddleware");
+
+/* PUBLIC ROUTES */
 router.post("/register", registerUser);
 router.post("/login", loginUser);
-router.get("/users/:id", getUserById);
+
+/* 🔐 PROTECTED ROUTE */
+router.get("/profile", authMiddleware, getUserProfile);
 
 module.exports = router;
