@@ -15,7 +15,10 @@ fetch(`http://localhost:3000/api/users/${userId}`)
 
 // ✅ LOAD CART
 async function loadCart() {
-  const res = await fetch(`http://localhost:3000/api/cart/${userId}`);
+  // const res = await fetch(`http://localhost:3000/api/cart/${userId}`);
+  const res=await fetch("http://localhost:3000/api/cart", {
+  credentials: "include"
+});
   const items = await res.json();
 
   const container = document.getElementById("cart-items");
@@ -51,9 +54,14 @@ document.getElementById("place-order-btn").addEventListener("click", async () =>
   alert("Order placed successfully!");
 
   // 🧹 clear cart
-  await fetch(`http://localhost:3000/api/cart/user/${userId}`, {
-    method: "DELETE"
-  });
+  // await fetch(`http://localhost:3000/api/cart/user/${userId}`, {
+  //   method: "DELETE"
+  // });
+
+await  fetch("http://localhost:3000/api/cart", {
+  method: "DELETE",
+  credentials: "include"
+});
 
   window.location.href = "main.html";
 });

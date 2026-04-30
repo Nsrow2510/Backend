@@ -1,12 +1,17 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const session = require("express-session");
+const cookieParser = require("cookie-parser");
 const logger = require("./middlewares/logger");
 const errorHandler = require("./middlewares/errorHandler");
 
 const dotenv = require("dotenv");
 const connectDB = require("./database/db");
 
+
+//NEW 
+// console.log(process.env.MONGO_URI);
 // Routes
 const userRoutes = require("./routes/userRoutes");
 const cartRoutes = require("./routes/cartRoutes");
@@ -16,6 +21,7 @@ dotenv.config();
 connectDB();
 
 const app = express();
+app.set("trust proxy", 1);
 
 /* ============================= */
 /* CORS CONFIGURATION */
@@ -28,6 +34,7 @@ app.use(cors({
     'http://127.0.0.1:3000',
     'http://localhost:3000'
   ],
+  credentials: true,   // ⭐ IMPORTANT
   methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type']
 }));
@@ -47,6 +54,21 @@ app.use('/frontend', express.static(path.join(__dirname, '../Frontend')));
 app.use(express.json());
 app.use(logger);
 
+app.use(cookieParser());
+
+app.use(
+  session({
+    secret: "veloura-secret-key",
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      maxAge: 1000 * 60 * 60, // 1 hour
+      httpOnly:true,
+      sameSite:"lax",//changed
+      secure:false
+    }
+  })
+);
 /* ============================= */
 /* ROUTES */
 /* ============================= */

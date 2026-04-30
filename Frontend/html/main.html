@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <script src="/bridge.js"></script>
+  <!-- <script src="/bridge.js"></script> -->
 <!-- Navbar -->
 <header class="navbar">
     <div class="logo">
@@ -544,7 +544,58 @@ Add to Cart
     <p>© 2025 Veloura Beauty. All rights reserved.</p>
   </div>
 </footer>
+<!-- <script>
+window.addEventListener("load", async () => {
+  try {
+    const res = await fetch("http://localhost:3000/api/me", {
+      method: "GET",
+      credentials: "include"
+    });
 
+    const data = await res.json();
+
+    if (res.status === 200) {
+      // ✅ USER LOGGED IN
+      document.getElementById("profile-btn").style.display = "inline";
+      document.getElementById("logout-btn").style.display = "inline";
+    } else {
+      // ❌ NOT LOGGED IN
+      document.getElementById("profile-btn").style.display = "none";
+      document.getElementById("logout-btn").style.display = "none";
+    }
+
+  } catch (err) {
+    console.log("Error:", err);
+  }
+});
+</script> -->
+<script>
+async function checkLogin() {
+  try {
+    const res = await fetch("http://localhost:3000/api/me", {
+      method: "GET",
+      credentials: "include"   // ⭐ REQUIRED
+    });
+
+    if (!res.ok) throw new Error("Not logged in");
+
+    const user = await res.json();
+
+    // SHOW LOGOUT BUTTON
+    document.getElementById("loginBtn").style.display = "none";
+    document.getElementById("logoutBtn").style.display = "inline-block";
+
+    console.log("Logged in as:", user.name);
+
+  } catch (err) {
+    // SHOW LOGIN BUTTON
+    document.getElementById("loginBtn").style.display = "inline-block";
+    document.getElementById("logoutBtn").style.display = "none";
+  }
+}
+
+checkLogin();
+</script>
   <script src="../javascript/script.js"></script>
 </body>
 </html>

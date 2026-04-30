@@ -117,9 +117,13 @@ document.getElementById("page-search-input").addEventListener("keypress", functi
 // ==================== CHATBOT ====================
 let productData = {};
 
-fetch("products.json")
-  .then(res => res.json())
-  .then(data => productData = data);
+// fetch("products.json")
+//   .then(res => res.json())
+//   .then(data => productData = data);
+// fetch("/frontend/json/products.json")
+//   .then(res => res.json())
+//   .then(data => productData = data)
+//   .catch(err => console.log("Product load error:", err));
 
 const chatBtn = document.getElementById("chat-btn");
 const chatBox = document.getElementById("chat-box");

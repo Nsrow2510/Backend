@@ -26,7 +26,9 @@ exports.loginUser = async (req, res) => {
   if (user.password !== password) {
     return res.status(401).json({ message: "Wrong password" });
   }
-
+ // ✅ Set session here (after verifying user)
+  req.session.userId = user._id;
+  
   res.json({
     message: "Login successful",
     userId: user._id   
@@ -48,3 +50,20 @@ exports.getUserById = async (req, res) => {
     res.status(500).json({ message: "Server error" });
   }
 };
+
+
+//USER ROUTES
+// exports.getCurrentUser = async (req, res) => {
+//   const user = await User.findById(req.session.userId);
+//   res.json(user);
+// };
+exports.getCurrentUser = async (req, res) => {
+  const user = await User.findById(req.session.userId);
+  if (!user) {
+    return res.status(404).json({ message: "User not found" });
+  }
+  res.json(user);
+};
+
+
+//new 
